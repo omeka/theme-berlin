@@ -1,38 +1,54 @@
+/* 
+Grid: 846px wide, 12 columns at 54px each, 11 gutters at 18px each.
+1 = 54px
+2 = 126px (6 columns)
+3 = 198px (4 columns)
+4 = 270px (3 columns)
+5 = 342px
+6 = 414px (2 columns)
+7 = 486px
+8 = 558px
+9 = 630px
+10 = 702px
+11 = 774px
+12 = 846px
+*/
 /* == Imports == */
 @import url("reset.css");
 
 /* == Generic == */
-body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
+body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; background: #fff; }
 
 	/* -- Headings -- */
-	h1 {}
-	h2 {}
-	h3 {}
-	h4 {}
-	h5 {}
-	h6 {}
+	h1, h2, h3 {font-weight: normal; font-family: 'Gill Sans', sans-serif;color:#015581;}
+	
+	h1 {font-size: 3.6em; text-transform: uppercase; letter-spacing: .2em; line-height: 1em; } 
+	h2 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;}
+	h3 {font-size: 1.8em; line-height:1em;margin-bottom:1em;}
+	h4 {font-size: 1.5em; line-height: 1.2em; margin: 0 0 1.2em; font-weight:normal;color:#015581;}
+	h5 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-weight:bold;}
+	
+	h1 a, h2 a, h3 a {text-decoration:none;}
+	img a {border: none;}
 
 	/* -- Misc Block elements -- */
-	p {}
-	ul {}
-	ol {}
-	dl {}
-	li {}
+	p {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+	ul {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+	ol {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+	dl {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
 	
 	/* -- Misc Inline elements -- */
-	img {}
-	
-	em {font-style:italic;}
-	strong {font-weight:bold;}
-
+	em,i {font-style:italic;}
+	strong,b {font-weight:bold;}
+	abbr,acronym {border: none; font-style: normal;}
+		
 	/* -- Links -- */
-	a:link {}
-	a:visited {}
-	a:hover {}
-	a:active {}
-	
-	.view-items-link {}
-	
+	a:link {color: #369;}
+	a:visited {color: #369;}
+	a:hover {color: #ff8000;} 
+	a:active {color: #ff8000;}
+
+
 	/* -- Body Classes -- */
 	.browse {}
 	.item {}
@@ -50,11 +66,15 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 	.odd {}
 	
 		/* Navigation Classes*/
-		.navigation {}
+		.navigation {list-style:none;}
+			.navigation li {display:inline;}
+			.navigation a {text-decoration:none;}
 		
 		/* Pagination Classes */
-		.pagination {} 
-		
+		.pagination {}
+			.pagination li {display:inline;padding:6px 8px; background:#0176b4; color:#fff;margin-right:1px;}
+			.pagination a { color:#fff; text-decoration:none;}
+			
 		.next {} 
 		.previous {} 
 	
@@ -66,17 +86,22 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 		.field {}
 		.field-value {}
 		
-		.item {}
-		.item-description {}
+		.item {border-bottom:1px solid #eee;padding-bottom:18px; margin-bottom:18px;overflow:hidden;}
+			.item h3 {float:left; width: 198px; margin-right:18px;}
+			.item img {float:right; width: 198px; height: 198px;}
+			.item-description {float:left; width: 414px;}
+			
 		.item-img {}
 		.items-list {}
-		.item-meta
-		.items-nav
-		.item-pagination {}
-		.item-tags {}
+		.item-meta {}
+		
+		.item-pagination {clear:both; border-top:1px solid #eee; padding-top:18px;}
+			.item-pagination a {text-decoration:none; font-weight:bold;}
+		.item-tags {clear:left;}
 		.item-thumbnail {}
 		.item-title {}	
 		
+		.download-file img {width: 54px; height:54px; float:left; margin-left:18px;}
 	
 		/* Collections Classes */
 		.collection {}
@@ -87,6 +112,16 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 		.exhibit-description {}
 		.exhibit-tags {}
 	
+		.exhibit-section-nav {margin-bottom:2em; border-bottom:1px solid #ccc;margin-bottom:1.5em;padding:0.3em; }
+				.exhibit-section-nav li {padding:0.5em 0;display:inline;}
+				.exhibit-section-nav a {padding:0.5em 1em 0.5em; color:#666;text-decoration:none;}
+				.exhibit-section-nav li a.current {border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+		
+		.exhibit-page-nav {}
+			.exhibit-page-nav li {display:inline; color:#fff;margin-right:1px;}
+			.exhibit-page-nav a { color:#fff;padding:6px 8px; background:#0176b4; text-decoration:none;}
+			.exhibit-page-nav a:hover, .exhibit-page-nav .current a {background:#ff8000;}
+		
 		/* Microformats Classes */
 		.hentry {}
 		
@@ -95,6 +130,7 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 		
 		/* Tags Classes */
 		.tags {}
+			.tags li {display:inline;}
 
 		/* Tag Clouds */
 		.hTagcloud ul {list-style:none; margin-left:0; padding-left:0;}
@@ -112,19 +148,38 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 
 
 /* == Wrap == */
-#wrap {}
+#wrap {width: 882px; margin:36px auto;}
 
 /* == Header == */
-#header {}
-	#search {}
-
+#header {margin-bottom:1em;}
+	#header h1 {float:left; width: 378px;margin-bottom:1em;}
+	#search {float:right;width: 270px; text-align:right;}
+		#search h2 {display:none;}
+		#search input {border:1px solid #ccc; background:#fafafa; padding:3px;}
+		#search input.textinput:focus {background:#fff;}
+		#search #submit_search {padding:2px; background:#369; color:#fff; border:1px solid #369;}
+	
+	#primary-nav {clear:both;overflow:hidden; zoom:1; border:1px solid #ccc; border-width:0 0 1px 1px; }
+		#primary-nav li { width: 144px; text-align:left; text-indent:18px;float:left; display:block;}
+		#primary-nav a {text-decoration:none;display:block;padding:9px 0; background:#fafafa;width: 143px; border:1px solid #ccc; border-width: 1px 1px 0px 0;}
+		#primary-nav a:hover {background:#fff;}
+		
+		#primary-nav li.current a {background:#fff; color:#ff8000;}
+		
 /* == Content == */
 
 	/* Structure */
-	#content {}
+	#content {padding:18px 18px 0;overflow:hidden; zoom:1;border:1px solid #ccc; background:#fff;border-top-width:0;}
 		#primary {}
 		#secondary {}
+	
 		
+		#secondary-nav {margin-bottom:2em; border-bottom:1px solid #ccc;margin-bottom:1.5em;padding:0.3em; }
+				#secondary-nav li {padding:0.5em 0;}
+				#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
+				#secondary-nav li.current a {border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
+		
+			
 	/* General */
 	#featured-item {}
 	#recent-items {}
@@ -144,10 +199,14 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 
 
 	/* Items Pages */
-	#extended-metadata {}
+	
+	
+	#extended-metadata {float:right; width: 270px;}
 		#item-type {}
 
-	#item-metadata {}
+	#item-metadata {float:left; width:558px;}
+		#item-images {overflow:hidden; margin-bottom:18px;}
+			#item-images-thumbs {margin:18px 0 18px -18px;}
 		#item-publisher {}
 		#item-creator {}
 		#item-description {}
@@ -165,9 +224,10 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 		#item-temporal-coverage {}
 		#item-date-added {}
 		#item-collection {}
-		#item-files {}
-		#item-tags {}
-		#item-citation {}
+	
+	#item-files {float:right; width: 270px;}
+	#item-tags {float:right; width: 270px;}
+	#item-citation {float:right; width: 270px;}
 		
 	#next-item {}
 	#previous-item {}
@@ -182,10 +242,18 @@ body {font:62.5% Verdana, Arial, sans-serif; background-color:#fff;}
 	#exhibit-summary {}
 	#exhibit-show {}
 
+	
+
 	/* Collections Pages */
 	#collection-description {}
 	#collectors {}
 	
 
 /* == Footer == */
-#footer {}
+#footer {clear:both; font-weight:bold;overflow:hidden; zoom:1; padding-top:18px;}
+	#footer a {text-decoration:none;}
+	#footer .navigation {float:right; text-align:right; width: 48%;}
+	#footer .navigation li {display:inline;}
+		#footer .navigation a {margin-left:8px;}
+	
+	#footer p {float:left; width: 48%;}

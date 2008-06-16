@@ -10,9 +10,17 @@ endif;
 	<div id="primary">
 		
 		<?php if ( total_results() ): ?>
-		
-		<h2>Browse Items</h2>
-		
+			<?php if($_GET['search']):?>
+				<h2>Search results for: <?php echo $_GET['search']; ?></h2>
+		<?php else: ?>
+		<h2>Browse Items
+		<?php 
+		if(!empty($_GET['collection'])) { 
+			$collectionid = $_GET['collection']; 
+			$collection = collection($collectionid); 
+			echo ' in '.$collection->name; 
+		} ?></h2>
+		<?php endif; ?>
 		<ul class="items-nav navigation" id="secondary-nav">
 			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
@@ -34,12 +42,12 @@ endif;
 				
 				<?php if($item->description): ?>
 				<div class="item-description">
-				<?php echo nls2p(h(snippet($item->description, 0, 250))); ?>
+				<?php echo nls2p(h(snippet($item->description, 0, 300))); ?>
 				</div>
 				<?php endif; ?>
 
 				<?php if(count($item->Tags)): ?>
-				<div class="tags"><p><strong>Tags:</strong>
+				<div class="item-tags"><p><strong>Tags:</strong>
 				<?php echo tag_string($item, uri('items/browse/tag/')); ?></p>
 				</div>
 				<?php endif;?>
