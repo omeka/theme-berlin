@@ -67,23 +67,24 @@ endif;
 
 		$first_file = $files[0];
 
-		if($first_file->hasThumbnail()) {
+		if(!empty($first_file) && $first_file->hasThumbnail()) {
 			$html = fullsize($first_file,array('id'=>'item-image'));
-		}
+		
 
-		if(count($files)>1) {
-			$html .= '<div id="item-images-thumbs">';
-			foreach($files as $file) {
-				if($file->hasThumbnail()) {
-					$html .= '<a href="'.file_download_uri($file).'" class="download-file">';
-					$html .= square_thumbnail($file, array('class'=>'thumb'));
-					$html .= '</a>';
+			if(count($files)>1) {
+				$html .= '<div id="item-images-thumbs">';
+				foreach($files as $file) {
+					if($file->hasThumbnail()) {
+						$html .= '<a href="'.file_download_uri($file).'" class="download-file">';
+						$html .= square_thumbnail($file, array('class'=>'thumb'));
+						$html .= '</a>';
+					}
+
 				}
-
-			}
-			$html .= '</div>';
+				$html .= '</div>';
+			} 
 		} else {
-			$html = display_files($first_file);
+			$html = display_files($item->Files);
 		}
 		
 		echo $html;
