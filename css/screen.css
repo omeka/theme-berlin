@@ -24,7 +24,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	
 	h1 {font-size: 3.6em; text-transform: uppercase; letter-spacing: .2em; line-height: 1em; } 
 	h2 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;}
-	h3 {font-size: 1.8em; line-height:1em;margin-bottom:1em;}
+	h3 {font-size: 1.8em; line-height:2em;margin-bottom:0;}
 	h4 {font-size: 1.5em; line-height: 1.2em; margin: 0 0 1.2em; font-weight:normal;color:#015581;}
 	h5 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-weight:bold;}
 	
@@ -86,18 +86,20 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		.field {}
 		.field-value {}
 		
-		.item {border-bottom:1px solid #eee;padding-bottom:18px; margin-bottom:18px;overflow:hidden;}
-			.item h3 {float:left; width: 198px; margin-right:18px;}
-			.item img {float:right; width: 198px; height: 198px;}
-			.item-description {float:left; width: 414px;}
+		.browse .item {border-bottom:1px solid #eee;padding-bottom:18px; margin-bottom:18px;overflow:hidden; zoom:1;}
+			.browse .item h3 {float:left; width: 198px; margin-right:18px;}
+			.browse .item img {float:right; width: 198px; height: 198px;}
+			.browse .item-description {float:left; width: 414px;}
 			
 		.item-img {}
 		.items-list {}
 		.item-meta {}
 		
-		.item-pagination {clear:both; border-top:1px solid #eee; padding-top:18px;}
-			.item-pagination a {text-decoration:none; font-weight:bold;}
-		.item-tags {clear:left;}
+		.item-pagination {clear:both;overflow:hidden; border-top:1px solid #eee; padding-top:18px;}
+			.item-pagination a {text-decoration:none; font-weight:bold;width:48%; float:left;}
+			.item-pagination .next a {float:right; text-align:right;}
+		
+		.item-tags {clear:left; margin-left:216px;}
 		.item-thumbnail {}
 		.item-title {}	
 		
@@ -117,10 +119,12 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 				.exhibit-section-nav a {padding:0.5em 1em 0.5em; color:#666;text-decoration:none;}
 				.exhibit-section-nav li a.current {border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
 		
-		.exhibit-page-nav {}
+		.exhibit-page-nav {color:#fff;}
 			.exhibit-page-nav li {display:inline; color:#fff;margin-right:1px;}
-			.exhibit-page-nav a { color:#fff;padding:6px 8px; background:#0176b4; text-decoration:none;}
+			.exhibit-page-nav a:link, .exhibit-page-nav a:visited { color:#fff;padding:6px 8px; background:#0176b4; text-decoration:none;}
 			.exhibit-page-nav a:hover, .exhibit-page-nav .current a {background:#ff8000;}
+			.exhibit-page-nav a:active { color:#fff;padding:6px 8px; background:#0176b4; text-decoration:none;}
+			.exhibit-page-nav .current a {background:#ff8000;}
 		
 		/* Microformats Classes */
 		.hentry {}
@@ -134,7 +138,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 
 		/* Tag Clouds */
 		.hTagcloud ul {list-style:none; margin-left:0; padding-left:0;}
-			.hTagcloud li {display:inline;}
+			.hTagcloud li {display:inline; margin-right:3px;}
 
 			.popular a {font-size:120%;}
 			.v-popular a {font-size:140%;}
@@ -181,10 +185,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		
 			
 	/* General */
-	#featured-item {}
-	#recent-items {}
-	
-	#featured-exhibit {}
+
 	
 	#pagination-top {}
 	#pagination-bottom {}
@@ -195,16 +196,27 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	
 		
 	/* Home Page */
-	#featured-collection {}
+	#home #primary {float:left; width: 414px;}
+	#home #secondary {float:right; width: 414px;}
 
+	#featured-collection {border-bottom:1px solid #ccc; margin-bottom:18px;}
+	
+	#featured-item {overflow:hidden; zoom:1; border-bottom:1px solid #ccc;background:#eee; padding:18px 18px 0;margin-bottom:18px;}
+		#featured-item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding:2px;}
+	
+	#recent-items {}
+		#recent-items .item {overflow:hidden; zoom:1;border-bottom:1px solid #ccc;}
+		#recent-items .item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding: 2px;}
+	
+	#featured-exhibit {}
 
 	/* Items Pages */
 	
-	
-	#extended-metadata {float:right; width: 270px;}
+	#items.show #primary {width: 558px;}
+	#extended-metadata {}
 		#item-type {}
 
-	#item-metadata {float:left; width:558px;}
+	#item-metadata {}
 		#item-images {overflow:hidden; margin-bottom:18px;}
 			#item-images-thumbs {margin:18px 0 18px -18px;}
 		#item-publisher {}
@@ -225,9 +237,9 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		#item-date-added {}
 		#item-collection {}
 	
-	#item-files {float:right; width: 270px;}
-	#item-tags {float:right; width: 270px;}
-	#item-citation {float:right; width: 270px;}
+	#item-files {}
+	#item-tags {}
+	#item-citation {}
 		
 	#next-item {}
 	#previous-item {}

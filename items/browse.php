@@ -59,7 +59,6 @@ endif;
 		<?php else: ?>
 			<h2>The query searched <?php total_items(); ?> items and returned no results.</h2>
 
-			<?php items_search_form(array('id'=>'search'), uri('items/browse')); ?>
 		<?php endif; ?>
 	
 		<div id="pagination-bottom" class="pagination"><?php echo pagination_links(); ?></div>
