@@ -22,11 +22,15 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	/* -- Headings -- */
 	h1, h2, h3 {font-weight: normal; font-family: 'Gill Sans', sans-serif;color:#015581;}
 	
-	h1 {font-size: 3.6em; text-transform: uppercase; letter-spacing: .2em; line-height: 1em; } 
-	h2 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;}
-	h3 {font-size: 1.8em; line-height:2em;margin-bottom:0;}
-	h4 {font-size: 1.5em; line-height: 1.2em; margin: 0 0 1.2em; font-weight:normal;color:#015581;}
-	h5 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-weight:bold;}
+	h1 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;} 
+	h2 {font-size: 1.8em; line-height:2em;margin-bottom:0;}
+	h3 {font-size: 1.5em; line-height: 1.2em; margin: 0 0 1.2em; font-weight:normal;color:#015581;}
+	h4 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-weight:bold;}
+	h5 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-style:italic;}
+	
+	body#home #content h2 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;}
+	body#home #content h3 {font-size: 1.8em; line-height:2em;margin-bottom:0;}
+	#items.show h3 {margin:0;}
 	
 	h1 a, h2 a, h3 a {text-decoration:none;}
 	img a {border: none;}
@@ -83,11 +87,13 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		
 		.featured {}
 		
-		.field {}
-		.field-value {}
-		
+		.element {overflow:hidden;clear:both;margin-bottom:1.5em;}
+		.element-text {font-size:1.2em; line-height:1.5em;margin:0;}
+        .element-text p {font-size:1em;margin:0;}
+		.element-text-empty {font-size:1.2em; line-height:1.5em;margin:0;}
+						
 		.browse .item {border-bottom:1px solid #eee;padding-bottom:18px; margin-bottom:18px;overflow:hidden; zoom:1;}
-			.browse .item h3 {float:left; width: 198px; margin-right:18px;}
+			.browse .item h2 {float:left; width: 198px; margin-right:18px;}
 			.browse .item img {float:right; width: 198px; height: 198px;}
 			.browse .item-description {float:left; width: 414px;}
 			
@@ -156,12 +162,15 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 
 /* == Header == */
 #header {margin-bottom:1em;}
-	#header h1 {float:left; width: 378px;margin-bottom:1em;}
-	#search {float:right;width: 270px; text-align:right;}
-		#search h2 {display:none;}
-		#search input {border:1px solid #ccc; background:#fafafa; padding:3px;}
-		#search input.textinput:focus {background:#fff;}
-		#search #submit_search {padding:2px; background:#369; color:#fff; border:1px solid #369;}
+	#site-title {float:left; width: 432px;margin-bottom:1em;font-weight: normal; font-family: 'Gill Sans', sans-serif;color:#015581;font-size: 3.6em; text-transform: uppercase; letter-spacing: .2em; line-height: 1em; }
+	#site-title a {text-decoration:none;}
+	
+	#search-container {float:right;width: 270px; text-align:right;}
+		#search-container h2 {display:none;}
+		#search-container input {border:1px solid #ccc; background:#fafafa; padding:3px;}
+		#search-container input.textinput:focus {background:#fff;}
+		#search-container #submit_search {padding:2px; background:#369; color:#fff; border:1px solid #369;margin-left:3px;}
+		#search-container a {font-size:1.2em; line-height:1.5em;text-decoration:none;}
 	
 	#primary-nav {clear:both;overflow:hidden; zoom:1; border:1px solid #ccc; border-width:0 0 1px 1px; }
 		#primary-nav li { width: 144px; text-align:left; text-indent:18px;float:left; display:block;}
@@ -183,6 +192,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 				#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
 				#secondary-nav li.current a {border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
 		
+	.item-description a.show {padding-left:5px;display:inline;}
 			
 	/* General */
 
@@ -209,10 +219,14 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		#recent-items .item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding: 2px;}
 	
 	#featured-exhibit {}
+	
+	.item-description {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+    .item-description p {font-size:1em;}
 
 	/* Items Pages */
 	
 	#items.show #primary {width: 558px;}
+	.title-list li {font-size: 1.2em; line-height: 1.5em; font-style:italic;}
 	#extended-metadata {}
 		#item-type {}
 
@@ -245,9 +259,13 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	#previous-item {}
 	
 		/* Search Results */
+		#primary form {padding:10px 0;overflow:hidden;}
+		#primary form .field {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;clear:both;}
+		#primary form .field label {display:block;float:left;margin-right:5px;}		
+		input#featured, input#public  {display:block;float:left;}
+		#primary form #submit_search {clear:both;float:left;margin-top:10px;}
 		#advanced_search_header {}
 		#primary #basic_search_header {}
-		#primary #submit_search {}
 
 	/* Exhibits Pages */
 	#exhibit-nav {}
