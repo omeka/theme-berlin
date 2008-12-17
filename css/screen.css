@@ -38,7 +38,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	/* -- Misc Block elements -- */
 	p {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
 	ul {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
-	ol {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+	ol {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;list-style:decimal inside;}
 	dl {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
 	
 	/* -- Misc Inline elements -- */
@@ -226,6 +226,7 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	/* Items Pages */
 	
 	#items.show #primary {width: 558px;}
+	ul.title-list {margin:0;}
 	.title-list li {font-size: 1.2em; line-height: 1.5em; font-style:italic;}
 	#extended-metadata {}
 		#item-type {}
