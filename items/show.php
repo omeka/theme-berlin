@@ -17,35 +17,18 @@
 	<div id="item-metadata">
 		<div id="item-images">
 
-		<?php 
-		
-		$files = $item->Files;
-
-		$first_file = $files[0];
-
-		if(!empty($first_file) && $first_file->hasThumbnail()) {
-			$html = fullsize($first_file,array('id'=>'item-image'));
-		
-
-			if(count($files)>1) {
-				$html .= '<div id="item-images-thumbs">';
-				foreach($files as $file) {
-					if($file->hasThumbnail()) {
-						$html .= '<a href="'.file_download_uri($file).'" class="download-file">';
-						$html .= square_thumbnail($file, array('class'=>'thumb'));
-						$html .= '</a>';
-					}
-
-				}
-				$html .= '</div>';
-			} 
-		} else {
-			$html = display_files($item->Files);
-		}
-		
-		echo $html;
-
-		?>
+			<?php $index = 0; ?>
+			<?php while ($file = loop_files_for_item()): ?>
+			    <?php if ($file->hasThumbnail()): ?>
+			        <?php if ($index == 0): ?>
+		    	       <?php echo display_file($file, array('imageSize'=>'fullsize'), array('class' => 'fullsize')); ?>
+		    	    <?php else: ?>
+		    	        <?php echo display_file($file, array('imageSize'=>'square_thumbnail', 'linkToFile'=>true), array('class' => 'square_thumbnail')); ?>
+		    	    <?php endif; ?>
+			    <?php endif; ?>
+			    <?php $index++; ?>
+	    	
+			<?php endwhile; ?>
 		</div>
 
     	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->

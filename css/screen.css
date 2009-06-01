@@ -109,8 +109,8 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		.item-thumbnail {}
 		.item-title {}	
 		
-		.download-file img {width: 54px; height:54px; float:left; margin-left:18px;}
-	
+		.square_thumbnail img {width: 54px; height:54px; float:left; margin-right:18px;}
+
 		/* Collections Classes */
 		.collection {}
 		.collection-description {}
