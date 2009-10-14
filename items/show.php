@@ -3,7 +3,7 @@
 <div id="primary">
     
 	<h1><?php echo item('Dublin Core', 'Title'); ?></h1>
-	
+		
 	<ul class="title-list">
 	    <h3>All Titles</h3>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
@@ -12,7 +12,6 @@
            </li>
         <?php endforeach ?>
 	</ul>
-	
 
 	<div id="item-metadata">
 		<div id="item-images">
@@ -62,7 +61,6 @@
     	<h3>Citation</h3>
     	<div class="element-text"><?php echo item_citation(); ?></div>
 	</div>
-
 
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">

@@ -49,7 +49,7 @@
 
     		<?php endif; ?>
 
-    		<p class="view-items-link"><a href="<?php echo uri('items'); ?>">View All Items</a></p>
+    		<p class="view-items-link"><a href="<?php echo html_escape(uri('items')); ?>">View All Items</a></p>
 			
 		</div><!--end recent-items -->
 		
