@@ -70,6 +70,7 @@
 		<?php echo link_to_next_item('Next Item'); ?>
 	</li>
 	</ul>
+	<?php echo plugin_append_to_items_show(); ?>
 	
 </div><!-- end primary -->
 
