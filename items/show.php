@@ -1,4 +1,4 @@
-<?php head(array('title' => item('Dublin Core', 'Title'),'javascript'=>js('resize'),'bodyid'=>'items','bodyclass' => 'show item')); ?>
+<?php head(array('title' => item('Dublin Core', 'Title'), 'bodyid'=>'items','bodyclass' => 'show item')); ?>
 
 <div id="primary">
     
@@ -20,7 +20,7 @@
 			<?php while ($file = loop_files_for_item()): ?>
 			    <?php if ($file->hasThumbnail()): ?>
 			        <?php if ($index == 0): ?>
-		    	       <?php echo display_file($file, array('imageSize'=>'fullsize'), array('class' => 'fullsize')); ?>
+		    	       <?php echo display_file($file, array('imageSize'=>'fullsize'), array('class' => 'fullsize', 'id' => 'item-image')); ?>
 		    	    <?php else: ?>
 		    	        <?php echo display_file($file, array('imageSize'=>'square_thumbnail', 'linkToFile'=>true), array('class' => 'square_thumbnail')); ?>
 		    	    <?php endif; ?>

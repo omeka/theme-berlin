@@ -17,8 +17,6 @@
 <!-- JavaScripts -->
 <?php echo js('default'); ?>
 
-<?php echo $javascript; ?>
-
 <!-- Plugin Stuff -->
 <?php echo plugin_header(); ?>
 
