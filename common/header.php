@@ -26,7 +26,7 @@
 
 		<div id="header">
 		    
-			<div id="site-title"><?php echo link_to_home_page(); ?></div>
+			<div id="site-title"><?php echo link_to_home_page(berlin_display_logo()); ?></div>
 			
 		</div><!-- end header -->
 		
