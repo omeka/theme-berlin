@@ -206,8 +206,8 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	
 		
 	/* Home Page */
-	#home #primary {float:left; width: 414px;}
-	#home #secondary {float:right; width: 414px;}
+	#home #primary {float:right; width: 414px;}
+	#home #secondary {float:left; width: 414px;}
 
 	#featured-collection {border-bottom:1px solid #ccc; margin-bottom:18px;}
 	
@@ -281,10 +281,10 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	
 
 /* == Footer == */
-#footer {clear:both; font-weight:bold;overflow:hidden; zoom:1; padding-top:18px;}
+#footer {clear:both; overflow:hidden; zoom:1; padding-top:18px;}
 	#footer a {text-decoration:none;}
-	#footer .navigation {float:right; text-align:right; width: 48%;}
+	#footer .navigation {float:right; font-weight:bold; text-align:right; width: 48%;}
 	#footer .navigation li {display:inline;}
 		#footer .navigation a {margin-left:8px;}
 	
-	#footer p {float:left; width: 48%;}
+	#footer #footer-text {float:left; width: 48%;}

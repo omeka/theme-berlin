@@ -37,7 +37,7 @@
 		
 		<div id="primary-nav">
 			<ul class="navigation">
-			<?php echo public_nav_main(array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'))); ?>
+			<?php echo berlin_public_nav_header(); ?>
 			</ul>
 		</div><!-- end primary-nav -->
 		<div id="content">

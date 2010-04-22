@@ -1,16 +1,25 @@
 <?php head(array('bodyid'=>'home')); ?>	
 
 	<div id="primary">
+	    <p><?php echo strip_formatting(get_theme_option('Homepage Text')); ?></p>
+	    <?php if (get_theme_option('Display Featured Item') == 1): ?>
+    	
 		<!-- Featured Item -->
     	<div id="featured-item">
     	    <?php echo display_random_featured_item(); ?>
     	</div><!--end featured-item-->	
-    	
+    	<?php endif; ?>
+    	<?php if (get_theme_option('Display Featured Collection') == 1): ?>
     	<!-- Featured Collection -->
     	<div id="featured-collection">
     	    <?php echo display_random_featured_collection(); ?>
     	</div><!-- end featured collection -->
-			
+		<?php endif; ?>	
+		
+		<?php if ((get_theme_option('Display Featured Exhibit') == 1) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+    	<!-- Featured Exhibit -->
+    	<?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+		<?php endif; ?>
 	</div><!-- end primary -->
 	
 	<div id="secondary">
@@ -18,8 +27,11 @@
 		<div id="recent-items">
     		<h2>Recently Added Items</h2>
 
-    		<?php set_items_for_loop(recent_items(3)); ?>
-    		<?php if (has_items_for_loop()): ?>
+    		<?php 
+    		$homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '3';
+    		set_items_for_loop(recent_items($homepageRecentItems));
+    		if (has_items_for_loop()): 
+    		?>
 
     		<div class="items-list">
     			<?php while (loop_items()): ?>

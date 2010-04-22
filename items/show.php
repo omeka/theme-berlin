@@ -3,16 +3,23 @@
 <div id="primary">
     
 	<h1><?php echo item('Dublin Core', 'Title'); ?></h1>
+    
+    <?php
+    $titles = item('Dublin Core', 'Title', 'all');
+    
+    if (count($titles) > 1):
+    
+    ?>
 
     <h3>All Titles</h3>	
 	<ul class="title-list">
-        <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
+        <?php foreach ($titles as $title): ?>
            <li class="item-title">
            <?php echo $title; ?>
            </li>
-        <?php endforeach ?>
+        <?php endforeach; ?>
 	</ul>
-
+    <?php endif; ?>
 	<div id="item-metadata">
 		<div id="item-images">
 
@@ -31,7 +38,8 @@
 		</div>
 
     	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
-    	<?php echo show_item_metadata(); ?>
+    	
+    	<?php echo berlin_show_item_metadata(); ?>
 	
 	</div><!-- end item-metadata -->
 	<!-- The following returns all of the files associated with an item. -->
