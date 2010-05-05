@@ -61,7 +61,7 @@ function berlin_show_item_metadata(array $options = array(), $item = null)
 }
 
 function berlin_public_nav_header()
-{
+{    
     if ($customHeaderNavigation = get_theme_option('custom_header_navigation')) {
         $navArray = array();
         $customLinkPairs = explode("\n", $customHeaderNavigation);
@@ -79,12 +79,11 @@ function berlin_public_nav_header()
                 $navArray[$link] = $url;
             }
         }
+        return nav($navArray);
     } else {
-        $filterName = 'public_navigation_main';
         $navArray = array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'));
-        $navArray = apply_filters($filterName, $navArray);
+        return public_nav_main($navArray);
     }
-    return nav($navArray);
 }
 
 // General helpers
