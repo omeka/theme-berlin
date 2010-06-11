@@ -11,8 +11,7 @@
 <?php echo auto_discovery_link_tag(); ?>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" media="screen" href="<?php echo html_escape(css('screen')); ?>" />
-<link rel="stylesheet" media="print" href="<?php echo html_escape(css('print')); ?>" />
+<link rel="stylesheet" media="all" href="<?php echo html_escape(css('screen')); ?>" />
 
 <!-- JavaScripts -->
 <?php echo js('default'); ?>

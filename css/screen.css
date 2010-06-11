@@ -37,9 +37,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
 blockquote, q {
     quotes: none;
 }
@@ -68,9 +65,8 @@ table {
     border-spacing: 0;
 }
 
-
 /* == Generic == */
-body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; background: #fff; }
+body {font: 62.5% "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; background: #fff; }
 
 	/* -- Headings -- */
 	h1, h2, h3 {font-weight: normal; font-family: 'Gill Sans', sans-serif;color:#015581;}
@@ -80,66 +76,55 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	h3 {font-size: 1.5em; line-height: 1.2em; margin: 0 0 1.2em; font-weight:normal;color:#015581;}
 	h4 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-weight:bold;}
 	h5 {font-size: 1.2em; line-height: 1.5em; margin-bottom:1.5em; font-style:italic;}
+	h6 {font-size:1.2em; line-height:1.5em; color: #666;}
 	
 	body#home #content h2 {font-size: 2.4em; line-height:1em;margin-bottom: 0.5em;text-transform:uppercase;letter-spacing:.1em;}
 	body#home #content h3 {font-size: 1.8em; line-height:2em;margin-bottom:0;}
 	#items.show h3 {margin:0;}
 	
 	h1 a, h2 a, h3 a {text-decoration:none;}
-	img a {border: none;}
 
 	/* -- Misc Block elements -- */
-	p {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
-	ul {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
-	ol {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;list-style:decimal inside;}
-	dl {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
-	
+	p,ul,ol,dl {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
+    ul,ol {margin-left:1.5em;}
+    li * {font-size:1em;}
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {margin-bottom:0;}
+    
 	/* -- Misc Inline elements -- */
 	em,i {font-style:italic;}
 	strong,b {font-weight:bold;}
 	abbr,acronym {border: none; font-style: normal;}
-		
+	
+	blockquote {margin-left: 3em;margin-right: 3em;font-style:italic;}
+	
+	dt {font-weight:bold;}
+	dd {margin-left:1.5em;}
+	
+	/* -- Tables -- */
+	table {width: 100%;font-size:1.2em;}
+    th,td {border-bottom:1px solid #ccc; margin:0;padding:0.5em 0;}
+    th {border-width: 3px; text-align:left;}
+	
 	/* -- Links -- */
 	a:link {color: #369;}
 	a:visited {color: #369;}
 	a:hover {color: #ff8000;} 
 	a:active {color: #ff8000;}
-
-
-	/* -- Body Classes -- */
-	.browse {}
-	.item {}
-	.show {}
-	.summary {}
-	.tags {}
-	
-	/* -- Misc Classes */
-
-	.image {} /* items/browse  */
-	
-	.description {}
-	
-	.even {}
-	.odd {}
+	img a {border: none;}
 	
 		/* Navigation Classes*/
-		.navigation {list-style:none;}
+		.navigation {list-style:none; margin-left:0;}
 			.navigation li {display:inline;}
 			.navigation a {text-decoration:none;}
 		
 		/* Pagination Classes */
-		.pagination {}
 			.pagination li {display:inline;padding:6px 8px; background:#0176b4; color:#fff;margin-right:1px;}
 			.pagination a { color:#fff; text-decoration:none;}
-			
-		.next {} 
-		.previous {} 
 	
 		/* Items Classes*/
-		.browse-items-link {}
-		
-		.featured {}
-		
 		.element {overflow:hidden;clear:both;margin-bottom:1.5em;}
 		.element-text {font-size:1.2em; line-height:1.5em;margin:0;}
         .element-text p {font-size:1em;margin:0;}
@@ -149,30 +134,16 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 			.browse .item h2 {float:left; width: 198px; margin-right:18px;}
 			.browse .item img {float:right; width: 198px; height: 198px;}
 			.browse .item-description {float:left; width: 414px;}
-			
-		.item-img {}
-		.items-list {}
-		.item-meta {}
 		
 		.item-pagination {clear:both;overflow:hidden; border-top:1px solid #eee; padding-top:18px;}
 			.item-pagination a {text-decoration:none; font-weight:bold;width:48%; float:left;}
 			.item-pagination .next a {float:right; text-align:right;}
 		
-		.item-tags {clear:left; margin-left:216px;}
-		.item-thumbnail {}
-		.item-title {}	
+		.item-tags {clear:left; margin-left:216px;}	
 		
 		.square_thumbnail img {width: 54px; height:54px; float:left; margin-right:18px;}
-
-		/* Collections Classes */
-		.collection {}
-		.collection-description {}
 	
 		/* Exhibits Classes */
-		.exhibit {}
-		.exhibit-description {}
-		.exhibit-tags {}
-	
 		.exhibit-section-nav {margin-bottom:2em; border-bottom:1px solid #ccc;margin-bottom:1.5em;padding:0.3em; }
 				.exhibit-section-nav li {padding:0.5em 0;display:inline;}
 				.exhibit-section-nav a {padding:0.5em 1em 0.5em; color:#666;text-decoration:none;}
@@ -185,20 +156,12 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 			.exhibit-page-nav a:active { color:#fff;padding:6px 8px; background:#0176b4; text-decoration:none;}
 			.exhibit-page-nav .current a {background:#ff8000;}
 		
-		/* Microformats Classes */
-		.hentry {}
-		
-		/* Search Classes */
-		.no-results {}
-		
 		/* Tags Classes */
-		.tags {}
-			.tags li {display:inline;}
+		.tags li {display:inline;}
 
 		/* Tag Clouds */
 		.hTagcloud ul {list-style:none; margin-left:0; padding-left:0;}
 			.hTagcloud li {display:inline; margin-right:3px;}
-
 			.popular a {font-size:120%;}
 			.v-popular a {font-size:140%;}
 			.vv-popular a {font-size:180%;}
@@ -208,7 +171,6 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 			.vvvvvv-popular a {font-size:320%;}
 			.vvvvvvv-popular a {font-size:340%;}
 			.vvvvvvvv-popular a {font-size:360%;}
-
 
 /* == Wrap == */
 #wrap {width: 882px; margin:36px auto;}
@@ -229,34 +191,18 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		#primary-nav li { width: 144px; text-align:left; text-indent:18px;float:left; display:block;}
 		#primary-nav a {text-decoration:none;display:block;padding:9px 0; background:#fafafa;width: 143px; border:1px solid #ccc; border-width: 1px 1px 0px 0;}
 		#primary-nav a:hover {background:#fff;}
-		
 		#primary-nav li.current a {background:#fff; color:#ff8000;}
 		
 /* == Content == */
 
 	/* Structure */
 	#content {padding:18px 18px 0;overflow:hidden; zoom:1;border:1px solid #ccc; background:#fff;border-top-width:0;}
-		#primary {}
-		#secondary {}
-	
-		
 		#secondary-nav {margin-bottom:2em; border-bottom:1px solid #ccc;margin-bottom:1.5em;padding:0.3em; }
 				#secondary-nav li {padding:0.5em 0;}
 				#secondary-nav a {padding:0.5em 1em 0.5em; color:#666;}
 				#secondary-nav li.current a {border-top:1px solid #ccc;background:#fff;color:#333; font-weight:bold;border-left:1px solid #ccc; border-right:1px solid #ccc; border-bottom:1px solid #fff;}
 		
 	.item-description a.show {padding-left:5px;display:inline;}
-			
-	/* General */
-
-	
-	#pagination-top {}
-	#pagination-bottom {}
-		
-	/* Navigation */
-	#primary-nav {}
-	#secondary-nav {}
-	
 		
 	/* Home Page */
 	#home #primary {float:right; width: 414px;}
@@ -267,50 +213,18 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	#featured-item {overflow:hidden; zoom:1; border-bottom:1px solid #ccc;background:#eee; padding:18px 18px 0;margin-bottom:18px;}
 		#featured-item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding:2px;}
 	
-	#recent-items {}
-		#recent-items .item {overflow:hidden; zoom:1;border-bottom:1px solid #ccc;}
-		#recent-items .item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding: 2px;}
-	
-	#featured-exhibit {}
-	
+	#recent-items .item {overflow:hidden; zoom:1;border-bottom:1px solid #ccc;}
+	#recent-items .item img {float:right; margin-left:18px; margin-bottom:18px; border:1px solid #ccc; padding: 2px;}
+		
 	.item-description {font-size:1.2em; line-height:1.5em; margin-bottom:1.5em;}
     .item-description p {font-size:1em;}
 
 	/* Items Pages */
-	
 	#items.show #primary {width: 558px;}
 	ul.title-list {margin:0;}
 	.title-list li {font-size: 1.2em; line-height: 1.5em; font-style:italic;}
-	#extended-metadata {}
-		#item-type {}
-
-	#item-metadata {}
 		#item-images {overflow:hidden; margin-bottom:18px;}
 			#item-images-thumbs {margin:18px 0 18px -18px;}
-		#item-publisher {}
-		#item-creator {}
-		#item-description {}
-		#item-relation {}
-		#item-spatial-coverage {}
-		#item-rights {}
-		#item-source {}
-		#item-subject {}
-		#item-additional-creator {}
-		#item-format {}
-		#item-contributor {}
-		#item-rights-holder {}
-		#item-provenance {}
-		#item-date {}
-		#item-temporal-coverage {}
-		#item-date-added {}
-		#item-collection {}
-	
-	#item-files {}
-	#item-tags {}
-	#item-citation {}
-		
-	#next-item {}
-	#previous-item {}
 	
 		/* Search Results */
 		#primary form {padding:10px 0;overflow:hidden;}
@@ -321,18 +235,10 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 		#advanced_search_header {}
 		#primary #basic_search_header {}
 
-	/* Exhibits Pages */
-	#exhibit-nav {}
-	#exhibit-summary {}
-	#exhibit-show {}
-        
-    	.exhibit-pagination {clear:both;overflow:hidden; border-top:1px solid #eee; padding-top:18px;}
-			.exhibit-pagination a {text-decoration:none; font-weight:bold;width:48%; float:left;}
-			.exhibit-pagination .next a {float:right; text-align:right;}
-	/* Collections Pages */
-	#collection-description {}
-	#collectors {}
-	
+	/* Exhibits Pages */      
+	.exhibit-pagination {clear:both;overflow:hidden; border-top:1px solid #eee; padding-top:18px;}
+		.exhibit-pagination a {text-decoration:none; font-weight:bold;width:48%; float:left;}
+		.exhibit-pagination .next a {float:right; text-align:right;}
 
 /* == Footer == */
 #footer {clear:both; overflow:hidden; zoom:1; padding-top:18px;}
@@ -340,5 +246,4 @@ body {font: 62.5% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #333; ba
 	#footer .navigation {float:right; font-weight:bold; text-align:right; width: 48%;}
 	#footer .navigation li {display:inline;}
 		#footer .navigation a {margin-left:8px;}
-	
 	#footer #footer-text {float:left; width: 48%;}
