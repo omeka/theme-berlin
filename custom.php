@@ -85,3 +85,13 @@ function berlin_public_nav_header()
         return public_nav_main($navArray);
     }
 }
+
+function berlin_header_image()
+{
+    if(function_exists('get_theme_option') && $headerBg = get_theme_option('Header Image')) {
+        $headerBg = WEB_THEME_UPLOADS.DIRECTORY_SEPARATOR.$headerBg;
+        $html = '<div id="header-image"><img src="'.$headerBg.'" /></div>';
+        return $html;	
+    }
+    return false;
+}

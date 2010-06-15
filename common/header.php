@@ -39,4 +39,5 @@
 			<?php echo berlin_public_nav_header(); ?>
 			</ul>
 		</div><!-- end primary-nav -->
+				<?php echo berlin_header_image(); ?>
 		<div id="content">
