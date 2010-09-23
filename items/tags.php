@@ -5,7 +5,7 @@
 	<h1>Browse Items</h1>
 	
 	<ul class="navigation item-tags" id="secondary-nav">
-	<?php echo nav(array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'))); ?>
+	<?php echo public_nav_items(array('Browse All' => uri('items/browse'), 'Browse by Tag' => uri('items/tags'))); ?>
 	</ul>
 
 	<?php echo tag_cloud($tags,uri('items/browse')); ?>

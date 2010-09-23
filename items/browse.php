@@ -4,9 +4,11 @@
 		
 		<h1>Browse Items (<?php echo total_results(); ?> total)</h1>
 
+        <?php if (function_exists('public_nav_items')): ?>
 		<ul class="items-nav navigation" id="secondary-nav">
-			<?php echo nav(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
+			<?php echo public_nav_items(array('Browse All' => uri('items'), 'Browse by Tag' => uri('items/tags'))); ?>
 		</ul>
+		<?php endif; ?>
 		
 		<div id="pagination-top" class="pagination"><?php echo pagination_links(); ?></div>
 		
