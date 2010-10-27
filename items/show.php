@@ -69,6 +69,8 @@
     	<h3>Citation</h3>
     	<div class="element-text"><?php echo item_citation(); ?></div>
 	</div>
+	
+	<?php echo plugin_append_to_items_show(); ?>
 
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
@@ -78,7 +80,6 @@
 		<?php echo link_to_next_item('Next Item'); ?>
 	</li>
 	</ul>
-	<?php echo plugin_append_to_items_show(); ?>
 	
 </div><!-- end primary -->
 
