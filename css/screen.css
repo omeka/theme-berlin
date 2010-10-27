@@ -250,6 +250,9 @@ body {font: 62.5% "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; b
 	.exhibit-pagination a {text-decoration:none; font-weight:bold;width:48%; float:left;}
 	.exhibit-pagination .next a {float:right; text-align:right;}
 	
+#exhibit-page-navigation {clear:both;margin-bottom:1em;float:right;}
+#exhibit-page-navigation .next-page {margin-left:2em;}
+	
 /* == Simple Pages styles == */
 .page #primary {float:left; width: 630px;}
 .page #secondary {float:right; width: 198px;}
