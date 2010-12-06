@@ -39,13 +39,19 @@
 
     	<!--  The following function prints all the the metadata associated with an item: Dublin Core, extra element sets, etc. See http://omeka.org/codex or the examples on items/browse for information on how to print only select metadata fields. -->
     	
-    	<?php echo berlin_show_item_metadata(); ?>
+    	<?php echo custom_show_item_metadata(); ?>
 	
 	</div><!-- end item-metadata -->
 	<!-- The following returns all of the files associated with an item. -->
 	<div id="itemfiles" class="element">
 	    <h3>Files</h3>
-		<div class="element-text"><?php echo display_files_for_item(); ?></div>
+		<div class="element-text">
+		  	<?php while ($file = loop_files_for_item()): ?>
+			    <?php if (!$file->hasThumbnail()): ?>
+		    	       <?php echo display_file($file); ?>
+			    <?php endif; ?>
+			<?php endwhile; ?>
+		</div>
 	</div>
 	
 	<!-- If the item belongs to a collection, the following creates a link to that collection. -->
