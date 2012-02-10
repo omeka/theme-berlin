@@ -411,18 +411,17 @@ body {
 		#primary-nav li {
 			width: 144px;
 			text-align:left;
-			text-indent:18px;
 			float:left;
 			display:block;
 			}
 		#primary-nav a {
 			text-decoration:none;
 			display:block;
-			padding:9px 0;
+			padding:9px 18px 109px 9px;
+            margin-bottom: -100px;
 			background:#fafafa;
-			width:143px;
 			border:1px solid #ccc;
-			border-width:1px 1px 0px 0;
+			border-width:1px 1px 0 0;
 			}
 		#primary-nav a:hover {
 			background:#fff;
@@ -616,6 +615,7 @@ body {
 		}
 		#footer .navigation a {
 			margin-left:8px;
+            white-space:nowrap;
 			}
 	#footer #footer-text {
 		float:left;
