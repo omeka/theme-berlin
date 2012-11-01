@@ -401,20 +401,20 @@ body {
 			line-height:1.5em;
 			text-decoration:none;
 			}
-	#primary-nav {
+	#top-nav {
 		clear:both;
 		overflow:hidden;
 		zoom:1;
 		border:1px solid #ccc;
 		border-width:0 0 1px 1px;
 		}
-		#primary-nav li {
+		#top-nav li {
 			width: 144px;
 			text-align:left;
 			float:left;
 			display:block;
 			}
-		#primary-nav a {
+		#top-nav a {
 			text-decoration:none;
 			display:block;
 			padding:9px 18px 109px 9px;
@@ -423,10 +423,10 @@ body {
 			border:1px solid #ccc;
 			border-width:1px 1px 0 0;
 			}
-		#primary-nav a:hover {
+		#top-nav a:hover {
 			background:#fff;
 			}
-		#primary-nav li.current a {
+		#top-nav li.current a {
 			background:#fff;
 			color:#ff8000;
 			}
@@ -752,7 +752,7 @@ a:link:after {
 	font-size:80%;
 }
 #search-container,
-#primary-nav,
+#top-nav,
 #header-image,
 .navigation,
 .pagination,
