@@ -608,7 +608,7 @@ body {
 		float:right;
 		font-weight:bold;
 		text-align:right;
-		/*width: 48%;*/
+		width: 48%;
 		}
 	#footer .navigation li {
 		display:inline;

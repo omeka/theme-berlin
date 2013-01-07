@@ -6,7 +6,7 @@
     )
     );
 ?>
-<div id="primary"
+<div id="primary">
     <!-- primary item title -->
    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?> </h1>
    
@@ -63,5 +63,4 @@
     </ul>
 
 </div> <!-- End of Primary. -->
-
- <?php echo foot(); ?>
+<?php echo foot(); ?>
