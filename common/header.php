@@ -12,8 +12,8 @@
     <?php echo auto_discovery_link_tags(); ?>
 
     <!-- Plugin Stuff -->
-    <?php fire_plugin_hook('public_theme_header'); ?>
-
+    <!--?php fire_plugin_hook('public_theme_header'); ?-->
+    <?php fire_plugin_hook('public-head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
@@ -22,13 +22,12 @@
     <!-- JavaScripts -->
     <?php echo head_js(); ?>
 </head>
-<?php //echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php echo body_tag(array('id'=>@$bodyid, 'class'=>@$bodyclass)); ?>
-    <?php fire_plugin_hook('public_theme_body',array('view'=>$this)); ?>
+    <?php fire_plugin_hook('public_body',array('view'=>$this)); ?>
     	<div id="wrap">
     
     		<div id="header">
-    		<?php fire_plugin_hook('public_theme_page_header'); ?>
+    		<?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
     		<div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
     		
     			<div id="search-container">
@@ -37,7 +36,9 @@
         			</div>
         </div>	
     		
-    		    <?php fire_plugin_hook('public_theme_page_content'); ?>
+    		    <?php //fire_plugin_hook('public_theme_page_content'); 
+                    
+                     ?>
     			<div id="primary-nav">
         			
         			    <?php echo public_nav_main(); ?>
@@ -45,3 +46,4 @@
     			</div>
     		<div id="content">
     
+<?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
