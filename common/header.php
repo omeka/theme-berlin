@@ -17,6 +17,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
+    queue_css_file('skeleton');
     echo head_css(); 
     ?>
     <!-- JavaScripts -->
