@@ -107,7 +107,10 @@
             clear:left;
             
         }
-       
+        #primary-nav ul.navigation{
+            list-style-type:none;
+        }
+              
        #footer{
         width:100%;
         display:inline-block;

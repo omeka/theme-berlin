@@ -19,9 +19,14 @@
     <?php
     queue_css_file('style');
     queue_css_file('skeleton');
+    queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     echo head_css(); 
     ?>
     <!-- JavaScripts -->
+   <?php queue_js_file('modernizr'); ?>
+    <?php queue_js_file('selectivizr-min'); ?>
+    <?php queue_js_file('respond.min'); ?>
+    <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
 <?php echo body_tag(array('id'=>@$bodyid, 'class'=>@$bodyclass)); ?>
@@ -34,7 +39,7 @@
     		
     			<div id="search-container">
     				    <h2>Search</h2>
-    				    <?php echo search_form(); ?>
+    				    <?php echo search_form(array('show_advanced'=>true)); ?>
         			</div>
         </div>	
     		
@@ -42,9 +47,13 @@
                     
                      ?>
     			<div id="primary-nav">
-        			
-        			    <?php echo public_nav_main(); ?>
-
+        			  
+        			   
+        			    <?php
+        			     
+        			     echo public_nav_main(); 
+        			     ?>
+                    
     			</div>
     		<div id="content">
     

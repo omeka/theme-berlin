@@ -376,9 +376,7 @@ body {
 		}
 	#search-container {
 		float:right;
-		width:30%;/*width: 270px;*/
-		text-align:right;
-		
+		width:30%;				
 		}
 		#search-container h2 {
 			display:none;
@@ -398,11 +396,44 @@ body {
 			border:1px solid #369;
 			margin-left:3px;
 			}
-		#search-container a {
+		#search-container  a{
 			font-size:1.2em;
 			line-height:1.5em;
 			text-decoration:none;
 			}
+			#advanced-search a.button{
+				width: 43px;
+				height:29px;
+				border: 1px solid #ccc;
+				background:#fafafa;
+				padding:3px;
+			}
+			#advanced-search{
+				width: 10%;
+ 			 	text-indent: -9999px;
+  				display: inline-block;
+ 			 	position: inherit;
+ 			  	top: 0;
+  				left: 90%;
+  				font-weight: bold;
+  				-webkit-box-sizing: border-box;
+  				-moz-box-sizing: border-box;
+ 				 box-sizing: border-box;
+ 			 	*behavior: url("../javascripts/boxsizing.htc");
+			}
+			
+			#advanced-search:link, #advanced-search:hover, #advanced-search:active, #advanced-search:visited{
+				color: black;
+			}
+			
+			#advanced-search:after{
+				content: "+";
+				display:block;
+				text-indent:0;
+				text-align:center;
+				margin-top:-2em;
+			}
+			
 	#primary-nav {
 		clear:both;
 		overflow:hidden;
@@ -425,14 +456,13 @@ body {
 			border:1px solid #ccc;
 			border-width:1px 1px 0 0;
 			}
-		#primary-nav a:hover {
+		#primary-nav  a:hover {
 			background:#fff;
 			}
 		#primary-nav li.current a {
 			background:#fff;
 			color:#ff8000;
 			}
-		
 /* == Content == */
 
 	/* Structure */
