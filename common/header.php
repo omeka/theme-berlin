@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <?php if ( $description = option('description')): ?>
     <meta name="description" content="<?php echo $description; ?>" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <?php endif; ?>
     
     <title><?php echo option('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
