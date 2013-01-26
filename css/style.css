@@ -398,7 +398,7 @@ body {
 			}
 		#search-container  a{
 			font-size:1.2em;
-			line-height:1.5em;
+			line-height:1.75em;
 			text-decoration:none;
 			}
 			#advanced-search a.button{
@@ -432,8 +432,12 @@ body {
 				text-indent:0;
 				text-align:center;
 				margin-top:-2em;
+				border: 1px solid #ccc;
+				background: #fafafa;
+				width: 20px;
+				height:20px;
 			}
-			
+					
 	#primary-nav {
 		clear:both;
 		overflow:hidden;
