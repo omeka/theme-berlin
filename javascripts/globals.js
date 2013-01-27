@@ -3,6 +3,36 @@ if (!Omeka) {
 }
 
 (function ($) {
+    
+        /**
+     * Add the TinyMCE WYSIWYG editor to a page.
+     * Default is to add to all textareas.
+     *
+     * @param {Object} [params] Parameters to pass to TinyMCE, these override the
+     * defaults.
+     */
+    Omeka.wysiwyg = function (params) {
+        // Default parameters
+        initParams = {
+            convert_urls: false,
+            mode: "textareas", // All textareas
+            theme: "advanced",
+            theme_advanced_toolbar_location: "top",
+            theme_advanced_statusbar_location: "none",
+            theme_advanced_toolbar_align: "left",
+            theme_advanced_buttons1: "bold,italic,underline,|,justifyleft,justifycenter,justifyright,|,bullist,numlist,|,link,formatselect,code",
+            theme_advanced_buttons2: "",
+            theme_advanced_buttons3: "",
+            plugins: "paste,inlinepopups,media",
+            media_strict: false,
+            width: "100%"
+        };
+
+        tinyMCE.init($.extend(initParams, params));
+    };
+    
+    
+    
     Omeka.showAdvancedForm = function () {
         var advancedForm = $('#advanced-form');
         var searchTextbox = $('#search-form input[type=text]');
@@ -30,5 +60,10 @@ if (!Omeka) {
             $('#search-form input[type=submit]').addClass("blue button");
         }
     };
+    
+    Omeka.dropDown = function(){
+        var primaryNav = $('#primary-nav .navigation li').size();
+      
+        
+    }
 })(jQuery);
-

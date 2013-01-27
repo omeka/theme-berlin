@@ -16,7 +16,7 @@ Grid: 846px wide, 12 columns at 54px each, 11 gutters at 18px each.
 /* == Reset == */
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
-@media screen {
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -419,7 +419,7 @@ body {
   				-webkit-box-sizing: border-box;
   				-moz-box-sizing: border-box;
  				 box-sizing: border-box;
- 			 	*behavior: url("../javascripts/boxsizing.htc");
+ 			 	/**behavior: url("../javascripts/boxsizing.htc");*/
 			}
 			
 			#advanced-search:link, #advanced-search:hover, #advanced-search:active, #advanced-search:visited{
@@ -527,7 +527,7 @@ body {
 		}
 	#home #secondary {
 		float:left;
-		width:414;/*width:414px;*/
+		width:414px;
 		}
 	#featured-collection {
 		border-bottom:1px solid #ccc;
@@ -751,7 +751,7 @@ body {
 .simple-pages-navigation .current ul {
 	display:block;
 	}
-}/*end @media screen*/
+/*end @media screen*/
 
 /* Print Styles */
 @media print {
