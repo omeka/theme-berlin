@@ -4,7 +4,61 @@
 
     /* Note: Design for a width of 768px */
 
-    @media only screen and (min-width: 768px) and (max-width: 959px) {}
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      #wrap{
+         max-width:95%; 
+         margin:36px auto; 
+        
+         }
+        #admin-bar{
+          position:relative;
+          top:auto;
+        }
+        
+        #header {
+           width: 100%;
+        }
+        #site-title{
+            width:100%;
+            clear:left;
+            text-align:center;
+            margin-bottom:0;
+        }
+        #search-container{
+            width: 100%;
+            clear:right; 
+            text-align:center;
+            margin-bottom:10px;       
+        }
+        #home #primary{
+          clear:right;
+          width:45%;
+          
+        }
+        #items.show #primary{
+            font-size:1.5em;
+            width:95%;
+        }
+        #home #secondary{
+            width:45%;
+            clear:left;
+            
+        }
+        
+        #primary-nav ul.navigation{
+            list-style-type:none;
+        }
+              
+       #footer{
+        width:100%;
+        display:inline-block;
+       }
+       
+       #footer  .navigation {
+           float:none;
+            text-align:center;
+       }
+    }
     
 /*    #Mobile (Portrait) 
 ================================================== */
@@ -14,7 +68,7 @@
     @media only screen and (max-width: 767px) {
     
         #wrap{
-         max-width:100%; 
+         max-width:95%; 
          margin:36px auto; 
          
          }
@@ -26,7 +80,11 @@
         #header {
            width: 100%;
         }
+        #primary-nav ul.navigation li{
+        	content:"+";
+        }
 	 #primary-nav .navigation{
+	   
 	   width:100%;
 	}
 
@@ -75,7 +133,7 @@
     
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         #wrap{
-         max-width:100%; 
+         max-width:95%; 
          margin:36px auto; 
         
          }
@@ -113,7 +171,7 @@
             clear:left;
             
         }
-        
+
         #primary-nav ul.navigation{
             list-style-type:none;
         }
