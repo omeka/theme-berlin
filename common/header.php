@@ -14,7 +14,7 @@
 
     <!-- Plugin Stuff -->
     <!--?php fire_plugin_hook('public_theme_header'); ?-->
-    <?php fire_plugin_hook('public-head',array('view'=>$this)); ?>
+    <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
