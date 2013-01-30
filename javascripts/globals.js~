@@ -67,7 +67,7 @@ if (!Omeka) {
       
             var dropdownMenu = $('#primary-nav');
                 dropdownMenu.prepend('<a class="menu">Menu</a>');
-                $('.menu').attr('id','0');
+            
             $('.menu').click(function(){
                 var x=$(this).attr('id');
                 
