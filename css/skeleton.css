@@ -103,7 +103,7 @@
           
         }
         #content h1{
-            font-size:1.7em;
+            font-size:1.6em;
         }
          #items.show #primary{
              font-size: 1.5em;
@@ -123,6 +123,7 @@
        #footer  .navigation {
            float:none;
             text-align:center;
+            font-size:1.2em;
        }
     }
     
