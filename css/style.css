@@ -445,11 +445,23 @@ body {
 		border:1px solid #ccc;
 		border-width:0 0 1px 1px;
 		}
+		#primary-nav a.menu{
+		    width: 116px;
+		    font-size:1.5em; 
+		    
+		 
+		   
+		}
+		#primary-nav ul{
+		    position:absolute;
+		    z-index:199
+		}
 		#primary-nav li {
 			width: 144px;
 			text-align:left;
-			float:left;
 			display:block;
+			overflow:hidden;
+			border-bottom:1px solid #0a0a0a;
 			}
 		#primary-nav a {
 			text-decoration:none;
@@ -458,10 +470,11 @@ body {
             margin-bottom: -100px;
 			background:#fafafa;
 			border:1px solid #ccc;
-			border-width:1px 1px 0 0;
+			border-width:1px 1px 1px 1px;
 			}
 		#primary-nav  a:hover {
 			background:#fff;
+			
 			}
 		#primary-nav li.current a {
 			background:#fff;
@@ -613,6 +626,7 @@ body {
 			line-height:1.5em;
 			margin-bottom:1.5em;
 			clear:both;
+			
 			}
 		#primary form .field label {
 			display:block;
@@ -628,6 +642,9 @@ body {
 			clear:both;
 			float:left;
 			margin-top:10px;
+			}
+			textarea{
+			    width:95%;
 			}
 
 /* == Footer == */

@@ -62,32 +62,37 @@ if (!Omeka) {
     };
     
     Omeka.dropDown = function(){
-           /* var primaryNav = $('#primary-nav .navigation').wrap('<ul id="dropdown"><li id="inner">');
-            $('#dropdown li#inner').prepend("<a href='#'>Menu</a>");*/
-      
+   
+           // Grab the primary-nav tag and insert a Menu string
             var dropdownMenu = $('#primary-nav');
+             var liCount = $('#primary-nav li').size();
+            // dropdownMenu.append(liCount);
+             if(liCount > 1){
                 dropdownMenu.prepend('<a class="menu">Menu</a>');
-                $('.menu').attr('id','0');
+                //Hide the rest of the menu
+              $('#primary-nav .navigation').hide();
+              
+              //function the will toggle the menu
             $('.menu').click(function(){
-                var x=$(this).attr('id');
+               var x=$(this).attr('id');
                 
                 if(x==1){
-                    $(".navigation").hide();
+                    $("#primary-nav .navigation").hide();
                     $(this).attr('id', '0');
                 }else {
-                    $(".navigation").show();
+                    $("#primary-nav .navigation").show();
                     $(this).attr('id','1');
-                    $(".navigation").css("z-index:1000");
+                    
                 }
             });
-            
+            }
             
             $('.navigation').mouseup(function(){return false;});
             
             $('.menu').mouseup(function(){return false;});
             
             mouseup(function(){
-                $('.navigation').hide();
+                $('#primary-nav .navigation').hide();
                 $('.menu').attr('id','0');
             });
             

@@ -36,7 +36,6 @@
           
         }
         #items.show #primary{
-            font-size:1.5em;
             width:95%;
         }
         #home #secondary{
@@ -80,9 +79,7 @@
         #header {
            width: 100%;
         }
-        #primary-nav ul.navigation li{
-        	content:"+";
-        }
+
 	 #primary-nav .navigation{
 	   
 	   width:100%;
@@ -104,6 +101,9 @@
           clear:both;
           width:100%;
           
+        }
+        #content h1{
+            font-size:1.7em;
         }
          #items.show #primary{
              font-size: 1.5em;
@@ -162,6 +162,8 @@
           width:100%;
           
         }
+        
+         
         #items.show #primary{
             font-size:1.5em;
             width:95%;
