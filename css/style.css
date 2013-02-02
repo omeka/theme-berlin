@@ -145,6 +145,7 @@ body {
 		line-height:1.5em;
 		margin-bottom:1.5em;
 		}
+	
     ul,
 	ol {
 		/*margin-left:1.5em;*/
@@ -756,7 +757,8 @@ body {
 /* == Simple Pages styles == */
 .page #primary {
 	float:left;
-	width: 630px;
+	width: 95%;
+    
 	}
 .page #secondary {
 	float:right;
