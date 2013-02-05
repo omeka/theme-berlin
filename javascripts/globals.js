@@ -77,10 +77,10 @@ if (!Omeka) {
                var x=$(this).attr('id');
                 
                 if(x==1){
-                    $("#primary-nav .navigation").hide();
+                    $("#primary-nav .navigation").slideUp();
                     $(this).attr('id', '0');
                 }else {
-                    $("#primary-nav .navigation").show();
+                    $("#primary-nav .navigation").slideDown();
                     $(this).attr('id','1');
                     
                 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC >
 <html lang="<?php echo get_html_lang(); ?>">
 
 <head>
@@ -16,6 +16,9 @@
     <!--?php fire_plugin_hook('public_theme_header'); ?-->
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
+     <!--[if IE]> 
+        <link rel='stylesheet' type='text/css' href="ie.css" />
+     <! [endif] -->
     <?php
     queue_css_file('style');
     queue_css_file('skeleton');
