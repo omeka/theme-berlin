@@ -754,6 +754,11 @@ body {
 	margin-left:2em;
 	}
 	
+	#exhibit-pages ul {
+    margin-left: 1em;
+    margin-top: 6px;
+}
+	
 /* == Simple Pages styles == */
 .page #primary {
 	float:left;
