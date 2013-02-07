@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC >
 <html lang="<?php echo get_html_lang(); ?>">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
@@ -12,17 +11,16 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
-    <!-- Plugin Stuff -->
-    <!--?php fire_plugin_hook('public_theme_header'); ?-->
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
      <!--[if IE]> 
-        <link rel='stylesheet' type='text/css' href="ie.css" />
-     <! [endif] -->
+        <link rel='stylesheet' type='text/css' href='ie' media='screen' />
+     <![endif]-->
     <?php
     queue_css_file('style');
     queue_css_file('skeleton');
     queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
+    
     echo head_css(); 
     ?>
     <!-- JavaScripts -->

@@ -85,16 +85,6 @@ if (!Omeka) {
                     
                 }
             });
-            }
-            
-            $('.navigation').mouseup(function(){return false;});
-            
-            $('.menu').mouseup(function(){return false;});
-            
-            mouseup(function(){
-                $('#primary-nav .navigation').hide();
-                $('.menu').attr('id','0');
-            });
-            
+            }            
     }
 })(jQuery);
