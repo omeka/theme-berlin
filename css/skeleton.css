@@ -141,14 +141,20 @@
       #exhibit .text-full {
         font-size:1.5em;
       }   
-         #collections .element-text {
+      #exhibit-page-navigation div{
+        font-size:1.5em;
+      }
+         #collections .element-text p{
         font-size:1.5em;
       }
       .item-description {
         font-size:1.5em;
       }
       #primary #featured-collection p{
-        font-size:1.5em;
+        font-size:1.8em;
+      }
+      #exhibit-pages ul{
+        font-size: 1.5em;
       }
     }
     
