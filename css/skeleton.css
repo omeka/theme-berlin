@@ -57,8 +57,11 @@
            float:none;
             text-align:center;
        }
-
-       
+        
+       #featured-item .item-description{
+            font-size: 1.5em;
+            word-wrap:break-word;
+       }
     }
     
 /*    #Mobile (Portrait) 
@@ -72,6 +75,12 @@
          max-width:95%; 
          margin:36px auto; 
          
+         }
+         #wrap p{
+            font-size: 1.5em;
+         }
+         .item-description {
+            font-size: 1.5em;
          }
         #admin-bar{
           position:relative;
@@ -128,33 +137,10 @@
             font-size:1.2em;
        }
 
-     .page #primary{
-            font-size:1.5em;
-        }
-      #exhibit .description  {
-        font-size: 1.5em;
-      } 
-      
-      #exhibit .exhibit-description{
-        font-size:1.5em;
-      }
-      #exhibit .text-full {
-        font-size:1.5em;
-      }   
-      #exhibit-page-navigation div{
-        font-size:1.5em;
-      }
-         #collections .element-text p{
-        font-size:1.5em;
-      }
-      .item-description {
-        font-size:1.5em;
-      }
-      #primary #featured-collection p{
-        font-size:1.8em;
-      }
-      #exhibit-pages ul{
-        font-size: 1.5em;
+ 
+      .exhibit-text{
+        clear: both;
+        width: 95%;
       }
     }
     
