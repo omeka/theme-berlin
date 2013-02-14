@@ -49,6 +49,7 @@
                     echo public_nav_main(); 
                ?>
            </div>
+                       <?php echo theme_header_image(); ?>
     <div id="content">
-            <?php echo theme_header_image(); ?>
+
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
