@@ -59,6 +59,8 @@ if (!Omeka) {
         } else {
             $('#search-form input[type=submit]').addClass("blue button");
         }
+        
+        
     };
     
     Omeka.dropDown = function(){
