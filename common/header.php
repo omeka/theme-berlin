@@ -50,5 +50,5 @@
                ?>
            </div>
     <div id="content">
-    
+            <?php echo theme_header_image(); ?>
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
