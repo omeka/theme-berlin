@@ -1,7 +1,6 @@
 if (!Omeka) {
     var Omeka = {};
 }
-
 (function ($) {
     
         /**
@@ -64,29 +63,30 @@ if (!Omeka) {
     };
     
     Omeka.dropDown = function(){
-   
-           // Grab the primary-nav tag and insert a Menu string
-            var dropdownMenu = $('#primary-nav');
-             var liCount = $('#primary-nav li').size();
-            // dropdownMenu.append(liCount);
-             if(liCount > 1){
-                dropdownMenu.prepend('<a class="menu">Menu</a>');
-                //Hide the rest of the menu
+ 
+       var reSize = function () {           
+           if($(window).width() < 768 ){
+              var dropdownMenu = $('#primary-nav');
+              dropdownMenu.prepend('<a class="menu">Menu</a>');
+              //Hide the rest of the menu
               $('#primary-nav .navigation').hide();
               
               //function the will toggle the menu
-            $('.menu').click(function(){
-               var x=$(this).attr('id');
+              $('.menu').click(function(){
+                 var x=$(this).attr('id');
                 
-                if(x==1){
+                  if(x==1){
                     $("#primary-nav .navigation").slideUp();
                     $(this).attr('id', '0');
-                }else {
+                  }else {
                     $("#primary-nav .navigation").slideDown();
                     $(this).attr('id','1');
+                  }
+              });
+           }
+        };
+        var initialize = $.debounce(100, reSize());
+            initialize();
                     
-                }
-            });
-            }            
-    }
+    };
 })(jQuery);
