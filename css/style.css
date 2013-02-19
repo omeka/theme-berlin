@@ -377,7 +377,7 @@ body {
 		}
 	#search-container {
 		float:right;
-		width:30%;
+		width:45%;
 		position:relative;				
 		}
 		#search-container h2 {
@@ -398,6 +398,9 @@ body {
 		    font-size:16px;
 		    line-height:24px;
 		   
+		 }
+		 #search-container input[type=submit]{
+		    width:21%;
 		 }
 		#search-container input[type=submit] {
 			padding:2px;
@@ -426,7 +429,7 @@ body {
 			}
 		    a#advanced-search.button{
               width:10%;
-              left:83%;
+              left:82.5%;
             }
 			#advanced-search{
 				width: 10%;
@@ -451,11 +454,12 @@ body {
                 top: 30px;
                 left: 0;
                 border: 1px solid #e7e7e7;
-                width: 100%;
+                width: 93%;
                 padding: 1.5em 1em;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing:    border-box;
                  box-sizing:        border-box;
+                 text-align:left;
                 *behavior: url("../javascripts/boxsizing.htc");
             }
 	
@@ -469,7 +473,7 @@ body {
 			    border:1px solid #e7e7e7;
 			    background:#369;
 			}
-					
+/******************** Navigation ******************/					
 		#primary-nav {
 		clear:both;
 		overflow:hidden;
@@ -500,6 +504,11 @@ body {
 			background:#fff;
 			color:#ff8000;
 			}
+			
+/* == Mobile nav == */
+#mobile-nav{
+  display:none;
+}			
 /* == Content == */
 
 	/* Structure */
@@ -782,7 +791,7 @@ body {
 .page #primary {
 	float:left;
 	width: 95%;
-    
+    /*font-size: 1.5em;*/
 	}
 .page #secondary {
 	float:right;

@@ -49,6 +49,11 @@
                     echo public_nav_main(); 
                ?>
            </div>
+               	   <div id="mobile-nav">
+               <?php
+                    echo public_nav_main(); 
+               ?>
+           </div>
                        <?php echo theme_header_image(); ?>
     <div id="content">
 

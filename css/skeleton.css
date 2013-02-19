@@ -43,7 +43,7 @@
             clear:left;
             
         }
-        
+      
         #primary-nav ul.navigation{
             list-style-type:none;
         }
@@ -86,6 +86,10 @@
        #search-container a{
         font-size: 1.25em;
        }
+       #advanced-form{
+        width: 70.5%;
+        margin-left: 17.5em;
+       }
     }
     
 /*    #Mobile (Portrait) 
@@ -117,7 +121,7 @@
 
 	 #primary-nav .navigation{
 	   
-	   width:116px;
+	   width:10%;
 	}
 
         #site-title{
@@ -181,33 +185,36 @@
         width:8%;
         left:75%;
        }
-       
-       #primary-nav {
+       #primary-nav{
+          display:none;
+       }
+       #mobile-nav {
+         display:block;
 		clear:both;
 		overflow:hidden;
 		zoom:1;
 		border:1px solid #ccc;
 		border-width:0 0 1px 1px;
 		}
-		#primary-nav a.menu{
+		#mobile-nav a.menu{
 		    width: 116px;
 		    font-size:1.5em; 
 		    
 		 
 		   
 		}
-		#primary-nav ul{
+		#mobile-nav  ul{
 		    position:absolute;
 		    z-index:199
 		}
-		#primary-nav li {
+		#mobile-nav li {
 			width: 144px;
 			text-align:left;
 			display:block;
 			overflow:hidden;
 			border-bottom:1px solid #0a0a0a;
 			}
-		#primary-nav a {
+		#mobile-nav a {
 			text-decoration:none;
 			display:block;
 			padding:9px 18px 109px 9px;
@@ -216,15 +223,18 @@
 			border:1px solid #ccc;
 			border-width:1px 1px 1px 1px;
 			}
-		#primary-nav  a:hover {
+		#mobile-nav a:hover {
 			background:#fff;
 			
 			}
-		#primary-nav li.current a {
+		#mobile-nav li.current a {
 			background:#fff;
 			color:#ff8000;
 			}
-     
+            #advanced-form{
+        width: 75.5%;
+        
+       }
     }
     
 /* #Mobile (Landscape)
@@ -304,7 +314,7 @@
        }
       
        a#advanced-search.button{
-        width:4%;
+        width:6%;
         left:76%;
        }
     }

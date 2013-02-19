@@ -1,6 +1,34 @@
 if (!Omeka) {
     var Omeka = {};
 }
+
+(function($,sr){
+ 
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+ 
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null; 
+          };
+ 
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+ 
+          timeout = setTimeout(delayed, threshold || 100); 
+      };
+  }
+	// smartresize 
+	jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+ 
+})(jQuery,'smartresize');
 (function ($) {
     
         /**
@@ -63,30 +91,23 @@ if (!Omeka) {
     };
     
     Omeka.dropDown = function(){
- 
-       var reSize = function () {           
-           if($(window).width() < 768 ){
-              var dropdownMenu = $('#primary-nav');
+            
+              var dropdownMenu = $('#mobile-nav');
               dropdownMenu.prepend('<a class="menu">Menu</a>');
               //Hide the rest of the menu
-              $('#primary-nav .navigation').hide();
+              $('#mobile-nav .navigation').hide();
               
               //function the will toggle the menu
               $('.menu').click(function(){
                  var x=$(this).attr('id');
                 
                   if(x==1){
-                    $("#primary-nav .navigation").slideUp();
+                    $("#mobile-nav .navigation").slideUp();
                     $(this).attr('id', '0');
                   }else {
-                    $("#primary-nav .navigation").slideDown();
+                    $("#mobile-nav .navigation").slideDown();
                     $(this).attr('id','1');
                   }
-              });
-           }
-        };
-        var initialize = $.debounce(100, reSize());
-            initialize();
-                    
+              });                    
     };
 })(jQuery);
