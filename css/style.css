@@ -783,8 +783,8 @@ body {
 	}
 	
 	#exhibit-pages ul {
-    margin-left: 1em;
-    margin-top: 6px;
+    margin-left: 1.25em;
+    margin-top: 1em;
 }
 	
 /* == Simple Pages styles == */
@@ -926,4 +926,12 @@ blockquote {
 #admin-bar li a:hover,
 #admin-bar li a:active {
     color: #fff !important;
+}
+#collection-tree{
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#collection-tree ul{
+    margin-left: 1.5em;
 }
