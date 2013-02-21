@@ -128,7 +128,7 @@ body {
 		line-height:2em;
 		margin-bottom:0;
 		}
-	#items.show h3 {
+	.items.show h3 {
 		margin:0;
 		}	
 	h1 a,
@@ -152,6 +152,7 @@ body {
 		}
     li * {
 		font-size:1em;
+		
 		}
     ul ul,
     ul ol,
@@ -388,9 +389,7 @@ body {
 			background:#fafafa;
 			padding:3px;
 			}
-/*		#search-container input.textinput:focus {
-			background:#fff;
-			}*/
+
 		 #search-container input[type=text], 
 		 #search-container input[type=submit]
 		 {
@@ -612,7 +611,7 @@ body {
 		}
 
 	/* Items Pages */
-	#items.show #primary {
+	.items.show #primary {
 		width: 558px;
 		}
 	ul.title-list {
@@ -934,4 +933,16 @@ blockquote {
 }
 #collection-tree ul{
     margin-left: 1.5em;
+}
+#search-filters ul li ul{
+	display:inline;
+	margin-left: 10px;
+}
+#search-filters li ul li{
+    display:inline-block;
+    
+ 
+}
+#search-filters ul li ul li:after{
+	content: ", ";
 }

@@ -30,8 +30,8 @@
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
-    <?php echo body_tag(array('id'=>@$bodyid, 'class'=>@$bodyclass)); ?>
-    <?php fire_plugin_hook('public_body',array('view'=>$this)); ?>
+ <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="wrap">
     
         <div id="header">
