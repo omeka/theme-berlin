@@ -231,10 +231,13 @@
 			background:#fff;
 			color:#ff8000;
 			}
-            #advanced-form{
-        width: 75.5%;
+        #advanced-form{
+           width: 75.5%;
         
-       }
+        }
+        .element-text {
+            font-size: 1.5em;
+        }
     }
     
 /* #Mobile (Landscape)
