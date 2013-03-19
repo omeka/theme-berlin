@@ -13,13 +13,9 @@
 
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
-     <!--[if IE]> 
-        <link rel='stylesheet' type='text/css' href='ie' media='screen' />
-     <![endif]-->
     <?php
     queue_css_file('style');
     queue_css_file('skeleton');
-    queue_css_url('http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
     
     echo head_css(); 
     ?>
