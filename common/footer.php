@@ -9,7 +9,7 @@
                 <p><?php echo $copyright; ?></p>
             <?php endif; ?>
         </div>
-        <nav><?php echo public_nav_main();?></nav>
+        <nav><?php echo public_nav_main()->setMaxDepth(0); ?></nav>
         <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
 		
 	</div><!-- end footer-content -->
