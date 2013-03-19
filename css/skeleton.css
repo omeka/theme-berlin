@@ -120,15 +120,15 @@
         }
 
 	 #primary-nav .navigation{
-	   
-	   width:10%;
-	}
+       
+       width:10%;
+    }
 
         #site-title{
             width:100%;
             clear:left;
             text-align:center;
-            margin-bottom:0;
+            margin-bottom:.75em;
         }
         #search-container{
             width: 100%;
@@ -190,50 +190,57 @@
        }
        #mobile-nav {
          display:block;
-		clear:both;
-		overflow:hidden;
-		zoom:1;
-		border:1px solid #ccc;
-		border-width:0 0 1px 1px;
-		}
-		#mobile-nav a.menu{
-		    width: 116px;
-		    font-size:1.5em; 
-		    
-		 
-		   
-		}
-		#mobile-nav  ul{
-		    position:absolute;
-		    z-index:199
-		}
-		#mobile-nav li {
-			width: 144px;
-			text-align:left;
-			display:block;
-			overflow:hidden;
-			border-bottom:1px solid #0a0a0a;
-			}
-		#mobile-nav a {
-			text-decoration:none;
-			display:block;
-			padding:9px 18px 109px 9px;
-            margin-bottom: -100px;
-			background:#fafafa;
-			border:1px solid #ccc;
-			border-width:1px 1px 1px 1px;
-			}
-		#mobile-nav a:hover {
-			background:#fff;
-			
-			}
-		#mobile-nav li.current a {
-			background:#fff;
-			color:#ff8000;
-			}
+        clear:both;
+        overflow:hidden;
+        zoom:1;
+        border:1px solid #ccc;
+        border-width:0 0 0 1px;
+        }
+        #mobile-nav a.menu{
+            width: 116px;
+            font-size:1.5em; 
+        }
+        #mobile-nav  ul{
+            position:absolute;
+            z-index:199;
+            background:#fafafa;
+            border-bottom:1px solid #ccc;
+        }
+        #mobile-nav li {
+            width: 144px;
+            text-align:left;
+            display:block;
+            overflow:hidden;
+            }
+        #mobile-nav a {
+            text-decoration:none;
+            display:block;
+            padding: 10px;
+            border:1px solid #ccc;
+            border-width: 1px 1px 0 0;
+            }
+            
+        #mobile-nav > a:first-child {
+            background:#fafafa;
+            cursor: pointer;
+        }
+        #mobile-nav a:hover {
+            background:#fff;
+            
+            }
+        #mobile-nav li.current a {
+            background:#fff;
+            color:#ff8000;
+            }
+            
+        #mobile-nav li ul a:before {
+            content: "-- ";
+        }
+        #mobile-nav li ul ul a:before {
+            content: "---- ";
+        }
         #advanced-form{
-           width: 75.5%;
-        
+           width: 100%;
         }
         .element-text {
             font-size: 1.5em;
