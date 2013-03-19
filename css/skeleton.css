@@ -300,25 +300,12 @@
            float:none;
             text-align:center;
        }
-
-    .page #primary{
-            font-size:1.4em;
-        }
         
         #search-container a{
         margin-left:0px;
       }
       
  
-             #search-container input[type=submit].with-advanced{
-            width:15%;
-          
-       }
-      
-       a#advanced-search.button{
-        width:6%;
-        left:76%;
-       }
     }
     
     
