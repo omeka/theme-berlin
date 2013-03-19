@@ -18,18 +18,7 @@
         #header {
            width: 100%;
         }
-        #site-title{
-            width:100%;
-            clear:left;
-            text-align:center;
-            margin-bottom:0;
-        }
-        #search-container{
-            width: 100%;
-            clear:right; 
-            text-align:center;
-            margin-bottom:10px;       
-        }
+
         #home #primary{
           clear:right;
           width:45%;
@@ -75,14 +64,6 @@
         width: 4%;
        }
        
-             #search-container input[type=submit].with-advanced{
-            width:10%;
-          
-       }
-       a#advanced-search.button{
-        width:4%;
-        left:93.5%;
-       }
        #search-container a{
         font-size: 1.5em;
        }
@@ -136,9 +117,7 @@
             /*text-align:center;*/
             margin-bottom:10px;       
         }
-        #search-container intpu[type=submit]{
-            margin-left:1em;
-        }
+
         #home #primary{
           clear:both;
           width:100%;
@@ -262,7 +241,7 @@
             width:100%;
             clear:left;
             text-align:center;
-            margin-bottom:0;
+            margin-bottom:.75em;
         }
         #search-container{
             width: 100%;
