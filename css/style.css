@@ -230,9 +230,9 @@ body {
             margin-left:0;
             }
             .pagination li {
-                display:inline;
+                display:inline-block;
                 padding:6px 8px;
-                background:#0176b4;
+                background:#369;;
                 color:#fff;
                 margin-right:1px;
                 }
@@ -581,7 +581,6 @@ body {
         #secondary-nav {
             margin-bottom:2em;
             border-bottom:1px solid #ccc;
-            margin-bottom:1.5em;
             }
                 #secondary-nav li {
                     padding:0.5em 0;
@@ -915,7 +914,7 @@ blockquote {
 
 }
 #sort-links ul li{
-    padding-left: 10px;
+    padding-right: 10px;
     display: inline-block;
 
 }
