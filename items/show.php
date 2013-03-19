@@ -1,12 +1,12 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
 <div id="primary">   <h1><?php echo metadata('item', array('Dublin Core','Title')); ?> </h1>
    
-   <?php
+    <?php
     $titles = metadata('item',array('Dublin Core','Title'),array('all'));
     
     if(count($titles) > 1):
-   ?>
-    <h3>All Titles</h3>
+    ?>
+    <h3><?php echo __('All Titles'); ?></h3>
     <ul class="title-list">
         <?php foreach($titles as $title): ?>
             <li class="item-title">
@@ -14,18 +14,18 @@
             </li>
         <?php endforeach; ?>
     </ul>
-   <?php endif; ?>
+    <?php endif; ?>
    
-   <!-- Items metadata -->
-   <h3>Files</h3>
-   <div id="item-metadata">
-       <?php echo all_element_texts('item'); ?>
-    <div id="item-images">
-      <?php echo  files_for_item();       ?>
+    <!-- Items metadata -->
+    <div id="item-metadata">
+        <?php echo all_element_texts('item'); ?>
     </div>
- 
 
-   </div> <!-- end Item metadata. -->
+    <h3><?php echo __('Files'); ?></h3>
+    <div id="item-images">
+         <?php echo files_for_item(); ?>
+    </div>
+
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
         <h3><?php echo __('Collection'); ?></h3>
