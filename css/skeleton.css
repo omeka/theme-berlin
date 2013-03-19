@@ -177,14 +177,6 @@
         margin-left:0px;
       }
       
-          #search-container input[type=submit].with-advanced{
-            width:14%;
-          
-       }
-       a#advanced-search.button{
-        width:8%;
-        left:75%;
-       }
        #primary-nav{
           display:none;
        }
@@ -338,8 +330,5 @@
        a#advanced-search.button{
         width:10%;
         left:87%;
-       }
-       #search-container a{
-        font-size: 1.25em;
        }
      }
