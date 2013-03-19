@@ -1,6 +1,7 @@
-<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
-<div id="primary">   <h1><?php echo metadata('item', array('Dublin Core','Title')); ?> </h1>
-   
+<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
+<div id="primary">
+    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+
     <?php
     $titles = metadata('item',array('Dublin Core','Title'),array('all'));
     
