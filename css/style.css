@@ -240,6 +240,23 @@ body {
                 color:#fff;
                 text-decoration:none;
                 }
+                
+          li.page-input {
+              height: 30px;
+              vertical-align: top;
+              padding: 0;
+          }
+
+          .page-input form {
+              margin: 5px 10px;
+          }
+
+          .page-input input[type=text] {
+              border: 0;
+              text-align: right;
+              width: 50px;
+              margin-right: 5px;
+          }
 
         /* Items Classes*/
         .element {
