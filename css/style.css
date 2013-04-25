@@ -610,14 +610,10 @@ body {
                 #secondary-nav li:first-child a, .secondary-nav li:first-child a {
                     padding-left: 0;
                 }
-                #secondary-nav li.current a, .secondary-nav li.current a {
+                #secondary-nav li.current a, .secondary-nav li.active a {
                     background:#fff;
                     color:#333;
                     font-weight:bold;
-                    border-top:1px solid #ccc;
-                    border-left:1px solid #ccc;
-                    border-right:1px solid #ccc;
-                    border-bottom:1px solid #fff;
                     }
                 .tags #secondary-nav .nav-browse-all a,
                 .tags .secondary-nav .nav-browse-all a {
