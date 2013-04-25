@@ -610,7 +610,7 @@ body {
                 #secondary-nav li:first-child a, .secondary-nav li:first-child a {
                     padding-left: 0;
                 }
-                #secondary-nav li.current a, .secondary-nav li.active a {
+                #secondary-nav li.active a, .secondary-nav li.active a {
                     background:#fff;
                     color:#333;
                     font-weight:bold;
