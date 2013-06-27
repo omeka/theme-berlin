@@ -28,9 +28,7 @@
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <div class="container">
-
-        <div id="header">
+        <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
@@ -38,19 +36,22 @@
                 <h2>Search</h2>
                     <?php echo search_form(array('show_advanced'=>TRUE)); ?>
             </div>
-            </div>
+        </header>
 
-           <div id="primary-nav">
-               <?php
-                    echo public_nav_main();
-               ?>
-           </div>
-                   <div id="mobile-nav">
-               <?php
-                    echo public_nav_main();
-               ?>
-           </div>
-                       <?php echo theme_header_image(); ?>
+         <div id="primary-nav">
+             <?php
+                  echo public_nav_main();
+             ?>
+         </div>
+  
+         <div id="mobile-nav">
+             <?php
+                  echo public_nav_main();
+             ?>
+         </div>
+        
+        <?php echo theme_header_image(); ?>
+                       
     <div id="content">
 
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>

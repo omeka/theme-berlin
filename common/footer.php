@@ -1,6 +1,6 @@
 </div><!-- end content -->
 
-<div id="footer">
+<footer>
 
     <div id="footer-content" class="center-div">
         <?php if($footerText = get_theme_option('Footer Text')): ?>
@@ -18,9 +18,7 @@
 
      <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
 
-</div><!-- end footer -->
-
-</div><!--end wrap-->
+</footer>
 
 <script type="text/javascript">
     jQuery(document).ready(function(){
