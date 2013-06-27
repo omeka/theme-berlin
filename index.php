@@ -1,5 +1,5 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-<div id="primary" class="eight columns omega">
+<div id="primary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
     <p><?php echo $homepageText; ?></p>
     <?php endif; ?>
@@ -24,7 +24,7 @@
 
 </div><!-- end primary -->
 
-<div id="secondary" class="eight columns alpha">
+<div id="secondary">
     <!-- Recent Items -->
     <div id="recent-items">
         <h2><?php echo __('Recently Added Items'); ?></h2>
