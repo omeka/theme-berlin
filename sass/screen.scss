@@ -1,5 +1,6 @@
 @import "base";
 @import "compass";
+@import "skeleton";
 
 /* @group ----- Generic ----- */
 
@@ -103,11 +104,10 @@ body {
 
 /* @group ----- Header ----- */
 
-#header {
+header {
+    @include container;
     padding: rhythm(2) 0;
     position: relative;
-    float: left;
-    width: 100%;
 }
 
 #site-title {
@@ -237,14 +237,18 @@ a#advanced-search.button {
     li { float: left;}
 }
 
+#admin-bar li { float: right; }
+
 #primary-nav {
     clear:both;
     position: relative;
+    @include container;
     margin-bottom: rhythm(2);
     
     .navigation { 
         position: absolute; 
         overflow: visible;
+        z-index: 100;
     }
 
     .navigation > li {
@@ -325,7 +329,6 @@ a#advanced-search.button {
 
 .pagination {
     float: left;
-    margin-left: 20px;
     
     ul { margin-left:0; }
     
@@ -357,10 +360,12 @@ a#advanced-search.button {
 /* @group ----- Global selectors ----- */
 
 #content {
-    padding: rhythm() 0;
     overflow:hidden;
     border:1px solid #ccc;
     background:#fff;
+    @include container;
+    padding: rhythm(1) 10px;
+    z-index: 0;
 }
 
 /* @end */
@@ -369,15 +374,18 @@ a#advanced-search.button {
 
 #home {
     #primary {
-        float:right;
-        padding-right: 20px;
-        @include box-sizing(border-box);
+        float:left;
+        @include columns(8);
+        @include alpha;
+        margin-right: 0;
+        padding-right: 10px;
     }
 
     #secondary {
-        float:left;
-        padding-left: 20px;
-        @include box-sizing(border-box);
+        float:right;
+        @include columns(8);
+        @include omega;
+        padding-left: 10px;
     }
 
     #content h2 {
@@ -427,29 +435,18 @@ a#advanced-search.button {
 
 /* @group ----- Items ----- */
 
-.items.browse {
-    h1, .items-nav { margin: 0 20px; }
-    
-    .items-nav { @include trailer(); }
+.items #content { 
+    @include container;
+    padding: rhythm(1) 10px;
 }
+
+.items .item + .pagination { @include leader(); }
+
+#next-item { float: right; }
 
 .item-description a.show {
     padding-left:5px;
     display:inline;
-}
-
-#sort-links{
-    float: right;
-    list-style-type:none;
-    padding: 0;
-    display:block;
-    margin-right: 20px;
-}
-
-#sort-links ul li{
-    padding-right: 10px;
-    display: inline-block;
-
 }
 
 .sort-label { display: inline-block; }
@@ -497,47 +494,17 @@ font-style:italic;
 .element {
     overflow:hidden;
     clear:both;
-    margin-bottom:1.5em;
-}
-.element-text {
-    font-size:1.2em;
-    line-height:1.5em;
-    margin:0;
-}
-.element-text p {
-    font-size:1em;
-    margin:0;
-}
-.element-text-empty {
-    font-size:1.2em;
-    line-height:1.5em;
-    margin:0;
+    @include trailer();
 }
 
 .browse .item {
     clear: both;
     border-bottom:1px solid #eee;
     padding: rhythm(2) 0;
-    margin: 0 20px;
     overflow:hidden;
 }
 
 #sort-links + .item { border-top: 1px solid #eee; }
-
-    .browse .item h2 {
-        float:left;
-        width: 198px;
-        margin-right:18px;
-    }
-    .browse .item img {
-        float:right;
-        width: 198px;
-        height: 198px;
-    }
-    .browse .item-description {
-        float:left;
-        width: 414px;
-    }
 
 .item-pagination {
     clear:both;
@@ -548,7 +515,6 @@ font-style:italic;
     .item-pagination a {
         text-decoration:none;
         font-weight:bold;
-        width:48%;
         float:left;
     }
     .item-pagination .next a {
@@ -608,85 +574,168 @@ font-style:italic;
 
 /* @end */
 
+/* @group ----- Items/Browse ----- */
+
+.browse .item {
+    h2 {
+        @include columns(4);
+        @include alpha;
+    }
+
+    .item-img {
+        @include columns(4);
+        @include omega;
+        float: right;
+        text-align: right;
+        
+        img { 
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    div { max-width: 100%; }
+}
+
+.browse .item-description {
+    @include columns(8);
+    margin: 0;
+}
+
+
+#sort-links{
+    float: right;
+    list-style-type:none;
+    padding: 0;
+    display:block;
+
+    ul li {
+        padding-left: 10px;
+        display: inline-block;
+    
+    }
+}
+
+/* @end */
+
+/* @group ----- Items/Search ----- */
+
+#advanced-search-form .field { @include trailer(); }
+
+/* @end */
+
+/* @group ----- Collections/Browse ----- */
+
+.collections .collection {
+    clear: both;
+    border-bottom: 1px solid #eee;
+    @include trailer();
+        
+    .view-items-link { @include trailer(1.5); }
+    
+    h3 { margin-bottom: 0; }
+}
+
+.pagination + .collection {
+    border-top: 1px solid #ccc;
+    @include padding-leader();
+}
+
+.collection .element-text p:only-child { margin-bottom: 0; }
+
+/* @end */
+
 /* @group ----- Search Results ----- */
 
-#primary form {
-  padding:10px 0;
-  overflow:hidden;
-  }
-#primary form .field {
-  font-size:1.2em;
-  line-height:1.5em;
-  margin-bottom:1.5em;
-  clear:both;
+#search-results + .pagination { @include leader(1.5); }
 
-  }
-#primary form .field label {
-  display:block;
-  float:left;
-  margin-right:5px;
-  }
-input#featured,
-input#public  {
-  display:block;
-  float:left;
-  }
-#primary form #submit_search {
-  clear:both;
-  float:left;
-  margin-top:10px;
-  }
-  textarea{
-      width:95%;
-        }
+#search-filters ul li ul { display:inline; }
 
-#search-filters ul li ul{
-    display:inline;
-    margin-left: 10px;
-}
-#search-filters li ul li{
-    display:inline-block;
+#search-filters li ul li { display:inline-block; }
 
+#search-filters li ul li:after { content: ", "; }
 
-}
-#search-filters ul li ul li:after{
-    content: ", ";
-}
+#search-filters li ul li:last-child:after { content: ""; }
 
 /* @end */
 
 /* @group ----- Footer ----- */
 
-#footer {
+footer {
     clear:both;
+    @include container;
     overflow:hidden;
-    /*zoom:1;*/
-    padding-top:18px;
-}
-    #footer a {
-        text-decoration:none;
-    }
-    #footer .navigation {
+    @include leader();
+
+    a { text-decoration:none; }
+
+    .navigation {
         float:right;
         font-weight:bold;
         text-align:right;
-        /*width: 48%;*/
-    }
-    #footer .navigation li {
-        display:inline;
-    }
-        #footer .navigation a {
+        
+        li { display:inline; }
+        
+        a {
             margin-left:8px;
             white-space:nowrap;
         }
-    #footer #footer-text {
-        float:left;
-        width: 48%;
     }
+}
+
+#footer-text {
+    float:left;
+    width: 48%;
+}
 
 /* @end */
 
 /* @group ----- Exhibit Builder ----- */
+
+.browse .exhibit {
+    clear: both;
+    border-bottom: 1px solid #eee;
+    @include trailer();
+}
+
+.pagination + .exhibit {
+    border-top: 1px solid #eee;
+    @include padding-leader();
+}
+
+.exhibits.summary #exhibit-pages {
+    @include columns(4);
+    @include alpha;
+    
+    a { text-decoration: none; }
+    
+    ul { 
+        margin-left: 0; 
+        @include leading-border(1px, 1, $base-font-size, solid);
+        border-color: #eee;
+    }
+    
+    li { 
+        @include trailing-border(1px, 1, $base-font-size, solid);
+        border-color: #eee;
+        @include trailer();
+    }
+}
+
+.exhibits.summary #primary {
+    @include columns(12);
+    @include omega;
+    float: right;
+    padding-left: 20px;
+    margin-left: 0;
+}
+
+.exhibits.show #exhibit-pages {
+    a { color: #fff; }
+    ul {
+        margin-left: 0;
+    }
+}
 
 .exhibit-section-nav {
     margin-bottom:2em;
@@ -714,25 +763,36 @@ input#public  {
 
 .exhibit-page-nav {
     color:#fff;
-}
-    .exhibit-page-nav li {
-        display:inline;
-        color:#fff;
-        margin-right:1px;
+    @include padding-leader(.5);
+    
+    li { float: none; }
+    
+    li ul li { float: left; }
+    
+    a {
+        display: block;
+        float: left;
     }
-    .exhibit-page-nav a:link,
-    .exhibit-page-nav a:visited {
-        color:#fff;padding:6px 8px;
+
+    a:link, a:visited {
+        padding: rhythm(.5) 10px;
         background:#0176b4;
         text-decoration:none;
     }
+}
+
+.exhibit-page-nav#secondary-nav > li { 
+    display: block;
+    overflow: auto;
+    padding: 0;
+}
+
     .exhibit-page-nav a:hover,
     .exhibit-page-nav .current a {
         background:#ff8000;
     }
     .exhibit-page-nav a:active {
         color:#fff;
-        padding:6px 8px;
         background:#0176b4;
         text-decoration:none;
     }
@@ -763,11 +823,6 @@ input#public  {
 }
 #exhibit-page-navigation .next-page {
     margin-left:2em;
-}
-
-    #exhibit-pages ul {
-    margin-left: 1.25em;
-    margin-top: 1em;
 }
 
 /* @end */

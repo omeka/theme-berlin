@@ -1,5 +1,7 @@
 /* @group ----- Global selectors ----- */
 
+#content div { max-width: 100%; }
+
 #search-container {
     clear: both;
     width: 100%;
@@ -16,10 +18,10 @@
 #mobile-nav { 
     display:block;
     clear:both;
-    overflow:hidden;
+    @include container;
     zoom:1;
     
-    ul{
+    ul {
         position:absolute;
         z-index:199;
         background:#fafafa;
@@ -53,6 +55,10 @@
         background:#fff;
         color:#ff8000;
     }
+    
+    li ul {
+        position: relative;
+    }
 
     li ul a:before {
         content: "-- ";
@@ -65,13 +71,46 @@
 
 /* @end */
 
+/* @group ----- Footer ----- */
+
+footer .navigation {
+    float: none;
+    width: 100%;
+    text-align: left;
+    @include trailer();
+    
+    li { 
+        display: block; 
+        float: none; 
+    }
+
+    a {
+        margin: 0;
+        display: block;
+    }
+}
+
+/* @end */
+
 /* @group ----- Home ----- */
 
-#home #primary, #home #secondary { padding: 0 20px; }
+#home #primary, #home #secondary { padding: rhythm(1) 0 0 0; }
 
 #home #primary > div:last-of-type {
     border-bottom: 1px solid #ccc;
-    @include trailer();
 }
+
+/* @end */
+
+/* @group ----- Items/Browse ----- */
+
+.browse .item img {
+    max-width: 50%;
+    float: left;
+    @include trailer();
+    @include leader();
+}
+
+#sort-links { float: left; }
 
 /* @end */
