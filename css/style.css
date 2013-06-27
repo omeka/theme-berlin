@@ -214,24 +214,21 @@ img a {
   width: 45%;
   position: relative;
 }
-
 #search-container h2 {
   display: none;
 }
-
-#search-container input {
+#search-container input[type=text], #search-container input[type=submit] {
   border: 1px solid #ccc;
   background: #fafafa;
   padding: 3px;
-}
-
-#search-container input[type=text],
-#search-container input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   height: 30px;
   font-size: 12px;
   line-height: 18px;
 }
-
 #search-container input[type=text] {
   width: 65%;
   behavior: url("../javascripts/boxsizing.htc");
@@ -239,7 +236,6 @@ img a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 #search-container input[type=submit] {
   padding: 2px;
   background: #369;
@@ -944,6 +940,15 @@ textarea {
   /* @end */
 }
 @media screen and (max-width: 768px) {
+  /* @group ----- Global selectors ----- */
+  #search-container {
+    clear: both;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 0em;
+  }
+
+  /* @end */
   /* @group ----- Navigation ----- */
   #primary-nav {
     display: none;
@@ -968,7 +973,6 @@ textarea {
     overflow: hidden;
     width: 100%;
   }
-
   #mobile-nav a {
     text-decoration: none;
     display: block;
@@ -976,27 +980,33 @@ textarea {
     border: 1px solid #ccc;
     border-width: 1px 1px 0 1px;
   }
-
+  #mobile-nav a:hover {
+    background: #fff;
+  }
   #mobile-nav > a:first-child {
     background: #fafafa;
     cursor: pointer;
   }
-
-  #mobile-nav a:hover {
-    background: #fff;
-  }
-
   #mobile-nav li.current a {
     background: #fff;
     color: #ff8000;
   }
-
   #mobile-nav li ul a:before {
     content: "-- ";
   }
-
   #mobile-nav li ul ul a:before {
     content: "---- ";
+  }
+
+  /* @end */
+  /* @group ----- Home ----- */
+  #home #primary, #home #secondary {
+    padding: 0 20px;
+  }
+
+  #home #primary > div:last-of-type {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.5em;
   }
 
   /* @end */

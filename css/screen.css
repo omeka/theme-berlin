@@ -160,24 +160,21 @@ img a {
   width: 45%;
   position: relative;
 }
-
 #search-container h2 {
   display: none;
 }
-
-#search-container input {
+#search-container input[type=text], #search-container input[type=submit] {
   border: 1px solid #ccc;
   background: #fafafa;
   padding: 3px;
-}
-
-#search-container input[type=text],
-#search-container input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   height: 30px;
   font-size: 12px;
   line-height: 18px;
 }
-
 #search-container input[type=text] {
   width: 65%;
   behavior: url("../javascripts/boxsizing.htc");
@@ -185,7 +182,6 @@ img a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 #search-container input[type=submit] {
   padding: 2px;
   background: #369;

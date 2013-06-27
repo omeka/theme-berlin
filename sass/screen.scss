@@ -129,39 +129,36 @@ body {
     float:right;
     width:45%;
     position:relative;
-}
+    
+    h2 { display:none; }
+    
+    input[type=text], input[type=submit] {
+        border:1px solid #ccc;
+        background:#fafafa;
+        padding:3px;
+        @include appearance(none);
+        border-radius: 0;
+        height:30px;
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+    }
 
-#search-container h2 { display:none; }
+    input[type=text] {
+        width: 65%;
+        behavior: url("../javascripts/boxsizing.htc");
+        @include box-sizing(border-box);
+    }
 
-#search-container input {
-    border:1px solid #ccc;
-    background:#fafafa;
-    padding:3px;
-}
-
-#search-container input[type=text],
-#search-container input[type=submit]
-{
-  height:30px;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-}
-
-#search-container input[type=text] {
-    width: 65%;
-    behavior: url("../javascripts/boxsizing.htc");
-    @include box-sizing(border-box);
-}
-
-#search-container input[type=submit] {
-    padding: 2px;
-    background: #369;
-    color: white;
-    position: absolute;
-    border: 0;
-    left: 65%;
-    top: 0;
-    width: 25%;
+    input[type=submit] {
+        padding: 2px;
+        background: #369;
+        color: white;
+        position: absolute;
+        border: 0;
+        left: 65%;
+        top: 0;
+        width: 25%;
+    }
 }
 
 a#advanced-search.button {
