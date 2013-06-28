@@ -2,7 +2,7 @@
 @import "compass";
 @import "skeleton";
 
-/* @group ----- Generic ----- */
+//* @group ----- Generic ----- */
 
 * { @include box-sizing(border-box); }
 
@@ -100,9 +100,9 @@ body {
 
     img a { border:none; }
 
-/* @end */
+//* @end */
 
-/* @group ----- Header ----- */
+//* @group ----- Header ----- */
 
 header {
     @include container;
@@ -223,9 +223,9 @@ a#advanced-search.button {
 
 #header-image img { max-width:100%; }
 
-/* @end */
+//* @end */
   
-/* @group ----- Navigation ----- */
+//* @group ----- Navigation ----- */
 
 .navigation {
     list-style:none;
@@ -286,12 +286,14 @@ a#advanced-search.button {
         width: 100%;
     }
     
-    li:hover > ul li { width: 120%; }
+    li:hover > ul li { 
+        width: skeleton-column-width(3);
+    }
 
     li ul li:hover > ul {
         position: absolute;
         top: 0;
-        left: 120%;
+        left: skeleton-column-width(3);
         border-left: 0;
     }
 
@@ -355,9 +357,9 @@ a#advanced-search.button {
     margin-right: 5px;
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Global selectors ----- */
+//* @group ----- Global selectors ----- */
 
 #content {
     overflow:hidden;
@@ -368,9 +370,9 @@ a#advanced-search.button {
     z-index: 0;
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Home Page ----- */
+//* @group ----- Home Page ----- */
 
 #home {
     #primary {
@@ -431,9 +433,9 @@ a#advanced-search.button {
     }
 }
     
-/* @end */
+//* @end */
 
-/* @group ----- Items ----- */
+//* @group ----- Items ----- */
 
 .items #content { 
     @include container;
@@ -572,9 +574,9 @@ font-style:italic;
     }
 
 
-/* @end */
+//* @end */
 
-/* @group ----- Items/Browse ----- */
+//* @group ----- Items/Browse ----- */
 
 .browse .item {
     h2 {
@@ -616,15 +618,15 @@ font-style:italic;
     }
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Items/Search ----- */
+//* @group ----- Items/Search ----- */
 
 #advanced-search-form .field { @include trailer(); }
 
-/* @end */
+//* @end */
 
-/* @group ----- Collections/Browse ----- */
+//* @group ----- Collections/Browse ----- */
 
 .collections .collection {
     clear: both;
@@ -643,9 +645,9 @@ font-style:italic;
 
 .collection .element-text p:only-child { margin-bottom: 0; }
 
-/* @end */
+//* @end */
 
-/* @group ----- Search Results ----- */
+//* @group ----- Search Results ----- */
 
 #search-results + .pagination { @include leader(1.5); }
 
@@ -657,9 +659,9 @@ font-style:italic;
 
 #search-filters li ul li:last-child:after { content: ""; }
 
-/* @end */
+//* @end */
 
-/* @group ----- Footer ----- */
+//* @group ----- Footer ----- */
 
 footer {
     clear:both;
@@ -688,9 +690,9 @@ footer {
     width: 48%;
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Exhibit Builder ----- */
+//* @group ----- Exhibit Builder ----- */
 
 .browse .exhibit {
     clear: both;
@@ -725,41 +727,15 @@ footer {
 .exhibits.summary #primary {
     @include columns(12);
     @include omega;
-    float: right;
-    padding-left: 20px;
+    float: left;
+    padding-right: 20px;
     margin-left: 0;
 }
 
 .exhibits.show #exhibit-pages {
     a { color: #fff; }
-    ul {
-        margin-left: 0;
-    }
+    ul { margin-left: 0; }
 }
-
-.exhibit-section-nav {
-    margin-bottom:2em;
-    border-bottom:1px solid #ccc;
-    margin-bottom:1.5em;padding:0.3em;
-}
-    .exhibit-section-nav li {
-        padding:0.5em 0;
-        display:inline;
-    }
-    .exhibit-section-nav a {
-        padding:0.5em 1em 0.5em;
-        color:#666;
-        text-decoration:none;
-    }
-    .exhibit-section-nav li a.current {
-        background:#fff;
-        color:#333;
-        font-weight:bold;
-        border-top:1px solid #ccc;
-        border-left:1px solid #ccc;
-        border-right:1px solid #ccc;
-        border-bottom:1px solid #fff;
-    }
 
 .exhibit-page-nav {
     color:#fff;
@@ -787,75 +763,28 @@ footer {
     padding: 0;
 }
 
-    .exhibit-page-nav a:hover,
-    .exhibit-page-nav .current a {
-        background:#ff8000;
-    }
-    .exhibit-page-nav a:active {
-        color:#fff;
-        background:#0176b4;
-        text-decoration:none;
-    }
-    .exhibit-page-nav .current a {
-        background:#ff8000;
-    }
-
-.exhibit-pagination {
-    clear:both;
-    overflow:hidden;
-    border-top:1px solid #eee;
-    padding-top:18px;
+.exhibit-page-nav a:hover,
+.exhibit-page-nav a:active,
+.exhibit-page-nav .current a {
+    background:#ff8000;
 }
-    .exhibit-pagination a {
-        text-decoration:none;
-        font-weight:bold;
-        width:48%;
-        float:left;
-    }
-    .exhibit-pagination .next a {
-        float:right;
-        text-align:right;
-    }
-#exhibit-page-navigation {
-    clear:both;
-    margin-bottom:1em;
+
+.exhibit-pagination .next a {
     float:right;
-}
-#exhibit-page-navigation .next-page {
-    margin-left:2em;
+    text-align:right;
 }
 
-/* @end */
-
-/* @group ----- Simple Pages styles ----- */
-
-.page #primary {
-    float:left;
-    width: 95%;
-    /*font-size: 1.5em;*/
-}
-.page #secondary {
-    float:right;
-    width: 198px;
-}
-.simple-pages-navigation ul {
-    display:none;
-}
-.simple-pages-navigation .current ul {
-    display:block;
+#exhibit-page-navigation { 
+    clear:both; 
+    margin: rhythm(2) 0 rhythm(1);
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Plugin styles ----- */
+//* @group ----- Other plugin styles ----- */
 
 #collection-tree{
-    width:95%;
     margin-left:auto;
     margin-right:auto;
 }
-#collection-tree ul{
-    margin-left: 1.5em;
-}
-
-/* @end */
+//* @end */
