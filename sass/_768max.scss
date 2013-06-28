@@ -1,4 +1,4 @@
-/* @group ----- Global selectors ----- */
+//* @group ----- Global selectors ----- */
 
 #content div { max-width: 100%; }
 
@@ -9,9 +9,9 @@
     @include trailer(0);
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Navigation ----- */
+//* @group ----- Navigation ----- */
 
 #primary-nav { display: none; }
 
@@ -69,9 +69,9 @@
     }
 }    
 
-/* @end */
+//* @end */
 
-/* @group ----- Footer ----- */
+//* @group ----- Footer ----- */
 
 footer .navigation {
     float: none;
@@ -90,9 +90,9 @@ footer .navigation {
     }
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Home ----- */
+//* @group ----- Home ----- */
 
 #home #primary, #home #secondary { padding: rhythm(1) 0 0 0; }
 
@@ -100,9 +100,9 @@ footer .navigation {
     border-bottom: 1px solid #ccc;
 }
 
-/* @end */
+//* @end */
 
-/* @group ----- Items/Browse ----- */
+//* @group ----- Items/Browse ----- */
 
 .browse .item img {
     max-width: 50%;
@@ -113,4 +113,4 @@ footer .navigation {
 
 #sort-links { float: left; }
 
-/* @end */
+//* @end */

@@ -1,17 +1,16 @@
-/*
-* Skeleton-SASS V1.0
-* Copyright 2012 by Michael Lazer-Walker
-* https://github.com/lazerwalker/Skeleton-Sass
-*
-* Based off of Skeleton v1.1:
-* https://github.com/dhgamache/Skeleton
-*
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
+// Skeleton-SASS V1.0
+// Copyright 2012 by Michael Lazer-Walker
+// https://github.com/lazerwalker/Skeleton-Sass
+//
+// Based off of Skeleton v1.1:
+// https://github.com/dhgamache/Skeleton
+//
+// Free to use under the MIT license.
+// http://www.opensource.org/licenses/mit-license.php
 
-/* #Variable Definitions
-================================================== */
+
+// #Variable Definitions
+// ==================================================
     $base-width: 960px;
     $tablet-width: 768px;
     $mobile-portrait-width: 300px;
@@ -20,8 +19,8 @@
     $num-columns: 16;
     $margin: 10px;
 
-/* Grid
-================================================== */
+// Grid
+// ==================================================
     @function skeleton-third-width($num: 1, $width: $base-width) {
         @return $num * ($width / 3) - (2 * $margin); }
 
@@ -102,10 +101,10 @@
             padding-left: 0; } }
 
 
-/* #Clearing
-================================================== */
-/* Include clearfix on parent to clear nested columns,
-or wrap each row of columns in a @include row */
+// #Clearing
+// ==================================================
+// Include clearfix on parent to clear nested columns, or wrap each row of columns in a @include row
+
 @mixin clearfix {
     zoom: 1;
     &:after { clear: both; }
@@ -117,7 +116,7 @@ or wrap each row of columns in a @include row */
         width: 0;
         height: 0; } }
 
-/* You can also use a @include clear to clear columns */
+// You can also use a @include clear to clear columns //
 @mixin clear {
     clear: both;
     display: block;
