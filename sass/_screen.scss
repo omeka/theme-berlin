@@ -119,6 +119,7 @@ header {
     @include container;
     border: solid #ccc;
     border-width: 1px 1px 0 1px;
+    padding-top: 1px;
     
     img {
         max-width: 100%;
@@ -228,6 +229,8 @@ a#advanced-search.button {
     *behavior: url("../javascripts/boxsizing.htc");
     @include box-sizing(border-box);
 }
+
+#advanced-form input[type="radio"] { margin-right: 5px;}
 
 #search-form fieldset fieldset { margin-bottom: $base-line-height; }
 

@@ -538,6 +538,7 @@ header:after {
   width: 960px;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
+  padding-top: 1px;
 }
 #header-image:after {
   content: "\0020";
@@ -674,6 +675,10 @@ a#advanced-search.button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+#advanced-form input[type="radio"] {
+  margin-right: 5px;
 }
 
 #search-form fieldset fieldset {
