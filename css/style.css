@@ -709,7 +709,6 @@ a#advanced-search.button {
   margin: 0 auto;
   padding: 0;
   width: 960px;
-  margin-bottom: 3em;
 }
 #primary-nav:after {
   content: "\0020";
@@ -735,12 +734,14 @@ a#advanced-search.button {
 }
 #primary-nav ul {
   padding-left: 0;
+  margin-left: 1px;
 }
 #primary-nav li {
   list-style-type: none;
+  margin: 0 0 -1px -1px;
 }
 #primary-nav .navigation {
-  position: absolute;
+  position: relative;
   overflow: visible;
   z-index: 100;
 }
@@ -761,7 +762,6 @@ a#advanced-search.button {
   padding: 0.75em 18px;
   background: #fafafa;
   border: 1px solid #ccc;
-  border-width: 1px 1px 0 0;
   height: 3em;
 }
 #primary-nav a:hover, #primary-nav li.active a {
@@ -777,7 +777,11 @@ a#advanced-search.button {
   top: 3em;
   border-left: 1px solid #ccc;
   left: -1px;
-  width: 100%;
+  margin-top: -1px;
+  z-index: 1000;
+  -webkit-box-shadow: #cccccc 0 3px 5px;
+  -moz-box-shadow: #cccccc 0 3px 5px;
+  box-shadow: #cccccc 0 3px 5px;
 }
 #primary-nav li:hover > ul li {
   width: 160px;
@@ -787,9 +791,7 @@ a#advanced-search.button {
   top: 0;
   left: 160px;
   border-left: 0;
-}
-#primary-nav li:hover ul li:last-child {
-  border-bottom: 1px solid #ccc;
+  margin: 0 0 0 -1px;
 }
 
 #secondary-nav, .secondary-nav {

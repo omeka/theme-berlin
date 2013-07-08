@@ -255,16 +255,19 @@ a#advanced-search.button {
     clear:both;
     position: relative;
     @include container;
-    margin-bottom: rhythm(2);
     
-    ul { padding-left: 0; }
+    ul { 
+        padding-left: 0; 
+        margin-left: 1px;
+    }
     
     li { 
         list-style-type: none; 
+        margin: 0 0 -1px -1px;
     }
     
     .navigation { 
-        position: absolute; 
+        position: relative; 
         overflow: visible;
         z-index: 100;
     }
@@ -284,7 +287,6 @@ a#advanced-search.button {
         padding: rhythm(.5) 18px;
         background:#fafafa;
         border:1px solid #ccc;
-        border-width:1px 1px 0 0;
         height: rhythm(2);
     }
 
@@ -301,7 +303,9 @@ a#advanced-search.button {
         top: rhythm(2);
         border-left: 1px solid #ccc;
         left: -1px;
-        width: 100%;
+        margin-top: -1px;
+        z-index: 1000;
+        @include box-shadow(#ccc 0 3px 5px);
     }
     
     li:hover > ul li { 
@@ -313,9 +317,8 @@ a#advanced-search.button {
         top: 0;
         left: skeleton-column-width(3);
         border-left: 0;
+        margin: 0 0 0 -1px;;
     }
-
-    li:hover ul li:last-child { border-bottom: 1px solid #ccc; }
 }
 
 #secondary-nav, .secondary-nav {
