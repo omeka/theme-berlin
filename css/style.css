@@ -1377,20 +1377,31 @@ ul.title-list {
   margin-top: 2.25em;
 }
 
-#search-filters ul {
+#item-filters ul, #search-filters ul {
   padding-left: 0;
   list-style-type: none;
 }
-#search-filters ul li ul {
-  display: inline;
-}
-#search-filters ul li ul li {
+#item-filters ul > li, #search-filters ul > li {
   display: inline-block;
 }
-#search-filters ul li ul li:after {
-  content: ", ";
+#item-filters ul > li:after, #search-filters ul > li:after {
+  content: " \00B7";
+  margin: 0 10px 0 5px;
 }
-#search-filters ul li ul li:last-child:after {
+#item-filters ul > li:last-child:after, #search-filters ul > li:last-child:after {
+  content: "\00A0";
+}
+#item-filters ul li ul, #search-filters ul li ul {
+  display: inline;
+}
+#item-filters ul li ul li, #search-filters ul li ul li {
+  display: inline-block;
+}
+#item-filters ul li ul li:after, #search-filters ul li ul li:after {
+  content: ", ";
+  margin: 0;
+}
+#item-filters ul li ul li:last-child:after, #search-filters ul li ul li:last-child:after {
   content: "";
 }
 

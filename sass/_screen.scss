@@ -712,15 +712,29 @@ font-style:italic;
 
 #search-results + .pagination { @include leader(1.5); }
 
-#search-filters ul { 
+#item-filters ul, #search-filters ul { 
     padding-left: 0; 
     list-style-type: none;
+    
+    & > li { 
+        display: inline-block; 
+        
+        &:after { 
+            content: " \00B7"; 
+            margin: 0 10px 0 5px;
+        }
+    }
+    
+    & > li:last-child:after { content: "\00A0"; }
     
     li ul { display:inline; }
     
     li ul li { display:inline-block; }
     
-    li ul li:after { content: ", "; }
+    li ul li:after { 
+        content: ", "; 
+        margin: 0;
+    }
 
     li ul li:last-child:after { content: ""; }
 }
