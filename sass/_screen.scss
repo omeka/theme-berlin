@@ -139,6 +139,11 @@ header {
     text-transform:uppercase;
     letter-spacing:.2em;
     position:relative;
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
     
 #site-title a { text-decoration:none; }

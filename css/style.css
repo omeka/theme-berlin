@@ -580,6 +580,10 @@ header:after {
   letter-spacing: .2em;
   position: relative;
 }
+#site-title img {
+  max-width: 100%;
+  height: auto;
+}
 
 #site-title a {
   text-decoration: none;
@@ -1555,6 +1559,10 @@ footer .navigation a {
     width: 100%;
     margin-top: 1.5em;
     margin-bottom: 0em;
+  }
+
+  #site-title {
+    width: 100%;
   }
 
   #primary-nav {
