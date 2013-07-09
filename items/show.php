@@ -30,7 +30,7 @@
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
         <h3><?php echo __('Collection'); ?></h3>
-        <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
+        <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
       </div>
    <?php endif; ?>
 
