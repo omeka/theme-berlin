@@ -1344,6 +1344,10 @@ ul.title-list {
   display: inline-block;
 }
 
+#outputs {
+  clear: both;
+}
+
 #advanced-search-form .field {
   margin-bottom: 1.5em;
 }
