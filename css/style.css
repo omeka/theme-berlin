@@ -1606,10 +1606,6 @@ footer .navigation a {
   }
 }
 @media screen and (max-width: 768px) {
-  #content div {
-    max-width: 100%;
-  }
-
   #search-container {
     clear: both;
     width: 100%;
