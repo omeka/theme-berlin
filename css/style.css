@@ -541,9 +541,7 @@ header:after {
   margin: 0 auto;
   padding: 0;
   width: 960px;
-  border: solid #ccc;
-  border-width: 1px 1px 0 1px;
-  padding-top: 1px;
+  z-index: 500;
 }
 #header-image:after {
   content: "\0020";
@@ -571,6 +569,8 @@ header:after {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
 }
 
 #site-title {
@@ -714,7 +714,6 @@ a#advanced-search.button {
 #primary-nav {
   clear: both;
   position: relative;
-  position: relative;
   margin: 0 auto;
   padding: 0;
   width: 960px;
@@ -742,8 +741,7 @@ a#advanced-search.button {
   }
 }
 #primary-nav ul {
-  padding-left: 0;
-  margin-left: 1px;
+  padding: 0 0 0 1px;
 }
 #primary-nav li {
   list-style-type: none;
@@ -751,12 +749,13 @@ a#advanced-search.button {
 }
 #primary-nav .navigation {
   position: relative;
-  overflow: visible;
   z-index: 100;
+  overflow: hidden;
 }
 #primary-nav .navigation > li {
   float: left;
   position: relative;
+  overflow: hidden;
 }
 #primary-nav .navigation > li:first-child a {
   border-left: 1px solid #ccc;
@@ -1726,20 +1725,6 @@ footer .navigation a {
 
   #sort-links {
     float: left;
-  }
-
-  .omeka-embed, div[style="width: 450px"] {
-    max-width: 100%;
-  }
-
-  div.thumbnail {
-    float: none !important;
-    margin-bottom: 0.75em;
-  }
-
-  div[style="width: 450px"] h1 {
-    font-size: 15px;
-    line-height: 18px;
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {

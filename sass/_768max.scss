@@ -128,19 +128,3 @@ footer .navigation {
 #sort-links { float: left; }
 
 //* @end */
-
-//* @group ----- Embedded Items Plugin ----- */
-
-.omeka-embed, div[style="width: 450px"] { max-width: 100%; }
-
-div.thumbnail { 
-    float: none !important; 
-    @include trailer(.5);
-}
-
-div[style="width: 450px"] h1 {
-    font-size: 1.25 * $base-font-size;
-    line-height: $base-line-height;
-}
-
-//* @end */
