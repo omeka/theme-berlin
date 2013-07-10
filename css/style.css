@@ -1712,6 +1712,20 @@ footer .navigation a {
   #sort-links {
     float: left;
   }
+
+  .omeka-embed, div[style="width: 450px"] {
+    max-width: 100%;
+  }
+
+  div.thumbnail {
+    float: none !important;
+    margin-bottom: 0.75em;
+  }
+
+  div[style="width: 450px"] h1 {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 @media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {
   #mobile-nav {
