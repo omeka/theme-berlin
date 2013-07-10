@@ -1,3 +1,12 @@
+//* @group ----- Generic HTML elements ----- */
+
+input[type=text], input[type=password], textarea { 
+    width: 100%; 
+    display: block;
+}
+
+//* @end */
+
 //* @group ----- Global selectors ----- */
 
 #search-container {

@@ -18,6 +18,11 @@ form, fieldset {
     margin: 0;
 }
 
+input[type=text], input[type=password], textarea {
+    border: 1px solid #ccc;
+    display: block;
+}
+
     /* -- Headings -- */
 
     h1, h2, h3, h4, h5, h6 { margin-bottom: $base-line-height; }
@@ -683,7 +688,9 @@ font-style:italic;
 
 //* @group ----- Items/Search ----- */
 
-#advanced-search-form .field { @include trailer(); }
+.field { @include trailer(); }
+
+.search-entry input[type=text] { display: inline-block; }
 
 //* @end */
 

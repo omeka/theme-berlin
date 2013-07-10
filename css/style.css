@@ -385,6 +385,11 @@ form, fieldset {
   margin: 0;
 }
 
+input[type=text], input[type=password], textarea {
+  border: 1px solid #ccc;
+  display: block;
+}
+
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 18px;
@@ -1348,8 +1353,12 @@ ul.title-list {
   clear: both;
 }
 
-#advanced-search-form .field {
+.field {
   margin-bottom: 1.5em;
+}
+
+.search-entry input[type=text] {
+  display: inline-block;
 }
 
 .collections .collection {
@@ -1606,6 +1615,11 @@ footer .navigation a {
   }
 }
 @media screen and (max-width: 768px) {
+  input[type=text], input[type=password], textarea {
+    width: 100%;
+    display: block;
+  }
+
   #search-container {
     clear: both;
     width: 100%;
