@@ -764,14 +764,25 @@ footer {
     a { text-decoration:none; }
 
     .navigation {
-        float:right;
         font-weight:bold;
-        text-align:right;
         
-        li { display:inline; }
+        li { 
+            display:inline; 
+
+            &:after { 
+                content: " \00B7"; 
+                margin: 0 10px 0 5px;
+            }
+            
+            &:last-child { margin: 0; }
+
+            &:last-child:after {
+                content: "\00A0";
+                display: none;
+            }
+        }
         
         a {
-            margin-left:8px;
             white-space:nowrap;
         }
     }

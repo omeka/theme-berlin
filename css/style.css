@@ -1453,15 +1453,23 @@ footer a {
   text-decoration: none;
 }
 footer .navigation {
-  float: right;
   font-weight: bold;
-  text-align: right;
 }
 footer .navigation li {
   display: inline;
 }
+footer .navigation li:after {
+  content: " \00B7";
+  margin: 0 10px 0 5px;
+}
+footer .navigation li:last-child {
+  margin: 0;
+}
+footer .navigation li:last-child:after {
+  content: "\00A0";
+  display: none;
+}
 footer .navigation a {
-  margin-left: 8px;
   white-space: nowrap;
 }
 
