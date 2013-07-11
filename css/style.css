@@ -541,7 +541,6 @@ header:after {
   margin: 0 auto;
   padding: 0;
   width: 960px;
-  z-index: 500;
 }
 #header-image:after {
   content: "\0020";
@@ -570,7 +569,7 @@ header:after {
   height: auto;
   vertical-align: bottom;
   border: solid #ccc;
-  border-width: 1px 1px 0 1px;
+  border-width: 0 1px 0 1px;
 }
 
 #site-title {
@@ -717,6 +716,8 @@ a#advanced-search.button {
   margin: 0 auto;
   padding: 0;
   width: 960px;
+  border-bottom: 1px solid #ccc;
+  z-index: 50;
 }
 #primary-nav:after {
   content: "\0020";
@@ -750,12 +751,12 @@ a#advanced-search.button {
 #primary-nav .navigation {
   position: relative;
   z-index: 100;
-  overflow: hidden;
+  overflow: visible;
 }
 #primary-nav .navigation > li {
   float: left;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 #primary-nav .navigation > li:first-child a {
   border-left: 1px solid #ccc;

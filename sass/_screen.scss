@@ -122,14 +122,13 @@ header {
 
 #header-image {
     @include container;
-    z-index: 500;
     
     img {
         max-width: 100%;
         height: auto;
         vertical-align: bottom;
         border: solid #ccc;
-        border-width: 1px 1px 0 1px;
+        border-width: 0 1px 0 1px;
     }
 }
 
@@ -264,6 +263,8 @@ a#advanced-search.button {
 #primary-nav {
     clear:both;
     @include container;
+    border-bottom: 1px solid #ccc;
+    z-index: 50;
     
     ul { 
         padding: 0 0 0 1px;
@@ -277,13 +278,13 @@ a#advanced-search.button {
     .navigation { 
         position: relative; 
         z-index: 100;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .navigation > li {
         float:left;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         
         &:first-child a { border-left: 1px solid #ccc; }
     }
