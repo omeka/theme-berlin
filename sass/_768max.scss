@@ -92,16 +92,6 @@ footer .navigation {
     width: 100%;
     text-align: left;
     @include trailer();
-    
-    li { 
-        display: block; 
-        float: none; 
-    }
-
-    a {
-        margin: 0;
-        display: block;
-    }
 }
 
 //* @end */
