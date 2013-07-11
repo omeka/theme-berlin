@@ -1486,7 +1486,6 @@ footer .navigation a {
 
 .pagination + .exhibit {
   border-top: 1px solid #eee;
-  padding-top: 1.5em;
 }
 
 .exhibits.summary #exhibit-pages {
@@ -1520,19 +1519,35 @@ footer .navigation a {
 .exhibits.summary #exhibit-pages a {
   text-decoration: none;
 }
-.exhibits.summary #exhibit-pages ul {
+.exhibits.summary #exhibit-pages > ul {
   margin-left: 0;
   border-top-style: solid;
   border-top-width: 0.08333em;
   padding-top: 1.41667em;
   border-color: #eee;
+  padding-left: 0;
+  list-style-type: none;
 }
-.exhibits.summary #exhibit-pages li {
+.exhibits.summary #exhibit-pages > ul > li {
   border-bottom-style: solid;
   border-bottom-width: 0.08333em;
   padding-bottom: 1.41667em;
   border-color: #eee;
   margin-bottom: 1.5em;
+}
+.exhibits.summary #exhibit-pages ul li > ul {
+  padding-left: 1.5em;
+  margin-left: 0;
+}
+.exhibits.summary #exhibit-pages ul li > ul li {
+  text-indent: -1.5em;
+}
+.exhibits.summary #exhibit-pages ul li > ul li:before {
+  content: "\2014";
+}
+.exhibits.summary #exhibit-pages li {
+  list-style-type: none;
+  margin-left: 0;
 }
 
 .exhibits.summary #primary {
@@ -1571,12 +1586,12 @@ footer .navigation a {
   color: #fff;
 }
 .exhibits.show #exhibit-pages ul {
+  padding-left: 0;
   margin-left: 0;
 }
 
 .exhibit-page-nav {
   color: #fff;
-  padding-top: 0.75em;
 }
 .exhibit-page-nav li {
   float: none;
@@ -1594,10 +1609,13 @@ footer .navigation a {
   text-decoration: none;
 }
 
-.exhibit-page-nav#secondary-nav > li {
+.exhibit-page-nav#secondary-nav li {
   display: block;
   overflow: auto;
-  padding: 0;
+  padding: 0 0 1.5em;
+}
+.exhibit-page-nav#secondary-nav li li {
+  padding-bottom: 0;
 }
 
 .exhibit-page-nav a:hover,
@@ -1614,6 +1632,15 @@ footer .navigation a {
 #exhibit-page-navigation {
   clear: both;
   margin: 3em 0 1.5em;
+}
+
+.exhibit-child-nav a {
+  display: inline-block;
+  padding: 0.75em 10px;
+  background-color: #f3f3f3;
+}
+.exhibit-child-nav li {
+  margin: 0 20px 1.5em 0;
 }
 
 #collection-tree {
@@ -1710,14 +1737,6 @@ footer .navigation a {
     width: 100%;
     text-align: left;
     margin-bottom: 1.5em;
-  }
-  footer .navigation li {
-    display: block;
-    float: none;
-  }
-  footer .navigation a {
-    margin: 0;
-    display: block;
   }
 
   #home #primary, #home #secondary {

@@ -805,7 +805,6 @@ footer {
 
 .pagination + .exhibit {
     border-top: 1px solid #eee;
-    @include padding-leader();
 }
 
 .exhibits.summary #exhibit-pages {
@@ -814,16 +813,34 @@ footer {
     
     a { text-decoration: none; }
     
-    ul { 
+    & > ul { 
         margin-left: 0; 
         @include leading-border(1px, 1, $base-font-size, solid);
         border-color: #eee;
+        padding-left: 0;
+        list-style-type: none;
     }
     
-    li { 
+    & > ul > li { 
         @include trailing-border(1px, 1, $base-font-size, solid);
         border-color: #eee;
         @include trailer();
+    }
+    
+    ul li > ul {
+        padding-left: 1.5em;
+        margin-left: 0;
+        
+        li { text-indent: -1.5em; }
+        
+        li:before { 
+            content: "\2014"; 
+        }
+    }
+    
+    li {
+        list-style-type: none; 
+        margin-left: 0;
     }
 }
 
@@ -837,14 +854,18 @@ footer {
 
 .exhibits.show #exhibit-pages {
     a { color: #fff; }
-    ul { margin-left: 0; }
+    ul { 
+        padding-left: 0; 
+        margin-left: 0;
+    }
 }
 
 .exhibit-page-nav {
     color:#fff;
-    @include padding-leader(.5);
     
-    li { float: none; }
+    li { 
+        float: none; 
+    }
     
     li ul li { float: left; }
     
@@ -860,10 +881,12 @@ footer {
     }
 }
 
-.exhibit-page-nav#secondary-nav > li { 
+.exhibit-page-nav#secondary-nav li { 
     display: block;
     overflow: auto;
-    padding: 0;
+    padding: 0 0 rhythm(1);
+    
+    li { padding-bottom: 0; }
 }
 
 .exhibit-page-nav a:hover,
@@ -880,6 +903,18 @@ footer {
 #exhibit-page-navigation { 
     clear:both; 
     margin: rhythm(2) 0 rhythm(1);
+}
+
+.exhibit-child-nav {
+    a {
+        display: inline-block;
+        padding: rhythm(.5) 10px;
+        background-color: #f3f3f3;
+    }
+    
+    li {
+        margin: 0 20px rhythm(1) 0;
+    }    
 }
 
 //* @end */
