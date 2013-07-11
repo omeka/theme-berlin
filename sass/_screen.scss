@@ -433,7 +433,11 @@ a#advanced-search.button {
         letter-spacing:.1em;
     }
     
-    #content h3 { margin-bottom: 0; }
+    #content h3 { 
+        margin-bottom: 0; 
+        
+        &:only-child { margin-bottom: $base-line-height; }
+    }
 }
 
 #featured-collection {

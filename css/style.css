@@ -966,6 +966,9 @@ a#advanced-search.button {
 #home #content h3 {
   margin-bottom: 0;
 }
+#home #content h3:only-child {
+  margin-bottom: 18px;
+}
 
 #featured-collection {
   border-bottom: 1px solid #ccc;
