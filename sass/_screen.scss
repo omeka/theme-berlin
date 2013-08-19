@@ -273,6 +273,7 @@ a#advanced-search.button {
     li { 
         list-style-type: none; 
         margin: 0 0 -1px -1px;
+        position: relative; 
     }
     
     .navigation { 
@@ -297,7 +298,6 @@ a#advanced-search.button {
         padding: rhythm(.5) 18px;
         background:#fafafa;
         border:1px solid #ccc;
-        height: rhythm(2);
     }
 
     a:hover, li.active a {
@@ -311,9 +311,7 @@ a#advanced-search.button {
         position: absolute;
         display: block; 
         top: rhythm(2);
-        border-left: 1px solid #ccc;
-        left: -1px;
-        margin-top: -1px;
+        margin-top: 1px;
         z-index: 1000;
         @include box-shadow(#ccc 0 3px 5px);
     }
