@@ -3,7 +3,7 @@
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
     <?php
-    $titles = metadata('item',array('Dublin Core','Title'),array('all'));
+    $titles = metadata('item',array('Dublin Core','Title'),'all');
 
     if(count($titles) > 1):
     ?>
