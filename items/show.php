@@ -2,21 +2,6 @@
 <div id="primary">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
-    <?php
-    $titles = metadata('item',array('Dublin Core','Title'),'all');
-
-    if(count($titles) > 1):
-    ?>
-    <h3><?php echo __('All Titles'); ?></h3>
-    <ul class="title-list">
-        <?php foreach($titles as $title): ?>
-            <li class="item-title">
-                <?php echo $title; ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    <?php endif; ?>
-
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
