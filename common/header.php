@@ -38,7 +38,7 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
             <div id="search-container">
-                <h2>Search</h2>
+                <h2><?php echo __('Search'); ?></h2>
                     <?php echo search_form(array('show_advanced'=>TRUE)); ?>
             </div>
         </header>
