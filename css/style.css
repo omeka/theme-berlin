@@ -601,6 +601,8 @@ header:after {
   float: right;
   width: 45%;
   position: relative;
+  font-size: 1.16667em;
+  line-height: 1.28571em;
 }
 #search-container h2 {
   display: none;
@@ -613,8 +615,6 @@ header:after {
   appearance: none;
   border-radius: 0;
   height: 30px;
-  font-size: 12px;
-  line-height: 18px;
 }
 #search-container input[type=text] {
   padding: 3px;
@@ -632,17 +632,15 @@ header:after {
   left: 65%;
   top: 0;
   width: 25%;
-  font-size: 1.16667em;
-  line-height: 1.28571em;
 }
 
 #advanced-search {
   width: 10%;
   right: 0;
   top: 0;
+  bottom: 0;
   border-left: 1px solid #005177;
   position: absolute;
-  line-height: 30px;
   text-decoration: none;
   width: 10%;
   text-indent: -9999px;
@@ -660,8 +658,10 @@ header:after {
   width: 100%;
   color: #fff;
   background: #369;
-  height: 30px;
   top: 0;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 30px;
 }
 
 #advanced-form {

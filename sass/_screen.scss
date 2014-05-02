@@ -157,6 +157,7 @@ header {
     float:right;
     width:45%;
     position:relative;
+    @include adjust-font-size-to(14px);
     
     h2 { display:none; }
     
@@ -166,8 +167,6 @@ header {
         @include appearance(none);
         border-radius: 0;
         height:30px;
-        font-size: $base-font-size;
-        line-height: $base-line-height;
     }
 
     input[type=text] {
@@ -185,7 +184,6 @@ header {
         left: 65%;
         top: 0;
         width: 25%;
-        @include adjust-font-size-to(14px);
     }
 }
 
@@ -193,9 +191,9 @@ header {
     width: 10%;
     right: 0;
     top: 0;
+    bottom: 0;
     border-left: 1px solid #005177;
     position: absolute;
-    line-height: 30px;
     text-decoration:none;
     width: 10%;
     text-indent: -9999px;
@@ -211,8 +209,10 @@ header {
         width: 100%;
         color: #fff;
         background:#369;
-        height: 30px;
         top: 0;
+        bottom: 0;
+        font-size: 14px;
+        line-height: 30px;
     }
 }
       
