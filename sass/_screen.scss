@@ -2,7 +2,7 @@
 @import "compass";
 @import "skeleton";
 
-//* @group ----- Generic ----- */
+/* @group ----- Generic ----- */
 
 * { @include box-sizing(border-box); }
 
@@ -16,6 +16,7 @@ body {
 form, fieldset { 
     border: 0; 
     margin: 0;
+    padding: 0;
 }
 
 input[type=text], input[type=password], textarea {
@@ -66,7 +67,7 @@ input[type=text], input[type=password], textarea {
 
     /* -- Misc Block elements -- */
 
-    p, ul, ol, dl { margin-bottom: $base-line-height; }
+    p, ul, ol, dl { margin: rhythm() 0; }
 
     ul ul, ul ol, ol ol, ol ul { margin-bottom:0; }
 
@@ -110,9 +111,9 @@ input[type=text], input[type=password], textarea {
 
     img a { border:none; }
 
-//* @end */
+/* @end */
 
-//* @group ----- Header ----- */
+/* @group ----- Header ----- */
 
 header {
     @include container;
@@ -124,11 +125,11 @@ header {
     @include container;
     
     img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         vertical-align: bottom;
         border: solid #ccc;
-        border-width: 0 1px 0 1px;
+        border-width: 1px 1px 0 1px;
     }
 }
 
@@ -211,7 +212,7 @@ a#advanced-search.button {
     @include box-sizing(border-box);
     
     &:after{
-        content:"+";
+        content:"\2026";
         display:block;
         text-indent:0;
         text-align:center;
@@ -237,15 +238,23 @@ a#advanced-search.button {
     padding: 1.5em 1em;
     *behavior: url("../javascripts/boxsizing.htc");
     @include box-sizing(border-box);
+    
+    fieldset p {
+        margin: 0;
+    }
+    
+    & > *:last-child {
+        @include trailer(0);
+    }
 }
 
 #advanced-form input[type="radio"] { margin-right: 5px;}
 
 #search-form fieldset fieldset { margin-bottom: $base-line-height; }
 
-//* @end */
+/* @end */
   
-//* @group ----- Navigation ----- */
+/* @group ----- Navigation ----- */
 
 .navigation {
     list-style:none;
@@ -263,7 +272,6 @@ a#advanced-search.button {
 #primary-nav {
     clear:both;
     @include container;
-    border-bottom: 1px solid #ccc;
     z-index: 50;
     
     ul { 
@@ -393,9 +401,9 @@ a#advanced-search.button {
     display: inline-block;
 }
 
-//* @end */
+/* @end */
 
-//* @group ----- Global selectors ----- */
+/* @group ----- Global selectors ----- */
 
 #content {
     overflow:hidden;
@@ -410,9 +418,9 @@ a#advanced-search.button {
     display: none;
 }
 
-//* @end */
+/* @end */
 
-//* @group ----- Home Page ----- */
+/* @group ----- Home Page ----- */
 
 #home {
     #primary {
@@ -465,29 +473,32 @@ a#advanced-search.button {
     }
 }
 
-.items-list {
-    padding-left: 0;
-    
-    h3 { margin-top: 0; }
-}
-
 #recent-items .item {
     overflow:hidden;
     border-bottom:1px solid #ccc;
     @include trailer();
 
     img {
-        float:right;
-        margin-left:18px;
-        margin-bottom:18px;
-        border:1px solid #ccc;
+        float: left;
+        margin: rhythm() rhythm() rhythm() 0;
+        border: 1px solid #ccc;
         padding: 2px;
+        max-width: 25%;
+        height: auto;
+    }
+    
+    h3 {
+        margin: 0;
     }
 }
     
-//* @end */
+.view-items-link {
+    @include trailer(0);
+}
 
-//* @group ----- Items ----- */
+/* @end */
+
+/* @group ----- Items ----- */
 
 .items #content { 
     @include container;
@@ -620,9 +631,9 @@ font-style:italic;
     }
 
 
-//* @end */
+/* @end */
 
-//* @group ----- Items/Browse ----- */
+/* @group ----- Items/Browse ----- */
 
 .browse .item {
     h2 {
@@ -681,17 +692,17 @@ font-style:italic;
 
 #outputs { clear: both; }
 
-//* @end */
+/* @end */
 
-//* @group ----- Items/Search ----- */
+/* @group ----- Items/Search ----- */
 
 .field { @include trailer(); }
 
 .search-entry input[type=text] { display: inline-block; }
 
-//* @end */
+/* @end */
 
-//* @group ----- Collections/Browse ----- */
+/* @group ----- Collections/Browse ----- */
 
 .collections .collection {
     clear: both;
@@ -710,9 +721,9 @@ font-style:italic;
 
 .collection .element-text p:only-child { margin-bottom: 0; }
 
-//* @end */
+/* @end */
 
-//* @group ----- Search Results ----- */
+/* @group ----- Search Results ----- */
 
 #search-results + .pagination { @include leader(1.5); }
 
@@ -743,9 +754,9 @@ font-style:italic;
     li ul li:last-child:after { content: ""; }
 }
 
-//* @end */
+/* @end */
 
-//* @group ----- Footer ----- */
+/* @group ----- Footer ----- */
 
 footer {
     clear:both;
@@ -785,9 +796,9 @@ footer {
     width: 48%;
 }
 
-//* @end */
+/* @end */
 
-//* @group ----- Exhibit Builder ----- */
+/* @group ----- Exhibit Builder ----- */
 
 .browse .exhibit {
     clear: both;
@@ -909,12 +920,12 @@ footer {
     }    
 }
 
-//* @end */
+/* @end */
 
-//* @group ----- Other plugin styles ----- */
+/* @group ----- Other plugin styles ----- */
 
 #collection-tree{
     margin-left:auto;
     margin-right:auto;
 }
-//* @end */
+/* @end */
