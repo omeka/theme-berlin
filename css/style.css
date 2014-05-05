@@ -369,8 +369,8 @@ table {
 
 /* @group ----- Generic ----- */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -610,9 +610,8 @@ header:after {
 #search-container input[type=text], #search-container input[type=submit] {
   border: 1px solid #ccc;
   background: #fafafa;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
   border-radius: 0;
   height: 30px;
 }
@@ -620,8 +619,8 @@ header:after {
   padding: 3px;
   width: 65%;
   behavior: url("../javascripts/boxsizing.htc");
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #search-container input[type=submit] {
@@ -645,8 +644,8 @@ header:after {
   width: 10%;
   text-indent: -9999px;
   behavior: url("../javascripts/boxsizing.htc");
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #advanced-search:after {
@@ -676,8 +675,8 @@ header:after {
   width: 100%;
   padding: 1.5em 1em;
   *behavior: url("../javascripts/boxsizing.htc");
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 #advanced-form fieldset p {
@@ -767,8 +766,8 @@ header:after {
 }
 #primary-nav a {
   behavior: url("../javascripts/boxsizing.htc");
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
   display: block;
@@ -789,8 +788,8 @@ header:after {
   top: 3em;
   margin-top: 1px;
   z-index: 1000;
-  -webkit-box-shadow: #cccccc 0 3px 5px;
   -moz-box-shadow: #cccccc 0 3px 5px;
+  -webkit-box-shadow: #cccccc 0 3px 5px;
   box-shadow: #cccccc 0 3px 5px;
 }
 #primary-nav li:hover > ul li {
@@ -1076,6 +1075,26 @@ header:after {
 #sort-links-list {
   display: inline-block;
   margin: 0.75em 0 0.75em 10px;
+}
+
+.desc a:after, .asc a:after {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  margin-left: 3px;
+}
+
+.desc a:after {
+  border-left: .25em solid transparent;
+  border-right: .25em solid transparent;
+  border-top: .5em solid;
+}
+
+.asc a:after {
+  border-left: .25em solid transparent;
+  border-right: .25em solid transparent;
+  border-bottom: .5em solid;
 }
 
 ul.title-list {
@@ -1533,16 +1552,16 @@ footer .navigation a {
 }
 .exhibits.summary #exhibit-pages > ul {
   margin-left: 0;
-  border-top-style: solid;
   border-top-width: 0.08333em;
+  border-top-style: solid;
   padding-top: 1.41667em;
   border-color: #eee;
   padding-left: 0;
   list-style-type: none;
 }
 .exhibits.summary #exhibit-pages > ul > li {
-  border-bottom-style: solid;
   border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
   padding-bottom: 1.41667em;
   border-color: #eee;
   margin-bottom: 1.5em;
@@ -1712,6 +1731,23 @@ footer .navigation a {
     clear: both;
     visibility: hidden;
   }
+}
+@media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {
+  #mobile-nav {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 767px) {
+  #mobile-nav {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 480px) and (max-width: 767px) {
+  #mobile-nav {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 768px) {
   #mobile-nav ul {
     position: absolute;
     z-index: 199;
@@ -1788,19 +1824,4 @@ footer .navigation a {
   }
 
   /* @end */
-}
-@media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {
-  #mobile-nav {
-    width: 768px;
-  }
-}
-@media only screen and (max-width: 768px) and (max-width: 767px) {
-  #mobile-nav {
-    width: 300px;
-  }
-}
-@media only screen and (max-width: 768px) and (min-width: 480px) and (max-width: 767px) {
-  #mobile-nav {
-    width: 420px;
-  }
 }
