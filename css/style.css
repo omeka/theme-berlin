@@ -607,7 +607,7 @@ header:after {
 #search-container h2 {
   display: none;
 }
-#search-container input[type=text], #search-container input[type=submit] {
+#search-container input[type=text], #search-container button {
   border: 1px solid #ccc;
   background: #fafafa;
   -moz-appearance: none;
@@ -617,31 +617,43 @@ header:after {
 }
 #search-container input[type=text] {
   padding: 3px;
-  width: 65%;
+  width: 100%;
   behavior: url("../javascripts/boxsizing.htc");
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-#search-container input[type=submit] {
+#search-container button {
   background: #369;
   color: white;
   position: absolute;
   border: 0;
-  left: 65%;
+  right: 0;
   top: 0;
-  width: 25%;
+  width: 30px;
+  text-indent: -9999px;
+}
+#search-container button:after {
+  font-family: "FontAwesome";
+  content: "\f002";
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
 }
 
 #advanced-search {
-  width: 10%;
+  width: 30px;
   right: 0;
   top: 0;
   bottom: 0;
   border-left: 1px solid #005177;
   position: absolute;
   text-decoration: none;
-  width: 10%;
   text-indent: -9999px;
   behavior: url("../javascripts/boxsizing.htc");
   -moz-box-sizing: border-box;
@@ -692,6 +704,10 @@ header:after {
 
 #search-form fieldset fieldset {
   margin-bottom: 18px;
+}
+
+#search-form.with-advanced button {
+  right: 30px;
 }
 
 /* @end */

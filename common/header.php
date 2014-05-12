@@ -20,7 +20,7 @@
     <?php fire_plugin_hook('public_head',array('view'=>$this)); ?>
     <!-- Stylesheets -->
     <?php
-    queue_css_file('style');
+    queue_css_file(array('iconfonts', 'style'));
 
     echo head_css();
     ?>
@@ -38,8 +38,11 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
             <div id="search-container">
-                <h2><?php echo __('Search'); ?></h2>
-                    <?php echo search_form(array('show_advanced'=>TRUE)); ?>
+                <?php if (get_theme_option('use_advanced_search')): ?>
+                <?php echo search_form(array('show_advanced' => true)); ?>
+                <?php else: ?>
+                <?Php echo search_form(); ?>
+                <?php endif; ?>
             </div>
         </header>
 
