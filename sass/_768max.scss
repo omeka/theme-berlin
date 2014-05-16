@@ -41,6 +41,7 @@ input[type=text], input[type=password], textarea {
         border-bottom:1px solid #ccc;
         width: 100%;
         padding-left: 0;
+        margin: 0;
     }
 
     li {
@@ -113,9 +114,12 @@ footer .navigation {
 
 .browse .item img {
     max-width: 50%;
-    float: left;
     @include trailer();
     @include leader();
+}
+
+.browse .item {
+    padding: rhythm() 0;
 }
 
 #sort-links { float: left; }
