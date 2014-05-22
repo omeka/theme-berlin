@@ -267,7 +267,6 @@ header {
 .navigation {
     list-style:none;
     margin:0;
-    overflow: auto;
     padding-left: 0;
 
     a { text-decoration:none; }
@@ -275,7 +274,7 @@ header {
     li { float: left;}
 }
 
-#admin-bar li { float: right; }
+#admin-bar ul { display: inline-block; }
 
 #primary-nav {
     clear:both;
@@ -347,6 +346,7 @@ header {
 
 #secondary-nav, .secondary-nav {
     @include trailer();
+    overflow: auto;
     border-bottom:1px solid #ccc;
     
     li { 
@@ -427,7 +427,8 @@ header {
 }
 
 .item img,
-.collection img {
+.collection img,
+.image img {
     border: 1px solid #ccc;
     padding: 2px;
     width: auto;
@@ -489,6 +490,7 @@ header {
         padding:2px;
         height: rhythm(7);
         width: auto;
+        background-color: #fff;
     }
 }
 
@@ -524,7 +526,7 @@ header {
     padding: rhythm(1) 10px;
 }
 
-.items .item + .pagination { @include leader(); }
+.items .item + .pagination-nav .pagination { @include leader(); }
 
 #next-item { float: right; }
 
@@ -756,7 +758,7 @@ ul.title-list {
 
 /* @group ----- Collections/Browse ----- */
 
-.collections .collection:not(.record-image) {
+.collections .collection {
     clear: both;
     border-bottom: 1px solid #eee;
     @include trailer();
@@ -775,14 +777,16 @@ ul.title-list {
 
 .collection .element-text p:only-child { margin-bottom: 0; }
 
-.collection.record-image {
+.collection .image,
+.exhibit .image {
     float: right;
     display: block;
     @include box-shadow(-3px -3px 0 #ddd, -6px -6px 0 #f2f2f2);
     margin: 0 0 rhythm() rhythm();
 }
 
-.collection.record-image img {
+.collection .image img,
+.exhibit .image img {
     float: right;
     height: rhythm(7);
 }
@@ -797,7 +801,8 @@ ul.title-list {
     @include leader(.5);
 }
 
-.browse .collection.record-image {
+.browse .collection .image,
+.browse .exhibit .image {
     float: left;
     height: rhythm(7);
     margin: 0 rhythm() rhythm() 0;
