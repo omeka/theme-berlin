@@ -1502,6 +1502,20 @@ ul.title-list {
   margin-top: 2.25em;
 }
 
+#search-results td {
+  vertical-align: top;
+}
+
+#search-results .image {
+  float: left;
+  height: 6em;
+  margin: 0 1.5em 0 0;
+}
+#search-results .image img {
+  height: 100%;
+  width: auto;
+}
+
 #item-filters ul, #search-filters ul {
   padding-left: 0;
   list-style-type: none;

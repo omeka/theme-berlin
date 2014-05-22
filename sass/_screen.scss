@@ -823,6 +823,21 @@ ul.title-list {
 
 #search-results + .pagination { @include leader(1.5); }
 
+#search-results td {
+    vertical-align: top;
+}
+
+#search-results .image {
+    float: left;
+    height: rhythm(4);
+    margin: 0 rhythm() 0 0;
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
 #item-filters ul, #search-filters ul { 
     padding-left: 0; 
     list-style-type: none;
