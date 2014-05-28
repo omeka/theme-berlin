@@ -752,6 +752,8 @@ ul.title-list {
 
 .field { @include trailer(); }
 
+.search-entry select { @include trailer(.5); }
+
 .search-entry input[type=text] { display: inline-block; }
 
 /* @end */

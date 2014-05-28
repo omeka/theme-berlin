@@ -1422,6 +1422,10 @@ ul.title-list {
   margin-bottom: 1.5em;
 }
 
+.search-entry select {
+  margin-bottom: 0.75em;
+}
+
 .search-entry input[type=text] {
   display: inline-block;
 }
