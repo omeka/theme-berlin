@@ -893,6 +893,10 @@ footer {
             white-space:nowrap;
         }
     }
+    
+    nav + p {
+        text-align: right;
+    }
 }
 
 #footer-text {

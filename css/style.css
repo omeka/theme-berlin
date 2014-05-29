@@ -1459,9 +1459,9 @@ ul.title-list {
 .collection .image,
 .exhibit .image {
   display: block;
-  -webkit-box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
-  -moz-box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
-  box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  -webkit-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  -moz-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
   margin: 0 1.5em 1.5em 9px;
 }
 
@@ -1600,6 +1600,9 @@ footer .navigation li:last-child:after {
 }
 footer .navigation a {
   white-space: nowrap;
+}
+footer nav + p {
+  text-align: right;
 }
 
 #footer-text {
