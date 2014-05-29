@@ -921,13 +921,18 @@ header:after {
   display: none;
 }
 
-.item img,
-.collection img,
+.image {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
 .image img {
   border: 1px solid #ccc;
+  float: left;
   padding: 2px;
   width: auto;
   vertical-align: top;
+  height: 100%;
 }
 
 .record {
@@ -1002,34 +1007,29 @@ header:after {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-#home #content h3 {
-  margin-bottom: 0;
-}
-#home #content h3:only-child {
-  margin-bottom: 18px;
-}
 
-#featured-collection {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5em;
-  overflow: auto;
-}
-#featured-collection:last-of-type {
-  border-bottom: 0;
-}
-
-#featured-item {
+#featured-item,
+#featured-collection,
+#featured-exhibit {
   overflow: hidden;
   background: #eee;
   padding: 1.5em 20px;
   margin-bottom: 1.5em;
 }
-#featured-item h2 {
-  margin-top: 0;
+#featured-item h2,
+#featured-collection h2,
+#featured-exhibit h2 {
+  margin: 0;
 }
-#featured-item img {
-  float: right;
-  margin: 0 0 1.5em 20px;
+#featured-item h3,
+#featured-collection h3,
+#featured-exhibit h3 {
+  margin: 0 0 1em;
+}
+#featured-item img,
+#featured-collection img,
+#featured-exhibit img {
+  float: left;
   border: 1px solid #ccc;
   padding: 2px;
   height: 10.5em;
@@ -1042,16 +1042,11 @@ header:after {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.5em;
 }
-#recent-items .item img {
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
-  border: 1px solid #ccc;
-  padding: 2px;
-  max-width: 25%;
-  height: auto;
+#recent-items .item .image {
+  height: 6em;
 }
 #recent-items .item h3 {
-  margin: 0;
+  margin-top: 0;
 }
 
 .view-items-link {
@@ -1463,17 +1458,15 @@ ul.title-list {
 
 .collection .image,
 .exhibit .image {
-  float: right;
   display: block;
-  -webkit-box-shadow: -3px -3px 0 #dddddd, -6px -6px 0 #f2f2f2;
-  -moz-box-shadow: -3px -3px 0 #dddddd, -6px -6px 0 #f2f2f2;
-  box-shadow: -3px -3px 0 #dddddd, -6px -6px 0 #f2f2f2;
-  margin: 0 0 1.5em 1.5em;
+  -webkit-box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  -moz-box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  box-shadow: -4px -4px 0 -1px #f2f2f2, -4px -4px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  margin: 0 1.5em 1.5em 9px;
 }
 
 .collection .image img,
 .exhibit .image img {
-  float: right;
   height: 10.5em;
 }
 
@@ -1493,7 +1486,6 @@ ul.title-list {
 .browse .exhibit .image {
   float: left;
   height: 10.5em;
-  margin: 0 1.5em 1.5em 0;
 }
 .browse .collection .image img,
 .browse .exhibit .image img {
