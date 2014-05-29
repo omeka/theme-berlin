@@ -537,23 +537,20 @@ header {
 }
 
 .desc a:after, .asc a:after {
-    content: "";
+    font-family: "FontAwesome";
     display: inline-block;
     height: 0;
     width: 0;
-    margin-left: 3px;
+    text-decoration: underline;
+    margin-right: 10px;
 }
 
 .desc a:after {
-    border-left: .25em solid transparent;
-    border-right: .25em solid transparent;
-    border-top: .5em solid;
+    content: "\00a0\f0d8";
 }
 
 .asc a:after {
-    border-left: .25em solid transparent;
-    border-right: .25em solid transparent;
-    border-bottom: .5em solid;
+    content: "\00a0\f0d7";
 }
 
 ul.title-list {
