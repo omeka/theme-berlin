@@ -1841,6 +1841,37 @@ footer nav + p {
   margin: 0 20px 1.5em 0;
 }
 
+.exhibit .description {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 520px;
+}
+@media only screen and (max-width: 767px) {
+  .exhibit .description {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .exhibit .description {
+    width: 412px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .exhibit .description {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .exhibit .description {
+    width: 420px;
+  }
+}
+.exhibit .description p:first-of-type {
+  margin-top: 0.75em;
+}
+
 /* @end */
 /* @group ----- Other plugin styles ----- */
 #collection-tree {

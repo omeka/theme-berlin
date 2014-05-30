@@ -1040,6 +1040,14 @@ footer {
     }    
 }
 
+.exhibit .description {
+    @include columns(9);
+    
+    p:first-of-type {
+        @include leader(.5);
+    }
+}
+
 /* @end */
 
 /* @group ----- Other plugin styles ----- */
