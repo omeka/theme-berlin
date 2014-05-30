@@ -1428,6 +1428,25 @@ ul.title-list {
   display: inline-block;
 }
 
+.remove_search {
+  text-indent: -9999px;
+  width: 18px;
+  position: relative;
+  height: 18px;
+  color: #666;
+}
+.remove_search:after {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  text-indent: 0;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  line-height: 18px;
+}
+
 /* @end */
 /* @group ----- Collections/Browse ----- */
 .collections .collection {

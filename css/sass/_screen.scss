@@ -747,6 +747,26 @@ ul.title-list {
 
 .search-entry input[type=text] { display: inline-block; }
 
+.remove_search {
+    text-indent: -9999px;
+    width: $base-line-height;
+    position: relative;
+    height: $base-line-height;
+    color: #666;
+    
+    &:after {
+        content: "\f00d";
+        font-family: "FontAwesome";
+        text-indent: 0;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        line-height: $base-line-height;
+    }
+}
+
 /* @end */
 
 /* @group ----- Collections/Browse ----- */
