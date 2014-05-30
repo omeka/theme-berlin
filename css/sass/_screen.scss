@@ -782,25 +782,40 @@ ul.title-list {
     height: rhythm(7);
 }
 
-.browse .collection h2 {
-    margin-top: 0;
-}
-
 #sort-links + .collection {
     border-color: #eee;
     @include leading-border(1px, 1, $base-font-size, solid);
     @include leader(.5);
 }
 
+.browse .collection h2,
+.browse .exhibit h2 {
+    @include columns(4);
+    @include alpha;
+    margin: 0;
+    max-width: 100%;
+}
+
 .browse .collection .image,
 .browse .exhibit .image {
-    float: left;
+    @include omega;
+    float: right;
+    text-align: right;
     height: rhythm(7);
     
     img {
         height: 100%;
         width: auto;
     }
+}
+
+.collection-meta {
+    @include columns(9);
+}
+
+.collection-description p:first-of-type,
+.view-items-link:only-child {
+    @include leader(.5);
 }
 
 .browse .collection .element {

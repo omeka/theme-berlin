@@ -1467,10 +1467,6 @@ ul.title-list {
   height: 10.5em;
 }
 
-.browse .collection h2 {
-  margin-top: 0;
-}
-
 #sort-links + .collection {
   border-color: #eee;
   border-top-style: solid;
@@ -1479,15 +1475,86 @@ ul.title-list {
   margin-top: 0.75em;
 }
 
+.browse .collection h2,
+.browse .exhibit h2 {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-left: 0;
+  margin: 0;
+  max-width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .browse .collection h2,
+  .browse .exhibit h2 {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .browse .collection h2,
+  .browse .exhibit h2 {
+    width: 172px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .browse .collection h2,
+  .browse .exhibit h2 {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .browse .collection h2,
+  .browse .exhibit h2 {
+    width: 420px;
+  }
+}
+
 .browse .collection .image,
 .browse .exhibit .image {
-  float: left;
+  margin-right: 0;
+  float: right;
+  text-align: right;
   height: 10.5em;
 }
 .browse .collection .image img,
 .browse .exhibit .image img {
   height: 100%;
   width: auto;
+}
+
+.collection-meta {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 520px;
+}
+@media only screen and (max-width: 767px) {
+  .collection-meta {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .collection-meta {
+    width: 412px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .collection-meta {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .collection-meta {
+    width: 420px;
+  }
+}
+
+.collection-description p:first-of-type,
+.view-items-link:only-child {
+  margin-top: 0.75em;
 }
 
 .browse .collection .element {
