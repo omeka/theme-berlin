@@ -944,6 +944,7 @@ footer {
     clear: both;
     border-bottom: 1px solid #eee;
     @include trailer();
+    overflow: auto;
 }
 
 .pagination + .exhibit {
