@@ -578,7 +578,7 @@ ul.title-list {
   }
 
     .items.show h3 {
-        margin:0;
+        @include trailer(.5);
     }
 
 /* Items Classes*/
@@ -617,6 +617,16 @@ ul.title-list {
 .item .tags {
     clear:left;
     margin-left:216px;
+}
+
+.item-file a {
+    display: block;
+    height: rhythm(6);
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
 }
 
 .item h2 {
