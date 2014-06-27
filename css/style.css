@@ -369,8 +369,8 @@ table {
 
 /* @group ----- Generic ----- */
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -610,8 +610,9 @@ header:after {
 #search-container input[type=text], #search-container button {
   border: 1px solid #ccc;
   background: #fafafa;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: 0;
   height: 30px;
 }
@@ -619,8 +620,8 @@ header:after {
   padding: 3px;
   width: 100%;
   behavior: url("../javascripts/boxsizing.htc");
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 #search-container button {
@@ -656,8 +657,8 @@ header:after {
   text-decoration: none;
   text-indent: -9999px;
   behavior: url("../javascripts/boxsizing.htc");
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 #advanced-search:after {
@@ -687,8 +688,8 @@ header:after {
   width: 100%;
   padding: 1.5em 1em;
   *behavior: url("../javascripts/boxsizing.htc");
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 #advanced-form fieldset p {
@@ -781,8 +782,8 @@ header:after {
 }
 #primary-nav a {
   behavior: url("../javascripts/boxsizing.htc");
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
   display: block;
@@ -803,8 +804,8 @@ header:after {
   top: 3em;
   margin-top: 1px;
   z-index: 1000;
-  -moz-box-shadow: #cccccc 0 3px 5px;
   -webkit-box-shadow: #cccccc 0 3px 5px;
+  -moz-box-shadow: #cccccc 0 3px 5px;
   box-shadow: #cccccc 0 3px 5px;
 }
 #primary-nav li:hover > ul li {
@@ -1474,8 +1475,8 @@ ul.title-list {
 .collection .image,
 .exhibit .image {
   display: block;
-  -moz-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
   -webkit-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
+  -moz-box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
   box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #cccccc, -8px -8px 0 -1px #dddddd, -8px -8px 0 #cccccc;
   margin: 0 1.5em 1.5em 9px;
 }
@@ -1487,8 +1488,8 @@ ul.title-list {
 
 #sort-links + .collection {
   border-color: #eee;
-  border-top-width: 0.08333em;
   border-top-style: solid;
+  border-top-width: 0.08333em;
   padding-top: 1.41667em;
   margin-top: 0.75em;
 }
@@ -1577,6 +1578,32 @@ ul.title-list {
 
 .browse .collection .element {
   clear: none;
+}
+
+/* @end */
+/* @group ----- Collections/Show ----- */
+.collections .item-img {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+.collections .item-img a {
+  display: block;
+  height: 6em;
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.collections .item-img img {
+  height: 100%;
+  width: auto;
+}
+
+.collections .item {
+  overflow: hidden;
+  border-color: #ccc;
+  border-top-style: solid;
+  border-top-width: 0.08333em;
+  padding-top: -0.08333em;
+  margin-top: 1.5em;
 }
 
 /* @end */
@@ -1738,16 +1765,16 @@ footer nav + p {
 }
 .exhibits.summary #exhibit-pages > ul {
   margin-left: 0;
-  border-top-width: 0.08333em;
   border-top-style: solid;
+  border-top-width: 0.08333em;
   padding-top: 1.41667em;
   border-color: #eee;
   padding-left: 0;
   list-style-type: none;
 }
 .exhibits.summary #exhibit-pages > ul > li {
-  border-bottom-width: 0.08333em;
   border-bottom-style: solid;
+  border-bottom-width: 0.08333em;
   padding-bottom: 1.41667em;
   border-color: #eee;
   margin-bottom: 1.5em;
@@ -1948,23 +1975,6 @@ footer nav + p {
     clear: both;
     visibility: hidden;
   }
-}
-@media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {
-  #mobile-nav {
-    width: 768px;
-  }
-}
-@media only screen and (max-width: 768px) and (max-width: 767px) {
-  #mobile-nav {
-    width: 300px;
-  }
-}
-@media only screen and (max-width: 768px) and (min-width: 480px) and (max-width: 767px) {
-  #mobile-nav {
-    width: 420px;
-  }
-}
-@media screen and (max-width: 768px) {
   #mobile-nav ul {
     position: absolute;
     z-index: 199;
@@ -2045,4 +2055,19 @@ footer nav + p {
   }
 
   /* @end */
+}
+@media only screen and (max-width: 768px) and (min-width: 768px) and (max-width: 959px) {
+  #mobile-nav {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 767px) {
+  #mobile-nav {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 480px) and (max-width: 767px) {
+  #mobile-nav {
+    width: 420px;
+  }
 }

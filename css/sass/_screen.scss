@@ -844,6 +844,34 @@ ul.title-list {
 
 /* @end */
 
+/* @group ----- Collections/Show ----- */
+
+.collections .item-img {
+    float: left;
+    margin: 0 rhythm() 0 0;
+    
+    a {
+        display: block;
+        height: rhythm(4);
+        border: 1px solid #ccc;
+        padding: 2px;
+    }
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.collections .item {
+    overflow: hidden;
+    border-color: #ccc;
+    @include leading-border(1px, 0, $base-font-size, solid);
+    @include leader();
+}
+
+/* @end */
+
 /* @group ----- Search Results ----- */
 
 #search-results + .pagination { @include leader(1.5); }
