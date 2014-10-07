@@ -7,7 +7,7 @@
 * { @include box-sizing(border-box); }
 
 body {
-    font: $base-font-size "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: $base-font-size Helvetica, Arial, sans-serif;
     line-height: $base-line-height;
     color: #333;
     background: #fff;
@@ -989,9 +989,15 @@ footer {
     border-top: 1px solid #eee;
 }
 
-.exhibits.summary #exhibit-pages {
+#exhibit-pages {
     @include columns(4);
     @include alpha;
+    
+    h4 {
+        font-family: 'Gill Sans', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
     
     a { text-decoration: none; }
     
@@ -1024,51 +1030,23 @@ footer {
         list-style-type: none; 
         margin-left: 0;
     }
+    
+    .current {
+        font-weight: bold;
+        
+        & > *:not(a) {
+            font-weight: normal;
+        }
+    }
 }
 
-.exhibits.summary #primary {
+.exhibits #primary,
+#exhibit-page-navigation {
     @include columns(12);
     @include omega;
     float: left;
     padding-right: 20px;
     margin-left: 0;
-}
-
-.exhibits.show #exhibit-pages {
-    a { color: #fff; }
-    ul { 
-        padding-left: 0; 
-        margin-left: 0;
-    }
-}
-
-.exhibit-page-nav {
-    color:#fff;
-    
-    li { 
-        float: none; 
-    }
-    
-    li ul li { float: left; }
-    
-    a {
-        display: block;
-        float: left;
-    }
-
-    a:link, a:visited {
-        padding: rhythm(.5) 10px;
-        background:#0176b4;
-        text-decoration:none;
-    }
-}
-
-.exhibit-page-nav#secondary-nav li { 
-    display: block;
-    overflow: auto;
-    padding: 0 0 rhythm(1);
-    
-    li { padding-bottom: 0; }
 }
 
 .exhibit-page-nav a:hover,
@@ -1083,20 +1061,8 @@ footer {
 }
 
 #exhibit-page-navigation { 
-    clear:both; 
+    clear: none;
     margin: rhythm(2) 0 rhythm(1);
-}
-
-.exhibit-child-nav {
-    a {
-        display: inline-block;
-        padding: rhythm(.5) 10px;
-        background-color: #f3f3f3;
-    }
-    
-    li {
-        margin: 0 20px rhythm(1) 0;
-    }    
 }
 
 .exhibit .description {
