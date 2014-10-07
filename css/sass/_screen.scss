@@ -1038,6 +1038,18 @@ footer {
             font-weight: normal;
         }
     }
+    
+    & > ul > li:not(.parent) ul {
+        display: none;
+    }
+
+    & > ul > li.current ul {
+        display: block;
+    }
+}
+
+#exhibit-pages ul ul {
+    margin: 0;
 }
 
 .exhibits #primary,

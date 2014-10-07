@@ -12,7 +12,13 @@ echo head(array(
 
 <nav id="exhibit-pages">
     <h4><?php echo exhibit_builder_link_to_exhibit($exhibit, metadata('exhibit', 'title')); ?></h4>
-    <?php echo berlin_exhibit_builder_page_nav(); ?>
+    <ul>
+        <?php $currentPageId = metadata('exhibit_page', 'id'); ?>
+        <?php set_exhibit_pages_for_loop_by_exhibit(); ?>
+        <?php foreach (loop('exhibit_page') as $exhibitPage): ?>
+        <?php echo berlin_exhibit_builder_page_summary($exhibitPage, $currentPageId); ?>
+        <?php endforeach; ?>
+    </ul>
 </nav>
 
 <div id="exhibit-page-navigation">
