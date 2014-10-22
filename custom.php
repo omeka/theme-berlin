@@ -31,6 +31,5 @@ function berlin_exhibit_builder_page_summary($exhibitPage = null, $currentPageId
         $html .= '</ul>';
     }
     $html .= '</li>';
-    set_current_record('exhibit page', $currentPage);
     return $html;
 }

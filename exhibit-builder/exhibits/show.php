@@ -14,10 +14,12 @@ echo head(array(
     <h4><?php echo exhibit_builder_link_to_exhibit($exhibit, metadata('exhibit', 'title')); ?></h4>
     <ul>
         <?php $currentPageId = metadata('exhibit_page', 'id'); ?>
+        <?php $currentPage = get_current_record('exhibit page'); ?>
         <?php set_exhibit_pages_for_loop_by_exhibit(); ?>
         <?php foreach (loop('exhibit_page') as $exhibitPage): ?>
         <?php echo berlin_exhibit_builder_page_summary($exhibitPage, $currentPageId); ?>
         <?php endforeach; ?>
+        <?php set_current_record('exhibit page', $currentPage); ?>
     </ul>
 </nav>
 
