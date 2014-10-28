@@ -1919,11 +1919,6 @@ footer nav + p {
 }
 
 /* @end */
-@media screen and (max-width: 960px) {
-  #featured-item img {
-    max-width: 50%;
-  }
-}
 @media screen and (max-width: 768px) {
   /* @group ----- Generic HTML elements ----- */
   input[type=text], input[type=password], textarea {
