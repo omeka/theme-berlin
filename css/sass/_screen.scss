@@ -471,8 +471,7 @@ header {
     }
 }
 
-#featured-item,
-#featured-collection,
+.featured,
 #featured-exhibit {
     overflow:hidden;
     background:#eee;
@@ -619,7 +618,7 @@ ul.title-list {
     margin-left:216px;
 }
 
-.item-file a {
+.item .item-file a {
     display: block;
     height: rhythm(6);
     
@@ -682,31 +681,32 @@ ul.title-list {
 
 /* @group ----- Items/Browse ----- */
 
-.browse .item {
-    h2 {
-        @include columns(4);
-        @include alpha;
-        margin-bottom: 0;
-        max-width: 100%;
-    }
-
-    .item-meta .item-img {
-        @include columns(4);
-        @include omega;
-        float: right;
-        text-align: right;
-        
-        img { 
-            height: rhythm(7);
-        }
-    }
-    
-    div { max-width: 100%; }
+.browse .item h2,
+.browse .item-meta .item-img {
+    @include columns(4);
 }
+
+.browse .item h2 {
+    @include alpha;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.browse .item-meta .item-img {
+    @include omega;
+    float: right;
+    text-align: right;
+}
+
+.browse .item-img img { 
+    height: rhythm(7);
+}
+
 
 .browse .item-meta {
     @include columns(12);
     margin: 0;
+    max-width: 100%;
     
     p:first-of-type { margin-top: 0; }
 }
@@ -714,6 +714,7 @@ ul.title-list {
 .browse .item-meta > div {
     @include columns(8);
     margin: 0;
+    max-width: 100%;
 }
 
 .browse .item-meta .item-description { 

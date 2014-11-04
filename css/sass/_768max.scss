@@ -113,13 +113,30 @@ footer .navigation {
 /* @group ----- Items/Browse ----- */
 
 .browse .item img {
-    max-width: 50%;
     @include trailer();
     @include leader();
 }
 
+.browse .item.record h2 {
+    @include trailer(1, 2 * $base-font-size);
+}
+
+.browse .item-meta .item-img {
+    width: auto;
+    float: left;
+    margin: 0 rhythm() 0 0;
+    
+    img {
+        @include leader(0);
+    }
+}
+
 .browse .item {
     padding: rhythm() 0;
+}
+
+.browse .item-meta > div {
+    float: none;
 }
 
 #sort-links { float: left; }

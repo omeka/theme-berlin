@@ -16,7 +16,7 @@ $sortLinks[__('Date Added')] = 'added';
 
 <?php foreach (loop('collections') as $collection): ?>
 
-<div class="collection">
+<div class="collection record">
 
     <h2><?php echo link_to_collection(); ?></h2>
 
