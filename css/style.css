@@ -408,6 +408,7 @@ h1 {
   line-height: 36px;
   text-transform: uppercase;
   letter-spacing: .1em;
+  word-break: break-word;
 }
 
 h2 {
@@ -932,6 +933,10 @@ header:after {
   width: auto;
   vertical-align: top;
   height: 100%;
+}
+
+.item-file img {
+  max-width: 100%;
 }
 
 .record {
