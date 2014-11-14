@@ -450,6 +450,19 @@ header {
     overflow: auto;
 }
 
+#sort-links + .item,
+#sort-links + .collection,
+nav + .exhibit { 
+    border-top: 1px solid #eee; 
+}
+
+
+.item + .pagination-nav ul,
+.collection + .pagination-nav ul,
+.exhibit + .pagination-nav ul {
+    @include leader();
+}
+
 /* @end */
 
 /* @group ----- Home Page ----- */
@@ -524,8 +537,6 @@ header {
     padding: rhythm(1) 10px;
 }
 
-.items .item + .pagination-nav .pagination { @include leader(); }
-
 #next-item { float: right; }
 
 .item-description a.show {
@@ -599,8 +610,6 @@ ul.title-list {
     float: left;
     width: 100%;
 }
-
-#sort-links + .item { border-top: 1px solid #eee; }
 
 .item-pagination {
     clear:both;
@@ -749,10 +758,6 @@ ul.title-list {
     display: block;
 }
 
-.item + .pagination-nav {
-    @include leader();
-}
-
 /* @end */
 
 /* @group ----- Items/Search ----- */
@@ -787,21 +792,17 @@ ul.title-list {
 
 /* @group ----- Collections/Browse ----- */
 
-.collections .collection {
+.browse .collection,
+.browse .exhibit {
     clear: both;
     border-bottom: 1px solid #eee;
-    @include trailer();
     float: left;
     width: 100%;
+    @include padding-leader();
         
     .view-items-link { @include trailer(1.5); }
     
     h3 { margin: 0; }
-}
-
-.pagination + .collection {
-    border-top: 1px solid #ccc;
-    @include padding-leader();
 }
 
 .collection .element-text p:only-child { margin-bottom: 0; }
@@ -816,12 +817,6 @@ ul.title-list {
 .collection .image img,
 .exhibit .image img {
     height: rhythm(7);
-}
-
-#sort-links + .collection {
-    border-color: #eee;
-    @include leading-border(1px, 1, $base-font-size, solid);
-    @include leader(.5);
 }
 
 .browse .collection h2,
@@ -983,13 +978,6 @@ footer {
 /* @end */
 
 /* @group ----- Exhibit Builder ----- */
-
-.browse .exhibit {
-    clear: both;
-    border-bottom: 1px solid #eee;
-    @include trailer();
-    overflow: auto;
-}
 
 .pagination + .exhibit {
     border-top: 1px solid #eee;

@@ -944,6 +944,18 @@ header:after {
   overflow: auto;
 }
 
+#sort-links + .item,
+#sort-links + .collection,
+nav + .exhibit {
+  border-top: 1px solid #eee;
+}
+
+.item + .pagination-nav ul,
+.collection + .pagination-nav ul,
+.exhibit + .pagination-nav ul {
+  margin-top: 1.5em;
+}
+
 /* @end */
 /* @group ----- Home Page ----- */
 #home #primary {
@@ -1085,10 +1097,6 @@ header:after {
   }
 }
 
-.items .item + .pagination-nav .pagination {
-  margin-top: 1.5em;
-}
-
 #next-item {
   float: right;
 }
@@ -1165,10 +1173,6 @@ ul.title-list {
   padding: 3em 0;
   float: left;
   width: 100%;
-}
-
-#sort-links + .item {
-  border-top: 1px solid #eee;
 }
 
 .item-pagination {
@@ -1403,10 +1407,6 @@ ul.title-list {
   display: block;
 }
 
-.item + .pagination-nav {
-  margin-top: 1.5em;
-}
-
 /* @end */
 /* @group ----- Items/Search ----- */
 .field {
@@ -1442,23 +1442,21 @@ ul.title-list {
 
 /* @end */
 /* @group ----- Collections/Browse ----- */
-.collections .collection {
+.browse .collection,
+.browse .exhibit {
   clear: both;
   border-bottom: 1px solid #eee;
-  margin-bottom: 1.5em;
   float: left;
   width: 100%;
+  padding-top: 1.5em;
 }
-.collections .collection .view-items-link {
+.browse .collection .view-items-link,
+.browse .exhibit .view-items-link {
   margin-bottom: 2.25em;
 }
-.collections .collection h3 {
+.browse .collection h3,
+.browse .exhibit h3 {
   margin: 0;
-}
-
-.pagination + .collection {
-  border-top: 1px solid #ccc;
-  padding-top: 1.5em;
 }
 
 .collection .element-text p:only-child {
@@ -1477,14 +1475,6 @@ ul.title-list {
 .collection .image img,
 .exhibit .image img {
   height: 10.5em;
-}
-
-#sort-links + .collection {
-  border-color: #eee;
-  border-top-width: 0.08333em;
-  border-top-style: solid;
-  padding-top: 1.41667em;
-  margin-top: 0.75em;
 }
 
 .browse .collection h2,
@@ -1714,13 +1704,6 @@ footer nav + p {
 
 /* @end */
 /* @group ----- Exhibit Builder ----- */
-.browse .exhibit {
-  clear: both;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 1.5em;
-  overflow: auto;
-}
-
 .pagination + .exhibit {
   border-top: 1px solid #eee;
 }
