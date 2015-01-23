@@ -349,6 +349,7 @@ header {
     @include trailer();
     overflow: auto;
     border-bottom:1px solid #ccc;
+    clear: both;
     
     li { 
         padding: rhythm() 0; 
@@ -984,8 +985,11 @@ footer {
 }
 
 #exhibit-pages {
-    @include columns(4);
-    @include alpha;
+    width: skeleton-column-width(4, $base-width);
+    display: inline-block;
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        width: skeleton-column-width(4, $tablet-width); }
     
     h4 {
         font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
@@ -1046,11 +1050,12 @@ footer {
     margin: 0;
 }
 
-.exhibits #primary,
-#exhibit-page-navigation {
+.exhibits #content > h1:first-of-type,
+#exhibit-blocks,
+#exhibit-page-navigation,
+.exhibits.summary #primary {
     @include columns(12);
-    @include omega;
-    float: left;
+    @include alpha;
     padding-right: 20px;
     margin-left: 0;
 }

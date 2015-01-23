@@ -823,6 +823,7 @@ header:after {
   margin-bottom: 1.5em;
   overflow: auto;
   border-bottom: 1px solid #ccc;
+  clear: both;
 }
 #secondary-nav li, .secondary-nav li {
   padding: 1.5em 0;
@@ -1709,31 +1710,12 @@ footer nav + p {
 }
 
 #exhibit-pages {
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
   width: 220px;
-  margin-left: 0;
-}
-@media only screen and (max-width: 767px) {
-  #exhibit-pages {
-    margin: 0;
-  }
+  display: inline-block;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #exhibit-pages {
     width: 172px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  #exhibit-pages {
-    width: 300px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  #exhibit-pages {
-    width: 420px;
   }
 }
 #exhibit-pages h4 {
@@ -1791,39 +1773,48 @@ footer nav + p {
   margin: 0;
 }
 
-.exhibits #primary,
-#exhibit-page-navigation {
+.exhibits #content > h1:first-of-type,
+#exhibit-blocks,
+#exhibit-page-navigation,
+.exhibits.summary #primary {
   float: left;
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
   width: 700px;
-  margin-right: 0;
-  float: left;
+  margin-left: 0;
   padding-right: 20px;
   margin-left: 0;
 }
 @media only screen and (max-width: 767px) {
-  .exhibits #primary,
-  #exhibit-page-navigation {
+  .exhibits #content > h1:first-of-type,
+  #exhibit-blocks,
+  #exhibit-page-navigation,
+  .exhibits.summary #primary {
     margin: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .exhibits #primary,
-  #exhibit-page-navigation {
+  .exhibits #content > h1:first-of-type,
+  #exhibit-blocks,
+  #exhibit-page-navigation,
+  .exhibits.summary #primary {
     width: 556px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .exhibits #primary,
-  #exhibit-page-navigation {
+  .exhibits #content > h1:first-of-type,
+  #exhibit-blocks,
+  #exhibit-page-navigation,
+  .exhibits.summary #primary {
     width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .exhibits #primary,
-  #exhibit-page-navigation {
+  .exhibits #content > h1:first-of-type,
+  #exhibit-blocks,
+  #exhibit-page-navigation,
+  .exhibits.summary #primary {
     width: 420px;
   }
 }
@@ -2041,6 +2032,12 @@ footer nav + p {
 
   #sort-links {
     float: left;
+  }
+
+  /* @end */
+  /* @group ----- Exhibits/Show ----- */
+  #exhibit-pages {
+    width: 100%;
   }
 
   /* @end */
