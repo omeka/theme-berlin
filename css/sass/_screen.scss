@@ -1076,13 +1076,35 @@ footer {
     margin: rhythm(2) 0 rhythm(1);
 }
 
-.exhibit .description {
+.exhibit .description,
+.exhibit .description ~ * {
     @include columns(9);
     
     p:first-of-type {
         @include leader(.5);
     }
 }
+
+.exhibit .description ~ * {
+    display: block;
+    margin: rhythm() auto;
+    padding: 0 40px 0 80px;
+    float: none;
+    @include box-sizing(content-box);
+}
+
+.exhibit-block {
+    clear: none;
+}
+
+.exhibit-items.left {
+    clear: left;
+}
+
+.exhibit-items.right {
+    clear: right;
+}
+
 
 /* @end */
 

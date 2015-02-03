@@ -1835,7 +1835,8 @@ footer nav + p {
   margin: 3em 0 1.5em;
 }
 
-.exhibit .description {
+.exhibit .description,
+.exhibit .description ~ * {
   float: left;
   display: inline;
   margin-left: 10px;
@@ -1843,27 +1844,54 @@ footer nav + p {
   width: 520px;
 }
 @media only screen and (max-width: 767px) {
-  .exhibit .description {
+  .exhibit .description,
+  .exhibit .description ~ * {
     margin: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  .exhibit .description {
+  .exhibit .description,
+  .exhibit .description ~ * {
     width: 412px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .exhibit .description {
+  .exhibit .description,
+  .exhibit .description ~ * {
     width: 300px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .exhibit .description {
+  .exhibit .description,
+  .exhibit .description ~ * {
     width: 420px;
   }
 }
-.exhibit .description p:first-of-type {
+.exhibit .description p:first-of-type,
+.exhibit .description ~ * p:first-of-type {
   margin-top: 0.75em;
+}
+
+.exhibit .description ~ * {
+  display: block;
+  margin: 1.5em auto;
+  padding: 0 40px 0 80px;
+  float: none;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.exhibit-block {
+  clear: none;
+}
+
+.exhibit-items.left {
+  clear: left;
+}
+
+.exhibit-items.right {
+  clear: right;
 }
 
 /* @end */
@@ -2032,6 +2060,23 @@ footer nav + p {
 
   #sort-links {
     float: left;
+  }
+
+  /* @end */
+  /* @group ----- Exhibits/Show ----- */
+  .exhibit {
+    clear: both;
+  }
+
+  .exhibit .description {
+    float: none;
+  }
+
+  .exhibit .description ~ * {
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   /* @end */
