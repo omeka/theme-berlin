@@ -1093,18 +1093,9 @@ footer {
     @include box-sizing(content-box);
 }
 
-.exhibit-block {
-    clear: none;
+.exhibit-items .download-file:last-child {
+    @include trailer();
 }
-
-.exhibit-items.left {
-    clear: left;
-}
-
-.exhibit-items.right {
-    clear: right;
-}
-
 
 /* @end */
 

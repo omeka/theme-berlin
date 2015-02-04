@@ -1882,16 +1882,8 @@ footer nav + p {
   box-sizing: content-box;
 }
 
-.exhibit-block {
-  clear: none;
-}
-
-.exhibit-items.left {
-  clear: left;
-}
-
-.exhibit-items.right {
-  clear: right;
+.exhibit-items .download-file:last-child {
+  margin-bottom: 1.5em;
 }
 
 /* @end */
