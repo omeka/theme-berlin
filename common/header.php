@@ -32,6 +32,7 @@
     <?php echo head_js(); ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <a href="#content" id="skipnav">Skip to main content</a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
         <header>
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
@@ -51,15 +52,15 @@
                   echo public_nav_main();
              ?>
          </div>
-  
+
          <div id="mobile-nav">
              <?php
                   echo public_nav_main();
              ?>
          </div>
-        
+
         <?php echo theme_header_image(); ?>
-                       
-    <div id="content">
+
+    <div id="content" tabindex="-1">
 
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
