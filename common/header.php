@@ -32,7 +32,7 @@
     <?php echo head_js(); ?>
 </head>
  <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <a href="#content" id="skipnav">Skip to main content</a>
+    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
         <header role="banner">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
@@ -53,7 +53,7 @@
              ?>
          </div>
 
-         <div id="mobile-nav" role="navigation" aria-label="Mobile Navigation">
+         <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
              <?php
                   echo public_nav_main();
              ?>
