@@ -28,10 +28,10 @@ if (!Omeka) {
         } else {
             $('#search-form input[type=submit]').addClass("blue button");
         }
-        
-        
+
+
     };
-    
+
     Omeka.dropDown = function(){
         var dropdownMenu = $('#mobile-nav');
         dropdownMenu.prepend('<a class="menu">Menu</a>');
@@ -51,4 +51,11 @@ if (!Omeka) {
             }
         });
     };
+
+    Omeka.skipnav = function() {
+      $("#skipnav").click(function() {
+        $("#content").focus();
+      });
+
+    }
 })(jQuery);
