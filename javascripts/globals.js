@@ -51,4 +51,10 @@ if (!Omeka) {
             }
         });
     };
+    
+    Omeka.skipNav = function() {
+        $("#skipnav").click(function() {
+            $("#content").focus();
+        });
+    };
 })(jQuery);
