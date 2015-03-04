@@ -202,7 +202,7 @@ header {
     }
 }
 
-#advanced-search {
+.show-advanced.button {
     width: 30px;
     right: 0;
     top: 0;
@@ -251,13 +251,17 @@ header {
     & > *:last-child {
         @include trailer(0);
     }
+    
+    &.open {
+        display: block;
+    }
 }
 
 #advanced-form input[type="radio"] { margin-right: 5px;}
 
 #search-form fieldset fieldset { margin-bottom: $base-line-height; }
 
-#search-form.with-advanced button {
+#search-container.with-advanced .button {
     right: 30px;
 }
 

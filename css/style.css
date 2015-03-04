@@ -647,7 +647,7 @@ header:after {
   width: 30px;
 }
 
-#advanced-search {
+.show-advanced.button {
   width: 30px;
   right: 0;
   top: 0;
@@ -661,7 +661,7 @@ header:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-#advanced-search:after {
+.show-advanced.button:after {
   content: "\2026";
   display: block;
   text-indent: 0;
@@ -698,6 +698,9 @@ header:after {
 #advanced-form > *:last-child {
   margin-bottom: 0em;
 }
+#advanced-form.open {
+  display: block;
+}
 
 #advanced-form input[type="radio"] {
   margin-right: 5px;
@@ -707,7 +710,7 @@ header:after {
   margin-bottom: 18px;
 }
 
-#search-form.with-advanced button {
+#search-container.with-advanced .button {
   right: 30px;
 }
 
