@@ -761,6 +761,17 @@ header:after {
   padding: 0;
   width: 960px;
   z-index: 50;
+  /* mega menu list */
+  /* a top level navigation item in the mega menu */
+  /* first descendant link within a top level navigation item */
+  /* focus/open states of first descendant link within a top level 
+     navigation item */
+  /* open state of first descendant link within a top level 
+     navigation item */
+  /* sub-navigation panel */
+  /* sub-navigation panel open state */
+  /* list of items within sub-navigation panel */
+  /* list item within sub-navigation panel */
 }
 #primary-nav:after {
   content: "\0020";
@@ -784,12 +795,17 @@ header:after {
     width: 420px;
   }
 }
-#primary-nav ul {
+#primary-nav .nav-menu {
+  display: block;
+  position: relative;
+  list-style: none;
+  margin: 0 0 0 -1px;
   padding: 0 0 0 1px;
+  z-index: 15;
 }
 #primary-nav li {
   list-style-type: none;
-  margin: 0 0 -1px -1px;
+  margin: 0 0 -1px 0;
   position: relative;
 }
 #primary-nav .navigation {
@@ -797,13 +813,86 @@ header:after {
   z-index: 100;
   overflow: visible;
 }
-#primary-nav .navigation > li {
+#primary-nav .nav-item {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
   float: left;
   position: relative;
   overflow: visible;
 }
-#primary-nav .navigation > li:first-child a {
+#primary-nav .nav-item:first-child > a {
   border-left: 1px solid #ccc;
+}
+#primary-nav .nav-item > a {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 -1px 0;
+  border: 1px solid #ccc;
+}
+#primary-nav .nav-item:not(:first-child) > a {
+  margin-left: -1px;
+}
+#primary-nav .nav-item > a:focus,
+#primary-nav .nav-item > a.open {
+  border: 1px solid #dedede;
+}
+#primary-nav .nav-item > a.open {
+  background-color: #fff;
+  border-bottom: none;
+  z-index: 1;
+}
+#primary-nav .sub-nav {
+  position: absolute;
+  display: none;
+  top: 3em;
+  margin-top: 0;
+  padding: 0;
+  border: 1px solid #dedede;
+  background-color: #fff;
+}
+#primary-nav .sub-nav.open {
+  display: block;
+  width: 160px;
+}
+#primary-nav .sub-nav.open li {
+  width: 100%;
+}
+#primary-nav .subnav a:hover + ul,
+#primary-nav .subnav a:focus + ul {
+  display: block;
+  position: absolute;
+  top: 3em;
+  margin-top: 1px;
+  z-index: 1000;
+  -moz-box-shadow: #ccc 0 3px 5px;
+  -webkit-box-shadow: #ccc 0 3px 5px;
+  box-shadow: #ccc 0 3px 5px;
+}
+#primary-nav .sub-nav ul {
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+#primary-nav .sub-nav ul a {
+  margin-top: -0.75em;
+  padding-left: 2.25em;
+}
+#primary-nav .sub-nav li {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#primary-nav .sub-nav > li {
+  border-color: #ccc;
+  border-bottom-width: 0.08333em;
+  border-bottom-style: solid;
+  padding-bottom: -0.08333em;
+}
+#primary-nav .sub-nav a {
+  width: 100%;
 }
 #primary-nav a {
   behavior: url("../javascripts/boxsizing.htc");
@@ -814,34 +903,13 @@ header:after {
   display: block;
   padding: 0.75em 18px;
   background: #fafafa;
-  border: 1px solid #ccc;
 }
-#primary-nav a:hover, #primary-nav li.active a {
-  background: #fff;
+#primary-nav a:hover,
+#primary-nav a:focus,
+#primary-nav li.active a {
   color: #ff8000;
-}
-#primary-nav li ul, #primary-nav li ul ul {
-  display: none;
-}
-#primary-nav li:hover > ul, #primary-nav li ul li:hover > ul {
-  position: absolute;
-  display: block;
-  top: 3em;
-  margin-top: 1px;
-  z-index: 1000;
-  -moz-box-shadow: #ccc 0 3px 5px;
-  -webkit-box-shadow: #ccc 0 3px 5px;
-  box-shadow: #ccc 0 3px 5px;
-}
-#primary-nav li:hover > ul li {
-  width: 160px;
-}
-#primary-nav li ul li:hover > ul {
-  position: absolute;
-  top: 0;
-  left: 160px;
-  border-left: 0;
-  margin: 0 0 0 -1px;
+  position: relative;
+  z-index: 1;
 }
 
 #secondary-nav, .secondary-nav {

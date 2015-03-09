@@ -302,18 +302,25 @@ header {
 
 #admin-bar ul { display: inline-block; }
 
+
 #primary-nav {
     clear:both;
     @include container;
     z-index: 50;
     
-    ul { 
+    /* mega menu list */
+    .nav-menu {
+        display: block;
+        position: relative;
+        list-style: none;
+        margin: 0 0 0 -1px;
         padding: 0 0 0 1px;
+        z-index: 15;
     }
     
     li { 
         list-style-type: none; 
-        margin: 0 0 -1px -1px;
+        margin: 0 0 -1px 0;
         position: relative; 
     }
     
@@ -323,14 +330,108 @@ header {
         overflow: visible;
     }
 
-    .navigation > li {
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+        list-style: none;
+        display: block;
+        padding: 0;
+        margin: 0;
         float:left;
         position: relative;
         overflow: visible;
         
-        &:first-child a { border-left: 1px solid #ccc; }
+        &:first-child > a { border-left: 1px solid #ccc; }
     }
 
+    /* first descendant link within a top level navigation item */
+    .nav-item > a {
+        position: relative;
+        display: inline-block;
+        margin: 0 0 -1px 0;
+        border:1px solid #ccc;
+    }
+    
+    .nav-item:not(:first-child) > a {
+        margin-left: -1px;
+    }
+    
+    /* focus/open states of first descendant link within a top level 
+       navigation item */
+    .nav-item > a:focus,
+    .nav-item > a.open {
+        border: 1px solid #dedede;
+    }
+    
+
+    /* open state of first descendant link within a top level 
+       navigation item */
+    .nav-item > a.open {
+        background-color: #fff;
+        border-bottom: none;
+        z-index: 1;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+        position: absolute;
+        display: none;
+        top: rhythm(2);
+        margin-top: 0;
+        padding: 0;
+        border: 1px solid #dedede;
+        background-color: #fff;
+    }
+    
+
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: block;
+        width: skeleton-column-width(3);
+        
+        li {
+            width: 100%;
+        }
+    }
+    
+    .subnav a:hover + ul,
+    .subnav a:focus + ul { 
+        display: block;
+        position: absolute;
+        top: rhythm(2);
+        margin-top: 1px;
+        z-index: 1000;
+        @include box-shadow(#ccc 0 3px 5px);
+    }
+
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        
+        a {
+            margin-top: rhythm(-.5);
+            padding-left: rhythm(1.5);
+        }
+    }
+    
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sub-nav > li {
+        border-color: #ccc;
+        @include trailing-border(1px, 0, $base-font-size, solid);
+    }
+    
+    .sub-nav a {
+        width: 100%;
+    }
+    
     a {
         behavior: url("../javascripts/boxsizing.htc");
         @include box-sizing(border-box);
@@ -338,35 +439,14 @@ header {
         display:block;
         padding: rhythm(.5) 18px;
         background:#fafafa;
-        border:1px solid #ccc;
     }
 
-    a:hover, li.active a {
-        background:#fff;
+    a:hover,
+    a:focus,
+    li.active a {
         color:#ff8000;
-    }
-
-    li ul, li ul ul { display: none; }
-
-    li:hover > ul, li ul li:hover > ul { 
-        position: absolute;
-        display: block; 
-        top: rhythm(2);
-        margin-top: 1px;
-        z-index: 1000;
-        @include box-shadow(#ccc 0 3px 5px);
-    }
-    
-    li:hover > ul li { 
-        width: skeleton-column-width(3);
-    }
-
-    li ul li:hover > ul {
-        position: absolute;
-        top: 0;
-        left: skeleton-column-width(3);
-        border-left: 0;
-        margin: 0 0 0 -1px;;
+        position: relative;
+        z-index: 1;
     }
 }
 
