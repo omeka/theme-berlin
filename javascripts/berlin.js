@@ -11,15 +11,7 @@ if (!Berlin) {
 
         //function the will toggle the menu
         $('.menu').click(function() {
-            var x = $(this).attr('id');
-
-            if (x==1) {
-                $("#mobile-nav .navigation").slideUp();
-                $(this).attr('id', '0');
-            } else {
-                $("#mobile-nav .navigation").slideDown();
-                $(this).attr('id','1');
-            }
+            $("#mobile-nav .navigation").slideToggle();
         });
     };
 })(jQuery)
