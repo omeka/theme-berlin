@@ -366,8 +366,7 @@ header {
     /* open state of first descendant link within a top level 
        navigation item */
     .nav-item > a.open {
-        background-color: #fff;
-        border-bottom: none;
+        background-color: #fafafa;
         z-index: 1;
     }
 
@@ -376,7 +375,7 @@ header {
         position: absolute;
         display: none;
         top: rhythm(2);
-        margin-top: 0;
+        margin-top: 1px;
         padding: 0;
         border: 1px solid #dedede;
         background-color: #fff;
@@ -447,6 +446,17 @@ header {
         color:#ff8000;
         position: relative;
         z-index: 1;
+    }
+
+    [aria-haspopup="true"]:after {
+        font-family: "FontAwesome";
+        content: "\f0da";
+        margin: -1px 0 0 .5em;
+        display: inline-block;
+    }
+
+    [aria-haspopup="true"].open:after {
+        content: "\f0d7";
     }
 }
 
