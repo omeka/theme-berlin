@@ -2090,8 +2090,6 @@ footer nav + p {
 }
 @media screen and (max-width: 768px) {
   #mobile-nav ul {
-    position: absolute;
-    z-index: 199;
     background: #fafafa;
     border-bottom: 1px solid #ccc;
     width: 100%;
