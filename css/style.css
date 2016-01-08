@@ -416,9 +416,22 @@ form, fieldset {
   padding: 0;
 }
 
-input[type=text], input[type=password], textarea {
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
   border: 1px solid #ccc;
-  display: block;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
 }
 
 /* -- Headings -- */
@@ -1542,6 +1555,7 @@ ul.title-list {
 /* @group ----- Items/Search ----- */
 .field {
   margin-bottom: 1.5em;
+  overflow: hidden;
 }
 
 .search-entry select {
