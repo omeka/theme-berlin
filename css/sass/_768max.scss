@@ -145,6 +145,18 @@ footer .navigation {
 
 .collection-meta {
     width: 100%;
+    display: inline;
+    float: none;
+}
+
+.browse .collection .image {
+    margin: rhythm() rhythm() rhythm() 10px;
+    float: left;
+}
+
+.browse .collection.record .view-items-link,
+.browse .exhibit .view-items-link {
+    clear: both;
 }
 
 /* @end */

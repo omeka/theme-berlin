@@ -2206,6 +2206,18 @@ footer nav + p {
   /* @group ----- Collections/Browse ----- */
   .collection-meta {
     width: 100%;
+    display: inline;
+    float: none;
+  }
+
+  .browse .collection .image {
+    margin: 1.5em 1.5em 1.5em 10px;
+    float: left;
+  }
+
+  .browse .collection.record .view-items-link,
+  .browse .exhibit .view-items-link {
+    clear: both;
   }
 
   /* @end */
