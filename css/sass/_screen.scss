@@ -324,24 +324,20 @@ header {
 
     /* mega menu list */
     .nav-menu {
-        display: block;
+        display: flex;
         position: relative;
         list-style: none;
         margin: 0 0 0 -1px;
         padding: 0 0 0 1px;
-        z-index: 15;
+        position: relative;
+        z-index: 100;
+        overflow: visible;
     }
 
     li {
         list-style-type: none;
         margin: 0 0 -1px 0;
         position: relative;
-    }
-
-    .navigation {
-        position: relative;
-        z-index: 100;
-        overflow: visible;
     }
 
     /* a top level navigation item in the mega menu */
@@ -363,6 +359,8 @@ header {
         display: inline-block;
         margin: 0 0 -1px 0;
         border:1px solid #ccc;
+        border-bottom: 0;
+        height: 100%;
     }
 
     .nav-item:not(:first-child) > a {
@@ -374,8 +372,8 @@ header {
     .nav-item > a:focus,
     .nav-item > a.open {
         border: 1px solid #dedede;
+        border-bottom: 0;
     }
-
 
     /* open state of first descendant link within a top level
        navigation item */
@@ -388,7 +386,6 @@ header {
     .sub-nav {
         position: absolute;
         display: none;
-        top: rhythm(2);
         margin-top: 1px;
         padding: 0;
         border: 1px solid #dedede;
@@ -424,7 +421,11 @@ header {
 
         a {
             margin-top: rhythm(-.5);
-            padding-left: rhythm(1.5);
+
+            &:before {
+                content: "\2014";
+                margin-right: rhythm(.25);
+            }
         }
     }
 
@@ -467,6 +468,8 @@ header {
         content: "\f0da";
         margin: -1px 0 0 .5em;
         display: inline-block;
+        width: rhythm();
+        text-align: center;
     }
 
     [aria-haspopup="true"].open:after {

@@ -838,22 +838,19 @@ header:after {
   }
 }
 #primary-nav .nav-menu {
-  display: block;
+  display: flex;
   position: relative;
   list-style: none;
   margin: 0 0 0 -1px;
   padding: 0 0 0 1px;
-  z-index: 15;
+  position: relative;
+  z-index: 100;
+  overflow: visible;
 }
 #primary-nav li {
   list-style-type: none;
   margin: 0 0 -1px 0;
   position: relative;
-}
-#primary-nav .navigation {
-  position: relative;
-  z-index: 100;
-  overflow: visible;
 }
 #primary-nav .nav-item {
   list-style: none;
@@ -872,6 +869,8 @@ header:after {
   display: inline-block;
   margin: 0 0 -1px 0;
   border: 1px solid #ccc;
+  border-bottom: 0;
+  height: 100%;
 }
 #primary-nav .nav-item:not(:first-child) > a {
   margin-left: -1px;
@@ -879,6 +878,7 @@ header:after {
 #primary-nav .nav-item > a:focus,
 #primary-nav .nav-item > a.open {
   border: 1px solid #dedede;
+  border-bottom: 0;
 }
 #primary-nav .nav-item > a.open {
   background-color: #fafafa;
@@ -887,7 +887,6 @@ header:after {
 #primary-nav .sub-nav {
   position: absolute;
   display: none;
-  top: 3em;
   margin-top: 1px;
   padding: 0;
   border: 1px solid #dedede;
@@ -918,7 +917,10 @@ header:after {
 }
 #primary-nav .sub-nav ul a {
   margin-top: -0.75em;
-  padding-left: 2.25em;
+}
+#primary-nav .sub-nav ul a:before {
+  content: "\2014";
+  margin-right: 0.375em;
 }
 #primary-nav .sub-nav li {
   display: block;
@@ -957,6 +959,8 @@ header:after {
   content: "\f0da";
   margin: -1px 0 0 .5em;
   display: inline-block;
+  width: 1.5em;
+  text-align: center;
 }
 #primary-nav [aria-haspopup="true"].open:after {
   content: "\f0d7";
