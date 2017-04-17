@@ -324,19 +324,22 @@ header {
 
     /* mega menu list */
     .nav-menu {
-        display: flex;
+        @include display-flex;
         position: relative;
         list-style: none;
-        margin: 0 0 0 -1px;
-        padding: 0 0 0 1px;
+        margin: 0;
+        padding: 0;
         position: relative;
         z-index: 100;
         overflow: visible;
+        flex-wrap: wrap;
+        align-items: stretch;
+        border-right: 1px solid #ccc;
     }
 
     li {
         list-style-type: none;
-        margin: 0 0 -1px 0;
+        margin: 0;
         position: relative;
     }
 
@@ -346,9 +349,10 @@ header {
         display: block;
         padding: 0;
         margin: 0;
-        float:left;
+        float:none;
         position: relative;
         overflow: visible;
+        flex:1 0 auto;
 
         &:first-child > a { border-left: 1px solid #ccc; }
     }
@@ -357,14 +361,11 @@ header {
     .nav-item > a {
         position: relative;
         display: inline-block;
-        margin: 0 0 -1px 0;
-        border:1px solid #ccc;
-        border-bottom: 0;
+        margin: 0;
+        border-left :1px solid #ccc;
+        border-top :1px solid #ccc;
         height: 100%;
-    }
-
-    .nav-item:not(:first-child) > a {
-        margin-left: -1px;
+        width: 100%;
     }
 
     /* focus/open states of first descendant link within a top level
@@ -372,6 +373,8 @@ header {
     .nav-item > a:focus,
     .nav-item > a.open {
         border: 1px solid #dedede;
+        border-right: 0;
+        margin: 0 -1px 0 0;
         border-bottom: 0;
     }
 
@@ -380,16 +383,28 @@ header {
     .nav-item > a.open {
         background-color: #fafafa;
         z-index: 1;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: -1px;
+            width: 1px;
+            top: 0;
+            background-color: #dedede;
+            bottom: 0;
+        }
     }
 
     /* sub-navigation panel */
     .sub-nav {
         position: absolute;
         display: none;
-        margin-top: 1px;
+        margin-top: 0;
         padding: 0;
         border: 1px solid #dedede;
         background-color: #fff;
+        min-width: calc(100% + 1px);
+        z-index: 999;
     }
 
 
