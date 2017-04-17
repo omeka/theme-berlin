@@ -472,7 +472,7 @@ header {
 
     a:hover,
     a:focus,
-    li.active a {
+    li.active > a {
         color:#ff8000;
         position: relative;
         z-index: 1;

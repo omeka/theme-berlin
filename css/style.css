@@ -965,7 +965,7 @@ header:after {
 }
 #primary-nav a:hover,
 #primary-nav a:focus,
-#primary-nav li.active a {
+#primary-nav li.active > a {
   color: #ff8000;
   position: relative;
   z-index: 1;
