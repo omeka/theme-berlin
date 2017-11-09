@@ -198,7 +198,7 @@ hr {
  * Contain overflow in all browsers.
  */
 pre {
-  overflow: auto;
+  overflow: hidden;
 }
 
 /**
@@ -370,7 +370,7 @@ legend {
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 textarea {
-  overflow: auto;
+  overflow: hidden;
 }
 
 /**
@@ -721,7 +721,7 @@ header:after {
 #advanced-form {
   display: none;
   background-color: #fff;
-  overflow: auto;
+  overflow: hidden;
   z-index: 1001;
   position: absolute;
   top: 30px;
@@ -984,7 +984,7 @@ header:after {
 
 #secondary-nav, .secondary-nav {
   margin-bottom: 1.5em;
-  overflow: auto;
+  overflow: hidden;
   border-bottom: 1px solid #ccc;
   clear: both;
 }
@@ -1105,7 +1105,7 @@ header:after {
 
 .record {
   clear: both;
-  overflow: auto;
+  overflow: hidden;
 }
 
 #sort-links + .item,
