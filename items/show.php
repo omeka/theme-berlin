@@ -2,15 +2,21 @@
 <div id="primary">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
+    <?php if ((get_theme_option('Item FileDisplay') == 1) && metadata('item', 'has files')): ?>
+    <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
+    <?php endif; ?>
+
     <!-- Items metadata -->
     <div id="item-metadata">
         <?php echo all_element_texts('item'); ?>
     </div>
-
-    <h3><?php echo __('Files'); ?></h3>
-    <div id="item-images">
-         <?php echo files_for_item(); ?>
-    </div>
+    
+    <?php if ((get_theme_option('Item FileDisplay') == 0) && metadata('item', 'has files')): ?>
+      <h3><?php echo __('Files'); ?></h3>
+      <div id="item-images">
+           <?php echo files_for_item(); ?>
+      </div>
+    <?php endif; ?>
 
    <?php if(metadata('item','Collection Name')): ?>
       <div id="collection" class="element">
