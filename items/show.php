@@ -1,7 +1,4 @@
-<?php 
-echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); 
-$linkToFileMetadata = (get_option('link_to_file_metadata')) ? true : false; 
-?>
+<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
@@ -17,7 +14,7 @@ $linkToFileMetadata = (get_option('link_to_file_metadata')) ? true : false;
     <?php if ((get_theme_option('Item FileDisplay') == 0) && metadata('item', 'has files')): ?>
       <h3><?php echo __('Files'); ?></h3>
       <div id="item-images">
-           <?php echo files_for_item(array('linkToMetadata' => $linkToFileMetadata)); ?>
+           <?php echo files_for_item(); ?>
       </div>
     <?php endif; ?>
 
