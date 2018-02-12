@@ -12,8 +12,7 @@ input[type=text], input[type=password], textarea {
 #search-container {
     clear: both;
     width: 100%;
-    @include leader();
-    @include trailer(0);
+    margin: 0;
 }
 
 /* @end */
@@ -90,7 +89,7 @@ footer .navigation {
     float: none;
     width: 100%;
     text-align: left;
-    @include trailer();
+    margin-bottom: 0;
 }
 
 /* @end */
@@ -111,26 +110,25 @@ footer .navigation {
 /* @group ----- Items/Browse ----- */
 
 .browse .item img {
-    @include trailer();
-    @include leader();
+    margin: $spacing-unit 0;
 }
 
 .browse .item.record h2 {
-    @include trailer(1, 2 * $base-font-size);
+    margin-bottom: $spacing-unit;
 }
 
 .browse .item-meta .item-img {
     width: auto;
     float: left;
-    margin: 0 rhythm() 0 0;
+    margin: 0 $spacing-unit 0 0;
 
     img {
-        @include leader(0);
+        margin-top: 0;
     }
 }
 
 .browse .item {
-    padding: rhythm() 0;
+    padding: $spacing-unit 0;
 }
 
 .browse .item-meta > div {
@@ -150,7 +148,7 @@ footer .navigation {
 }
 
 .browse .collection .image {
-    margin: rhythm() rhythm() rhythm() 10px;
+    margin: $spacing-unit $spacing-unit $spacing-unit 10px;
     float: left;
 }
 
@@ -173,7 +171,7 @@ footer .navigation {
 
 .exhibit .description ~ * {
     padding: 0;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 /* @end */

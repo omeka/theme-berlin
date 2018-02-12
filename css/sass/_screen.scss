@@ -1,10 +1,9 @@
 @import "base";
-@import "compass";
 @import "skeleton";
 
 /* @group ----- Generic ----- */
 
-* { @include box-sizing(border-box); }
+* { box-sizing: border-box; }
 
 body {
     font: $base-font-size Helvetica, Arial, sans-serif;
@@ -82,7 +81,7 @@ input[type="checkbox"] {
 
     /* -- Misc Block elements -- */
 
-    p, ul, ol, dl { margin: rhythm() 0; }
+    p, ul, ol, dl { margin: $spacing-unit 0; }
 
     ul ul, ul ol, ol ol, ol ul { margin-bottom:0; }
 
@@ -111,7 +110,7 @@ input[type="checkbox"] {
     th, td {
         border-bottom:1px solid #ccc;
         margin:0;
-        padding: rhythm(.5) 0;
+        padding: (.5 * $spacing-unit) 0;
     }
 
     th {
@@ -132,7 +131,7 @@ input[type="checkbox"] {
 
 header {
     @include container;
-    padding: rhythm(2) 0;
+    padding: (2 * $spacing-unit) 0;
     position: relative;
 }
 
@@ -172,14 +171,14 @@ header {
     float:right;
     width:45%;
     position:relative;
-    @include adjust-font-size-to(14px);
+    font-size: 1.1667 * $base-font-size;
 
     h2 { display:none; }
 
     input[type=text], button {
         border:1px solid #ccc;
         background:#fafafa;
-        @include appearance(none);
+        appearance: none;
         border-radius: 0;
         height:30px;
     }
@@ -188,7 +187,7 @@ header {
         padding:3px;
         width: 100%;
         behavior: url("../javascripts/boxsizing.htc");
-        @include box-sizing(border-box);
+        box-sizing: border-box;
     }
 
     button {
@@ -226,7 +225,7 @@ header {
     text-decoration:none;
     text-indent: -9999px;
     behavior: url("../javascripts/boxsizing.htc");
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     &:after{
         content:"\2026";
@@ -256,14 +255,14 @@ header {
     width: 100%;
     padding: 1.5em 1em;
     *behavior: url("../javascripts/boxsizing.htc");
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     fieldset p {
         margin: 0;
     }
 
     & > *:last-child {
-        @include trailer(0);
+          margin-bottom: 0;
     }
 
     &.open {
@@ -324,7 +323,7 @@ header {
 
     /* mega menu list */
     .nav-menu {
-        @include display-flex;
+        display: flex;
         position: relative;
         list-style: none;
         margin: 0;
@@ -422,10 +421,10 @@ header {
     .subnav a:focus + ul {
         display: block;
         position: absolute;
-        top: rhythm(2);
+        top: (2 * $spacing-unit);
         margin-top: 1px;
         z-index: 1000;
-        @include box-shadow(#ccc 0 3px 5px);
+        box-shadow: 0 3px 5px #ccc;
     }
 
     /* list of items within sub-navigation panel */
@@ -435,11 +434,11 @@ header {
         padding: 0;
 
         a {
-            margin-top: rhythm(-.5);
+            margin-top: (-.5 * $spacing-unit);
 
             &:before {
                 content: "\2014";
-                margin-right: rhythm(.25);
+                margin-right: (.25 * $spacing-unit);
             }
         }
     }
@@ -453,8 +452,7 @@ header {
     }
 
     .sub-nav > li {
-        border-color: #ccc;
-        @include trailing-border(1px, 0, $base-font-size, solid);
+        border-bottom: 1px solid #ccc;
     }
 
     .sub-nav a {
@@ -463,10 +461,10 @@ header {
 
     a {
         behavior: url("../javascripts/boxsizing.htc");
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         text-decoration:none;
         display:block;
-        padding: rhythm(.5) 18px;
+        padding: (.5 * $spacing-unit) 18px;
         background:#fafafa;
     }
 
@@ -483,7 +481,7 @@ header {
         content: "\f0da";
         margin: -1px 0 0 .5em;
         display: inline-block;
-        width: rhythm();
+        width: $spacing-unit;
         text-align: center;
     }
 
@@ -493,13 +491,13 @@ header {
 }
 
 #secondary-nav, .secondary-nav {
-    @include trailer();
+    margin-bottom: $spacing-unit;
     overflow: auto;
     border-bottom:1px solid #ccc;
     clear: both;
 
     li {
-        padding: rhythm() 0;
+        padding: $spacing-unit 0;
         margin-right: 20px;
     }
 
@@ -526,14 +524,14 @@ header {
 .pagination {
     float: left;
     padding-left: 0;
-    margin: 0 0 rhythm() 0;
+    margin: 0 0 $spacing-unit 0;
 
     ul {
         margin-left:0;
     }
 
     li {
-        height: rhythm(2);
+        height: (2 * $spacing-unit);
         border: solid #e7e7e7;
         border-width: 1px 0 1px 1px;
         float: left;
@@ -567,7 +565,7 @@ header {
     border:1px solid #ccc;
     background:#fff;
     @include container;
-    padding: rhythm(1) 10px;
+    padding: (1 * $spacing-unit) 10px;
     z-index: 0;
 }
 
@@ -577,7 +575,7 @@ header {
 
 .image {
     float: left;
-    margin: 0 rhythm() rhythm() 0;
+    margin: 0 $spacing-unit $spacing-unit 0;
 }
 
 .image img {
@@ -608,7 +606,7 @@ nav + .exhibit {
 .item + .pagination-nav ul,
 .collection + .pagination-nav ul,
 .exhibit + .pagination-nav ul {
-    @include leader();
+    margin-top: $spacing-unit;
 }
 
 /* @end */
@@ -641,18 +639,18 @@ nav + .exhibit {
 #featured-exhibit {
     overflow:hidden;
     background:#eee;
-    padding: rhythm() 20px;
-    @include trailer();
+    padding: $spacing-unit 20px;
+    margin-bottom: $spacing-unit;
 
     h2 { margin: 0; }
 
-    h3 { margin: 0 0 rhythm(1, 1.5 * $base-font-size) }
+    h3 { margin: 0 0 $spacing-unit; }
 
     img {
         float: left;
         border: 1px solid #ccc;
         padding: 2px;
-        height: rhythm(7);
+        height: (7 * $spacing-unit);
         width: auto;
         background-color: #fff;
     }
@@ -661,10 +659,10 @@ nav + .exhibit {
 #recent-items .item {
     overflow:hidden;
     border-bottom:1px solid #ccc;
-    @include trailer();
+    margin-bottom: $spacing-unit;
 
     .image {
-        height: rhythm(4);
+        height: (4 * $spacing-unit);
     }
 
     h3 {
@@ -673,7 +671,7 @@ nav + .exhibit {
 }
 
 .view-items-link {
-    @include trailer(0);
+    margin-bottom: $spacing-unit;
 }
 
 /* @end */
@@ -682,7 +680,7 @@ nav + .exhibit {
 
 .items #content {
     @include container;
-    padding: rhythm(1) 10px;
+    padding: (1 * $spacing-unit) 10px;
 }
 
 #next-item { float: right; }
@@ -696,7 +694,7 @@ nav + .exhibit {
 
 #sort-links-list {
     display: inline-block;
-    margin: rhythm(.5) 0 rhythm(.5) 10px;
+    margin: (.5 * $spacing-unit) 0 (.5 * $spacing-unit) 10px;
 }
 
 .desc a:after, .asc a:after {
@@ -741,20 +739,20 @@ ul.title-list {
   }
 
     .items.show h3 {
-        @include trailer(.5);
+        margin-bottom: .5 * $spacing-unit;
     }
 
 /* Items Classes*/
 .element {
     overflow:hidden;
     clear:both;
-    @include trailer();
+    margin-bottom: $spacing-unit;
 }
 
 .browse .item {
     clear: both;
     border-bottom:1px solid #eee;
-    padding: rhythm(2) 0;
+    padding: (2 * $spacing-unit) 0;
     float: left;
     width: 100%;
 }
@@ -782,7 +780,7 @@ ul.title-list {
 
 .item .item-file a {
     display: block;
-    height: rhythm(6);
+    height: (6 * $spacing-unit);
 
     img {
         height: 100%;
@@ -861,7 +859,7 @@ ul.title-list {
 }
 
 .browse .item-img img {
-    height: rhythm(7);
+    height: (7 * $spacing-unit);
 }
 
 
@@ -880,7 +878,7 @@ ul.title-list {
 }
 
 .browse .item-meta .item-description {
-    @include trailer();
+    margin-bottom: $spacing-unit;
 
     &:only-of-type { margin-bottom: 0; }
 }
@@ -911,13 +909,13 @@ ul.title-list {
 /* @group ----- Items/Search ----- */
 
 .field {
-    @include trailer();
+    margin-bottom: $spacing-unit;
     overflow: hidden;
 }
 
 .search-entry:first-child .advanced-search-joiner { display: none; }
 
-.search-entry select { @include trailer(.5); }
+.search-entry select { margin-bottom: .5 * $spacing-unit; }
 
 .search-entry input[type=text] { display: inline-block; }
 
@@ -951,9 +949,9 @@ ul.title-list {
     border-bottom: 1px solid #eee;
     float: left;
     width: 100%;
-    @include padding-leader();
+    padding-top: $spacing-unit;
 
-    .view-items-link { @include trailer(1.5); }
+    .view-items-link { margin-bottom: 1.5 * $spacing-unit; }
 
     h3 { margin: 0; }
 }
@@ -963,20 +961,20 @@ ul.title-list {
 .collection .image,
 .exhibit .image {
     display: block;
-    @include box-shadow(-5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC);
-    margin: 0 rhythm() rhythm() 9px;
+    box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
+    margin: 0 $spacing-unit $spacing-unit 9px;
 }
 
 .collection .image img,
 .exhibit .image img {
-    height: rhythm(7);
+    height: (7 * $spacing-unit);
 }
 
 .browse .collection h2,
 .browse .exhibit h2 {
     @include columns(4);
     @include alpha;
-    margin: 0 0 rhythm(1, 2 * $base-font-size);
+    margin: 0 0 $spacing-unit;
     max-width: 100%;
 }
 
@@ -985,7 +983,7 @@ ul.title-list {
     @include omega;
     float: right;
     text-align: right;
-    height: rhythm(7);
+    height: (7 * $spacing-unit);
 
     img {
         height: 100%;
@@ -999,7 +997,7 @@ ul.title-list {
 
 .collection-description p:first-of-type,
 .view-items-link:only-child {
-    @include leader(.5);
+    margin-top: .5 * $spacing-unit;
 }
 
 .browse .collection .element {
@@ -1012,11 +1010,11 @@ ul.title-list {
 
 .collections .item-img {
     float: left;
-    margin: 0 rhythm() 0 0;
+    margin: 0 $spacing-unit 0 0;
 
     a {
         display: block;
-        height: rhythm(4);
+        height: (4 * $spacing-unit);
         border: 1px solid #ccc;
         padding: 2px;
     }
@@ -1029,16 +1027,15 @@ ul.title-list {
 
 .collections .item {
     overflow: hidden;
-    border-color: #ccc;
-    @include leading-border(1px, 0, $base-font-size, solid);
-    @include leader();
+    border-top: 1px solid #ccc;
+    margin-top: $spacing-unit;
 }
 
 /* @end */
 
 /* @group ----- Search Results ----- */
 
-#search-results + .pagination { @include leader(1.5); }
+#search-results + .pagination { margin-top: 1.5 * $spacing-unit; }
 
 #search-results td {
     vertical-align: top;
@@ -1046,8 +1043,8 @@ ul.title-list {
 
 #search-results .image {
     float: left;
-    height: rhythm(4);
-    margin: 0 rhythm() 0 0;
+    height: (4 * $spacing-unit);
+    margin: 0 $spacing-unit 0 0;
 
     img {
         height: 100%;
@@ -1059,13 +1056,13 @@ ul.title-list {
     padding-left: 0;
     list-style-type: none;
     border-bottom: 1px solid #eee;
-    margin: rhythm(-.5) 0 0;
+    margin: (-.5 * $spacing-unit) 0 0;
 
     & > li {
         display: inline-block;
         background-color: #eee;
-        padding: rhythm(.25) rhythm(.5);
-        margin: 0 rhythm(.5) rhythm(.5) 0;
+        padding: (.25 * $spacing-unit) (.5 * $spacing-unit);
+        margin: 0 (.5 * $spacing-unit) (.5 * $spacing-unit) 0;
     }
 
     & > li:last-child:after { content: "\00A0"; }
@@ -1090,7 +1087,7 @@ footer {
     clear:both;
     @include container;
     overflow:hidden;
-    @include leader();
+    margin-top: $spacing-unit;
 
     a { text-decoration:none; }
 
@@ -1153,16 +1150,16 @@ footer {
 
     & > ul {
         margin-left: 0;
-        @include leading-border(1px, 1, $base-font-size, solid);
-        border-color: #eee;
+        border-top: 1px solid #eee;
+        padding-top: $spacing-unit - 1px;
         padding-left: 0;
         list-style-type: none;
     }
 
     & > ul > li {
-        @include trailing-border(1px, 1, $base-font-size, solid);
-        border-color: #eee;
-        @include trailer();
+        border-bottom: 1px solid #eee;
+        padding-bottom: $spacing-unit - 1px;
+        margin-bottom: $spacing-unit;
     }
 
     ul li > ul {
@@ -1230,7 +1227,7 @@ footer {
 
 #exhibit-page-navigation {
     clear: none;
-    margin: rhythm(2) 0 rhythm(1);
+    margin: (2 * $spacing-unit) 0 (1 * $spacing-unit);
 }
 
 .exhibit .description,
@@ -1238,20 +1235,20 @@ footer {
     @include columns(9);
 
     p:first-of-type {
-        @include leader(.5);
+        margin-top: .5 * $spacing-unit;
     }
 }
 
 .exhibit .description ~ * {
     display: block;
-    margin: rhythm() auto;
+    margin: $spacing-unit auto;
     padding: 0 40px 0 80px;
     float: none;
-    @include box-sizing(content-box);
+    box-sizing: content-box;
 }
 
 .exhibit-items .download-file:last-child {
-    @include trailer();
+    margin-bottom: $spacing-unit;
 }
 
 /* @end */
