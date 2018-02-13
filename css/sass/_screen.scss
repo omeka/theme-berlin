@@ -672,6 +672,7 @@ nav + .exhibit {
 
 .view-items-link {
     margin-bottom: $spacing-unit;
+    font-size: 1.25 * $base-font-size;
 }
 
 /* @end */
@@ -1029,6 +1030,12 @@ ul.title-list {
     overflow: hidden;
     border-top: 1px solid #ccc;
     margin-top: $spacing-unit;
+
+    &:last-of-type {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: $spacing-unit;
+        padding-bottom: $spacing-unit - 1px;
+    }
 }
 
 /* @end */

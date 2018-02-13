@@ -1021,7 +1021,8 @@ nav + .exhibit {
     margin-top: 0; }
 
 .view-items-link {
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  font-size: 15px; }
 
 /* @end */
 /* @group ----- Items ----- */
@@ -1428,6 +1429,10 @@ ul.title-list {
   overflow: hidden;
   border-top: 1px solid #ccc;
   margin-top: 18px; }
+  .collections .item:last-of-type {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 18px;
+    padding-bottom: 17px; }
 
 /* @end */
 /* @group ----- Search Results ----- */
