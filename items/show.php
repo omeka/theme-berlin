@@ -3,7 +3,7 @@
     <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
 
     <?php if ((get_theme_option('Item FileDisplay') == 1) && metadata('item', 'has files')): ?>
-    <?php echo files_for_item(array('imageSize' => 'fullsize', 'linkToMetadata' => $linkToFileMetadata)); ?>
+    <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
     <?php endif; ?>
 
     <!-- Items metadata -->
