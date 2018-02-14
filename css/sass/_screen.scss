@@ -672,6 +672,9 @@ nav + .exhibit {
 
 .view-items-link {
     margin-bottom: $spacing-unit;
+}
+
+.collections.show .view-items-link {
     font-size: 1.25 * $base-font-size;
 }
 

@@ -1021,7 +1021,9 @@ nav + .exhibit {
     margin-top: 0; }
 
 .view-items-link {
-  margin-bottom: 18px;
+  margin-bottom: 18px; }
+
+.collections.show .view-items-link {
   font-size: 15px; }
 
 /* @end */
