@@ -1801,14 +1801,18 @@ footer {
   #sort-links {
     float: left; }
   /* @end */
-  /* @group ----- Collections/Browse ----- */
-  .browse .collection h2 {
-    float: none; }
-  .collection-meta {
+  /* @group ----- Collections and Exhibits Browse ----- */
+  .browse .collection h2,
+  .browse .exhibit h2 {
+    float: none;
+    display: block; }
+  .collection-meta,
+  .browse .exhibit .description {
     width: 100%;
     display: inline;
     float: none; }
-  .browse .collection .image {
+  .browse .collection .image,
+  .browse .exhibit .image {
     margin: 18px 18px 9px 9px;
     float: left;
     width: auto;

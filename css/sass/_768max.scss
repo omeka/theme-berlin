@@ -139,19 +139,23 @@ footer .navigation {
 
 /* @end */
 
-/* @group ----- Collections/Browse ----- */
+/* @group ----- Collections and Exhibits Browse ----- */
 
-.browse .collection h2 {
+.browse .collection h2,
+.browse .exhibit h2 {
     float: none;
+    display: block;
 }
 
-.collection-meta {
+.collection-meta,
+.browse .exhibit .description {
     width: 100%;
     display: inline;
     float: none;
 }
 
-.browse .collection .image {
+.browse .collection .image,
+.browse .exhibit .image {
     margin: $spacing-unit $spacing-unit (.5 * $spacing-unit) (.5 * $spacing-unit);
     float: left;
     width: auto;
