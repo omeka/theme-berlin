@@ -141,6 +141,10 @@ footer .navigation {
 
 /* @group ----- Collections/Browse ----- */
 
+.browse .collection h2 {
+    float: none;
+}
+
 .collection-meta {
     width: 100%;
     display: inline;
@@ -148,8 +152,10 @@ footer .navigation {
 }
 
 .browse .collection .image {
-    margin: $spacing-unit $spacing-unit $spacing-unit 10px;
+    margin: $spacing-unit $spacing-unit (.5 * $spacing-unit) (.5 * $spacing-unit);
     float: left;
+    width: auto;
+    max-width: 50%;
 }
 
 .browse .collection.record .view-items-link,

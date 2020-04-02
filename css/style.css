@@ -1802,13 +1802,17 @@ footer {
     float: left; }
   /* @end */
   /* @group ----- Collections/Browse ----- */
+  .browse .collection h2 {
+    float: none; }
   .collection-meta {
     width: 100%;
     display: inline;
     float: none; }
   .browse .collection .image {
-    margin: 18px 18px 18px 10px;
-    float: left; }
+    margin: 18px 18px 9px 9px;
+    float: left;
+    width: auto;
+    max-width: 50%; }
   .browse .collection.record .view-items-link,
   .browse .exhibit .view-items-link {
     clear: both; }
