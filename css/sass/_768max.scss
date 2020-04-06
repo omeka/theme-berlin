@@ -139,17 +139,27 @@ footer .navigation {
 
 /* @end */
 
-/* @group ----- Collections/Browse ----- */
+/* @group ----- Collections and Exhibits Browse ----- */
 
-.collection-meta {
+.browse .collection h2,
+.browse .exhibit h2 {
+    float: none;
+    display: block;
+}
+
+.collection-meta,
+.browse .exhibit .description {
     width: 100%;
     display: inline;
     float: none;
 }
 
-.browse .collection .image {
-    margin: $spacing-unit $spacing-unit $spacing-unit 10px;
+.browse .collection .image,
+.browse .exhibit .image {
+    margin: $spacing-unit $spacing-unit (.5 * $spacing-unit) (.5 * $spacing-unit);
     float: left;
+    width: auto;
+    max-width: 50%;
 }
 
 .browse .collection.record .view-items-link,

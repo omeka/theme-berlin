@@ -965,13 +965,14 @@ ul.title-list {
 .collection .image,
 .exhibit .image {
     display: block;
-    box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
     margin: 0 $spacing-unit $spacing-unit 9px;
+    @include columns(3);
+    @include omega;
 }
 
 .collection .image img,
 .exhibit .image img {
-    height: (7 * $spacing-unit);
+    box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 #ccc, -8px -8px 0 -1px #ddd, -8px -8px 0 #CCC;
 }
 
 .browse .collection h2,
@@ -987,11 +988,11 @@ ul.title-list {
     @include omega;
     float: right;
     text-align: right;
-    height: (7 * $spacing-unit);
 
     img {
-        height: 100%;
-        width: auto;
+        max-width: 100%;
+        height: auto;
+        float: none;
     }
 }
 
