@@ -1342,29 +1342,7 @@ ul.title-list {
 .collection .image,
 .exhibit .image {
   display: block;
-  margin: 0 18px 18px 9px;
-  float: left;
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 160px;
-  margin-right: 0; }
-  @media only screen and (max-width: 767px) {
-    .collection .image,
-    .exhibit .image {
-      margin: 0; } }
-  @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .collection .image,
-    .exhibit .image {
-      width: 124px; } }
-  @media only screen and (max-width: 767px) {
-    .collection .image,
-    .exhibit .image {
-      width: 300px; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .collection .image,
-    .exhibit .image {
-      width: 420px; } }
+  margin: 0 18px 18px 9px; }
 
 .collection .image img,
 .exhibit .image img {
@@ -1399,9 +1377,30 @@ ul.title-list {
 
 .browse .collection .image,
 .browse .exhibit .image {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 160px;
   margin-right: 0;
   float: right;
   text-align: right; }
+  @media only screen and (max-width: 767px) {
+    .browse .collection .image,
+    .browse .exhibit .image {
+      margin: 0; } }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .browse .collection .image,
+    .browse .exhibit .image {
+      width: 124px; } }
+  @media only screen and (max-width: 767px) {
+    .browse .collection .image,
+    .browse .exhibit .image {
+      width: 300px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .browse .collection .image,
+    .browse .exhibit .image {
+      width: 420px; } }
   .browse .collection .image img,
   .browse .exhibit .image img {
     max-width: 100%;

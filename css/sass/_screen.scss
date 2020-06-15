@@ -966,8 +966,6 @@ ul.title-list {
 .exhibit .image {
     display: block;
     margin: 0 $spacing-unit $spacing-unit 9px;
-    @include columns(3);
-    @include omega;
 }
 
 .collection .image img,
@@ -985,6 +983,7 @@ ul.title-list {
 
 .browse .collection .image,
 .browse .exhibit .image {
+    @include columns(3);
     @include omega;
     float: right;
     text-align: right;
