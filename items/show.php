@@ -1,6 +1,6 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show')); ?>
 <div id="primary">
-    <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
+    <h1><?php echo metadata('item', 'rich_title', array('no_escape' => true)); ?></h1>
 
     <?php if ((get_theme_option('Item FileDisplay') == 1) && metadata('item', 'has files')): ?>
     <?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
