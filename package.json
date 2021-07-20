@@ -1,14 +1,17 @@
 {
   "name": "berlin",
-  "version": "2.6.1,
+  "version": "2.7.1",
   "description": "\"Abstraction of the Making the History of 1989 theme.\"",
   "main": "gulpfile.js",
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "gulp": "^4.0.0",
-    "gulp-postcss": "^6.1.1",
-    "gulp-sass": "^4.0.2",
+    "autoprefixer": "^10.2.6",
+    "glob": "^7.1.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.0",
+    "sass": "~1.32.13",
     "susy": "^2.2.12"
   },
   "scripts": {
