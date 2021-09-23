@@ -1,6 +1,6 @@
 {
   "name": "berlin",
-  "version": "2.7.1",
+  "version": "2.7.2",
   "description": "\"Abstraction of the Making the History of 1989 theme.\"",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -31,5 +31,9 @@
   "bugs": {
     "url": "https://github.com/omeka/theme-berlin/issues"
   },
-  "homepage": "https://github.com/omeka/theme-berlin#readme"
+  "homepage": "https://github.com/omeka/theme-berlin#readme",
+  "browserslist": [
+    "> 5%",
+    "> 1% in US"
+  ]
 }
