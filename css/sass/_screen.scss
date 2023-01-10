@@ -216,9 +216,9 @@ header {
     }
 }
 
-.show-advanced.button {
+#search-container .show-advanced.button {
     width: 30px;
-    right: 0;
+    right: 30px;
     top: 0;
     bottom: 0;
     background:#369;
@@ -1083,7 +1083,11 @@ ul.title-list {
 
     li ul { display:inline; }
 
-    li ul li { display:inline-block; }
+    li ul li { 
+        display:inline-block; 
+        margin: 0;
+        padding: 0;
+    }
 
     li ul li:after {
         content: ", ";

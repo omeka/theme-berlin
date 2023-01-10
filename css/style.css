@@ -685,9 +685,9 @@ header:after {
   width: 30px;
 }
 
-.show-advanced.button {
+#search-container .show-advanced.button {
   width: 30px;
-  right: 0;
+  right: 30px;
   top: 0;
   bottom: 0;
   background: #369;
@@ -698,7 +698,7 @@ header:after {
   behavior: url("../javascripts/boxsizing.htc");
   box-sizing: border-box;
 }
-.show-advanced.button:after {
+#search-container .show-advanced.button:after {
   content: "…";
   display: block;
   text-indent: 0;
@@ -1817,6 +1817,8 @@ ul.title-list {
 }
 #item-filters ul li ul li, #search-filters ul li ul li {
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 #item-filters ul li ul li:after, #search-filters ul li ul li:after {
   content: ", ";
