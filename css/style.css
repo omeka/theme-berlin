@@ -642,7 +642,6 @@ header:after {
   float: right;
   width: 45%;
   position: relative;
-  font-size: 14.0004px;
 }
 #search-container h2 {
   display: none;
@@ -740,12 +739,8 @@ header:after {
   margin-right: 5px;
 }
 
-#search-form fieldset fieldset {
+#search-form #query-types {
   margin-bottom: 18px;
-}
-
-#search-container.with-advanced .button {
-  right: 30px;
 }
 
 #skipnav {

@@ -171,7 +171,6 @@ header {
     float:right;
     width:45%;
     position:relative;
-    font-size: 1.1667 * $base-font-size;
 
     h2 { display:none; }
 
@@ -273,11 +272,7 @@ header {
 
 #advanced-form input[type="radio"] { margin-right: 5px;}
 
-#search-form fieldset fieldset { margin-bottom: $base-line-height; }
-
-#search-container.with-advanced .button {
-    right: 30px;
-}
+#search-form #query-types { margin-bottom: $base-line-height; }
 
 #skipnav {
     border: 0;
