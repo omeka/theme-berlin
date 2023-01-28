@@ -139,6 +139,17 @@ footer .navigation {
 
 /* @end */
 
+/* @group ----- Items/Browse ----- */
+
+#search-narrow-by-fields .advanced-search-type,
+#search-narrow-by-fields .advanced-search-element,
+#search-narrow-by-fields .advanced-search-terms {
+    width: 100%;
+    margin-bottom: .25rem;
+}
+
+/* @end */
+
 /* @group ----- Collections and Exhibits Browse ----- */
 
 .browse .collection h2,

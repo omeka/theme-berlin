@@ -27,6 +27,7 @@ input[type="url"],
 input[type="password"],
 textarea {
     border: 1px solid #ccc;
+    line-height: $base-line-height;
 }
 
 input[type="checkbox"] {
@@ -915,31 +916,34 @@ ul.title-list {
     overflow: hidden;
 }
 
-.search-entry:first-child .advanced-search-joiner { display: none; }
+.search-entry {
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+    padding: (.5 * $spacing-unit);
+}
 
-.search-entry select { margin-bottom: .5 * $spacing-unit; }
+.search-entry:first-child .advanced-search-joiner { display: none; }
 
 .search-entry input[type=text] { display: inline-block; }
 
-.remove_search {
-    text-indent: -9999px;
-    width: $base-line-height;
-    position: relative;
-    height: $base-line-height;
-    color: #666;
+#search-narrow-by-fields .advanced-search-joiner { 
+    width: auto; 
+    margin-right: .25rem;
+}
 
-    &:after {
-        content: "\f00d";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        text-indent: 0;
-        text-align: center;
-        width: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-        line-height: $base-line-height;
-    }
+#search-narrow-by-fields .advanced-search-type,
+#search-narrow-by-fields .advanced-search-element,
+#search-narrow-by-fields .advanced-search-terms {
+    width: 30%;
+    margin-right: .25rem;
+    margin-bottom: 0;
+}
+
+#search-narrow-by-fields input[type=text] { width: 100%; }
+
+.remove_search {
+    align-self: center;
+    margin-top: .25 * $spacing-unit;
 }
 
 /* @end */

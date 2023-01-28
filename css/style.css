@@ -423,6 +423,7 @@ input[type=url],
 input[type=password],
 textarea {
   border: 1px solid #ccc;
+  line-height: 18px;
 }
 
 input[type=checkbox] {
@@ -1563,36 +1564,40 @@ ul.title-list {
   overflow: hidden;
 }
 
-.search-entry:first-child .advanced-search-joiner {
-  display: none;
+.search-entry {
+  justify-content: flex-start;
+  border: 1px solid #ccc;
+  padding: 9px;
 }
 
-.search-entry select {
-  margin-bottom: 9px;
+.search-entry:first-child .advanced-search-joiner {
+  display: none;
 }
 
 .search-entry input[type=text] {
   display: inline-block;
 }
 
-.remove_search {
-  text-indent: -9999px;
-  width: 18px;
-  position: relative;
-  height: 18px;
-  color: #666;
+#search-narrow-by-fields .advanced-search-joiner {
+  width: auto;
+  margin-right: 0.25rem;
 }
-.remove_search:after {
-  content: "";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  text-indent: 0;
-  text-align: center;
+
+#search-narrow-by-fields .advanced-search-type,
+#search-narrow-by-fields .advanced-search-element,
+#search-narrow-by-fields .advanced-search-terms {
+  width: 30%;
+  margin-right: 0.25rem;
+  margin-bottom: 0;
+}
+
+#search-narrow-by-fields input[type=text] {
   width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  line-height: 18px;
+}
+
+.remove_search {
+  align-self: center;
+  margin-top: 4.5px;
 }
 
 /* @end */
@@ -2136,6 +2141,9 @@ footer nav + p {
   /* @group ----- Items/Browse ----- */
 
   /* @end */
+  /* @group ----- Items/Browse ----- */
+
+  /* @end */
   /* @group ----- Collections and Exhibits Browse ----- */
 
   /* @end */
@@ -2271,6 +2279,14 @@ footer nav + p {
 @media screen and (max-width: 768px) {
   #sort-links {
     float: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  #search-narrow-by-fields .advanced-search-type,
+#search-narrow-by-fields .advanced-search-element,
+#search-narrow-by-fields .advanced-search-terms {
+    width: 100%;
+    margin-bottom: 0.25rem;
   }
 }
 @media screen and (max-width: 768px) {
