@@ -38,6 +38,10 @@ input[type="checkbox"] {
     }
 }
 
+select {
+    line-height: 1;
+}
+
     /* -- Headings -- */
 
     h1, h2, h3, h4, h5, h6 { margin-bottom: $base-line-height; }
@@ -920,6 +924,10 @@ ul.title-list {
     justify-content: flex-start;
     border: 1px solid #ccc;
     padding: (.5 * $spacing-unit);
+
+    select {
+        width: 100%;
+    }
 }
 
 .search-entry:first-child .advanced-search-joiner { display: none; }
