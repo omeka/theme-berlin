@@ -433,6 +433,10 @@ input[type=checkbox] + label {
   display: inline-block;
 }
 
+select {
+  line-height: 1;
+}
+
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 18px;
@@ -1568,6 +1572,9 @@ ul.title-list {
   justify-content: flex-start;
   border: 1px solid #ccc;
   padding: 9px;
+}
+.search-entry select {
+  width: 100%;
 }
 
 .search-entry:first-child .advanced-search-joiner {
