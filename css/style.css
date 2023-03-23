@@ -1573,8 +1573,13 @@ ul.title-list {
   border: 1px solid #ccc;
   padding: 9px;
 }
+.search-entry input[type=text],
 .search-entry select {
   width: 100%;
+  margin-bottom: 0;
+}
+.search-entry .input {
+  margin: 0 0.25rem 0 0;
 }
 
 .search-entry:first-child .advanced-search-joiner {
@@ -1590,12 +1595,8 @@ ul.title-list {
   margin-right: 0.25rem;
 }
 
-#search-narrow-by-fields .advanced-search-type,
-#search-narrow-by-fields .advanced-search-element,
-#search-narrow-by-fields .advanced-search-terms {
-  width: 30%;
-  margin-right: 0.25rem;
-  margin-bottom: 0;
+.input.advanced-search-terms {
+  flex-grow: 1;
 }
 
 #search-narrow-by-fields input[type=text] {
@@ -1603,8 +1604,7 @@ ul.title-list {
 }
 
 .remove_search {
-  align-self: center;
-  margin-top: 4.5px;
+  align-self: flex-end;
 }
 
 /* @end */

@@ -925,8 +925,14 @@ ul.title-list {
     border: 1px solid #ccc;
     padding: (.5 * $spacing-unit);
 
+    input[type="text"],
     select {
         width: 100%;
+        margin-bottom: 0;
+    }
+
+    .input {
+        margin: 0 .25rem 0 0;
     }
 }
 
@@ -939,19 +945,14 @@ ul.title-list {
     margin-right: .25rem;
 }
 
-#search-narrow-by-fields .advanced-search-type,
-#search-narrow-by-fields .advanced-search-element,
-#search-narrow-by-fields .advanced-search-terms {
-    width: 30%;
-    margin-right: .25rem;
-    margin-bottom: 0;
+.input.advanced-search-terms {
+    flex-grow: 1;
 }
 
 #search-narrow-by-fields input[type=text] { width: 100%; }
 
 .remove_search {
-    align-self: center;
-    margin-top: .25 * $spacing-unit;
+    align-self: flex-end;
 }
 
 /* @end */
