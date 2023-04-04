@@ -920,6 +920,10 @@ ul.title-list {
     overflow: hidden;
 }
 
+.inputs select {
+    max-width: 100%;
+}
+
 .search-entry {
     justify-content: flex-start;
     border: 1px solid #ccc;
