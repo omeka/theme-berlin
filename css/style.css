@@ -872,7 +872,7 @@ header:after {
 #primary-nav .nav-item > a.open {
   border: 1px solid #dedede;
   border-right: 0;
-  margin: 0 -1px 0 0;
+  margin: 0;
   border-bottom: 0;
 }
 #primary-nav .nav-item > a.open {
