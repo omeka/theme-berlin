@@ -766,18 +766,22 @@ ul.title-list {
 
 .item-pagination {
     clear:both;
-    overflow:hidden;
+    display: flex;
+    justify-content: space-between;
     border-top:1px solid #eee;
     padding-top:18px;
 }
     .item-pagination a {
         text-decoration:none;
         font-weight:bold;
-        float:left;
+        display: block;
+        background: #369;
+        color: white;
+        padding: (.25 * $spacing-unit) (.5 * $spacing-unit);
     }
-    .item-pagination .next a {
-        float:right;
-        text-align:right;
+
+    .item-pagination .next {
+        margin-left: auto;
     }
 
 .item .tags {
