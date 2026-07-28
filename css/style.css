@@ -675,7 +675,7 @@ header:after {
 }
 #search-container button:after {
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: ""/"";
   font-weight: 900;
   text-indent: 0;
   position: absolute;
@@ -951,7 +951,7 @@ header:after {
 }
 #primary-nav [aria-haspopup=true]:after {
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: ""/"";
   font-weight: 900;
   margin: -1px 0 0 0.5em;
   display: inline-block;
@@ -1274,11 +1274,11 @@ nav + .exhibit {
 }
 
 .desc a:after {
-  content: " ";
+  content: " "/"";
 }
 
 .asc a:after {
-  content: " ";
+  content: " "/"";
 }
 
 ul.title-list {
