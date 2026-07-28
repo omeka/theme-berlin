@@ -48,7 +48,8 @@ input[type=text], input[type=password], textarea {
         width: 100%;
     }
 
-    a {
+    a,
+    button {
         text-decoration:none;
         display:block;
         padding: 10px;
@@ -58,9 +59,12 @@ input[type=text], input[type=password], textarea {
 
     a:hover { background:#fff; }
 
-    & > a:first-child {
+    & > .menu.button {
         background:#fafafa;
         cursor: pointer;
+        width: 100%;
+        text-align: left;
+        color: #369;
     }
 
     li.current a {

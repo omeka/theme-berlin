@@ -58,7 +58,8 @@
              ?>
          </div>
 
-         <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile Navigation'); ?>">
+         <div id="mobile-nav" role="navigation" aria-label="<?php echo __('Mobile'); ?>">
+            <button type="button" class="menu button" aria-expanded="false" aria-controls="mobile-nav-ul"><?php echo __('Menu'); ?></button>
              <?php echo public_nav_main(); ?>
          </div>
         <?php echo theme_header_image(); ?>

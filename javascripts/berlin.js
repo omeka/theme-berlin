@@ -4,14 +4,19 @@ if (!Berlin) {
 
 (function ($) {    
     Berlin.dropDown = function(){
-        var dropdownMenu = $('#mobile-nav');
-        dropdownMenu.prepend('<a href="#" class="menu">Menu</a>');
         //Hide the rest of the menu
-        $('#mobile-nav .navigation').hide();
+        var menuButton = $('#mobile-nav .menu.button');
+        var mobileNav = $('#mobile-nav .navigation');
+        mobileNav.attr('id', 'mobile-nav-ul').hide();
 
         //function the will toggle the menu
-        $('.menu').click(function() {
-            $("#mobile-nav .navigation").slideToggle();
+        menuButton.click(function() {
+            mobileNav.slideToggle().toggleClass('open');
+            if (mobileNav.hasClass('open')) {
+                menuButton.attr('aria-expanded', 'true');
+            } else {
+                menuButton.attr('aria-expanded', 'false');
+            }
         });
     };
 })(jQuery)

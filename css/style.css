@@ -2200,7 +2200,8 @@ footer nav + p {
   }
 }
 @media screen and (max-width: 768px) {
-  #mobile-nav a {
+  #mobile-nav a,
+#mobile-nav button {
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -2214,9 +2215,12 @@ footer nav + p {
   }
 }
 @media screen and (max-width: 768px) {
-  #mobile-nav > a:first-child {
+  #mobile-nav > .menu.button {
     background: #fafafa;
     cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: #369;
   }
 }
 @media screen and (max-width: 768px) {
