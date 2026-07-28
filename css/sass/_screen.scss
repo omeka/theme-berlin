@@ -190,7 +190,6 @@ header {
     input[type=text] {
         padding:3px;
         width: 100%;
-        behavior: url("../javascripts/boxsizing.htc");
         box-sizing: border-box;
     }
 
@@ -230,7 +229,6 @@ header {
     position: absolute;
     text-decoration:none;
     text-indent: -9999px;
-    behavior: url("../javascripts/boxsizing.htc");
     box-sizing: border-box;
 
     &:after{
@@ -259,7 +257,6 @@ header {
     border: 1px solid #e7e7e7;
     width: 100%;
     padding: 1.5em 1em;
-    *behavior: url("../javascripts/boxsizing.htc");
     box-sizing: border-box;
 
     fieldset p {
@@ -461,7 +458,6 @@ header {
     }
 
     a {
-        behavior: url("../javascripts/boxsizing.htc");
         box-sizing: border-box;
         text-decoration:none;
         display:block;
