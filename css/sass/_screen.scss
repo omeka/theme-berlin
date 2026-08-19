@@ -933,8 +933,13 @@ ul.title-list {
         margin: 0;
     }
 
+    ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: .5 * $spacing-unit;
+    }
+
     ul li {
-        padding-left: 10px;
         display: inline-block;
         list-style-type: none;
     }
