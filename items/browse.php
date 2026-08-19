@@ -11,20 +11,22 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <?php echo item_search_filters(); ?>
 
-<?php echo pagination_links(); ?>
+<div class="browse-controls">
+    <?php echo pagination_links(); ?>
+    <?php if ($total_results > 0): ?>
 
-<?php if ($total_results > 0): ?>
+    <?php
+    $sortLinks[__('Title')] = 'Dublin Core,Title';
+    $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+    $sortLinks[__('Date Added')] = 'added';
+    ?>
+    <div id="sort-links">
+        <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+    </div>
 
-<?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Creator')] = 'Dublin Core,Creator';
-$sortLinks[__('Date Added')] = 'added';
-?>
-<div id="sort-links">
-    <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+    <?php endif; ?>
 </div>
 
-<?php endif; ?>
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">

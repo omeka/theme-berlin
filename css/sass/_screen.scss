@@ -531,30 +531,36 @@ header {
 /* Pagination Classes */
 
 .pagination {
-    float: left;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
     padding-left: 0;
-    margin: 0 0 $spacing-unit 0;
-
-    ul {
-        margin-left:0;
-    }
+    margin: 0;
+    gap: (.5 * $spacing-unit) $spacing-unit;
 
     li {
-        height: (2 * $spacing-unit);
-        border: solid #e7e7e7;
-        border-width: 1px 0 1px 1px;
-        float: left;
         list-style-type: none;
-
-        &:last-of-type { border-right: 1px solid #e7e7e7; }
     }
 
     a, form {
         text-decoration:none;
-        padding: 0 10px;
-        line-height: 2 * $base-line-height;
         display:inline-block;
     }
+
+    .page-input,
+    form {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: .25 * $spacing-unit;
+        align-items: center;
+    }
+}
+
+.page-input label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5 * $spacing-unit;
 }
 
 .page-input input[type=text] {
@@ -616,6 +622,11 @@ nav + .exhibit {
 .collection + .pagination-nav ul,
 .exhibit + .pagination-nav ul {
     margin-top: $spacing-unit;
+}
+
+.pagination-nav {
+    display: inline-flex;
+    margin-right: auto;
 }
 
 /* @end */
@@ -707,10 +718,10 @@ nav + .exhibit {
 
 #sort-links-list {
     display: inline-block;
-    margin: (.5 * $spacing-unit) 0 (.5 * $spacing-unit) 10px;
 }
 
-.desc a:after, .asc a:after {
+.desc .sort-icon:after, 
+.asc .sort-icon:after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     display: inline-block;
@@ -720,11 +731,11 @@ nav + .exhibit {
     margin-right: 10px;
 }
 
-.desc a:after {
+.desc .sort-icon:after {
     content: "\00a0\f0d8" / "";
 }
 
-.asc a:after {
+.asc .sort-icon:after {
     content: "\00a0\f0d7" / "";
 }
 
@@ -764,10 +775,8 @@ ul.title-list {
 }
 
 .browse .item {
-    clear: both;
     border-bottom:1px solid #eee;
     padding: (2 * $spacing-unit) 0;
-    float: left;
     width: 100%;
 }
 
@@ -901,18 +910,28 @@ ul.title-list {
     &:only-of-type { margin-bottom: 0; }
 }
 
+.browse-controls {
+    display: flex;
+    flex-wrap: wrap;
+    padding: (.5 * $spacing-unit);
+    border-top: 1px solid var(--berlin-border-color);
+    border-bottom: 1px solid var(--berlin-border-color);
+    gap: $spacing-unit;
+}
+
 #sort-links{
-    float: right;
-    list-style-type:none;
     padding: 0;
     display:block;
 
-    ul { padding-left: 0; }
+    ul { 
+        padding-left: 0; 
+        margin: 0;
+    }
 
     ul li {
         padding-left: 10px;
         display: inline-block;
-
+        list-style-type: none;
     }
 }
 
@@ -1092,7 +1111,6 @@ ul.title-list {
 #item-filters ul, #search-filters ul {
     padding-left: 0;
     list-style-type: none;
-    border-bottom: 1px solid #eee;
     margin: (-.5 * $spacing-unit) 0 0;
 
     & > li {
