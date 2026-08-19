@@ -1431,7 +1431,8 @@ ul.title-list {
 }
 
 .browse .item-img img {
-  height: 126px;
+  max-height: 126px;
+  max-width: 100%;
 }
 
 .browse .item-meta {

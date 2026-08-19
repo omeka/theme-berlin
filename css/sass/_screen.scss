@@ -890,7 +890,8 @@ ul.title-list {
 }
 
 .browse .item-img img {
-    height: (7 * $spacing-unit);
+    max-height: (7 * $spacing-unit);
+    max-width: 100%;
 }
 
 
