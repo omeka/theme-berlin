@@ -921,7 +921,7 @@ header:after {
 }
 
 #secondary-nav, .secondary-nav {
-  margin-bottom: 18px;
+  margin-bottom: 4.5px;
   overflow: auto;
   border-bottom: 1px solid var(--berlin-border-color);
   clear: both;
@@ -1281,10 +1281,14 @@ ul.title-list {
   margin-bottom: 18px;
 }
 
-.browse .item {
+.browse .record {
   border-bottom: 1px solid #eee;
   padding: 36px 0;
   width: 100%;
+}
+
+.browse-controls + .record {
+  border-top: 1px solid var(--berlin-border-color);
 }
 
 .item-pagination {
@@ -1504,19 +1508,23 @@ ul.title-list {
   display: flex;
   flex-wrap: wrap;
   padding: 9px;
-  border-top: 1px solid var(--berlin-border-color);
-  border-bottom: 1px solid var(--berlin-border-color);
   gap: 18px;
 }
 
+#outputs,
 #sort-links {
   padding: 0;
-  display: block;
+  display: inline-flex;
+  gap: 9px;
 }
+#outputs p,
+#outputs ul,
+#sort-links p,
 #sort-links ul {
   padding-left: 0;
   margin: 0;
 }
+#outputs ul li,
 #sort-links ul li {
   padding-left: 10px;
   display: inline-block;
@@ -1778,16 +1786,23 @@ ul.title-list {
   width: auto;
 }
 
+#item-filters,
+#search-filters {
+  padding: 9px 0;
+}
+
 #item-filters ul, #search-filters ul {
   padding-left: 0;
   list-style-type: none;
-  margin: -9px 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4.5px;
 }
 #item-filters ul > li, #search-filters ul > li {
   display: inline-block;
   background-color: #eee;
   padding: 4.5px 9px;
-  margin: 0 9px 9px 0;
 }
 #item-filters ul > li:last-child:after, #search-filters ul > li:last-child:after {
   content: " ";
@@ -1937,7 +1952,6 @@ footer nav + p {
 
 .secondary-nav + .exhibit {
   border-top: 0;
-  padding-top: 0;
 }
 
 #exhibit-pages ul ul {
@@ -2263,12 +2277,7 @@ footer nav + p {
 @media screen and (max-width: 768px) {
   .browse-controls {
     padding: 9px 0;
-    border-top: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  #sort-links {
-    float: left;
+    border: 0;
   }
 }
 @media screen and (max-width: 768px) {

@@ -502,7 +502,7 @@ header {
 }
 
 #secondary-nav, .secondary-nav {
-    margin-bottom: $spacing-unit;
+    margin-bottom: .25 * $spacing-unit;
     overflow: auto;
     border-bottom:1px solid var(--berlin-border-color);
     clear: both;
@@ -774,10 +774,14 @@ ul.title-list {
     margin-bottom: $spacing-unit;
 }
 
-.browse .item {
+.browse .record {
     border-bottom:1px solid #eee;
     padding: (2 * $spacing-unit) 0;
     width: 100%;
+}
+
+.browse-controls + .record {
+    border-top:1px solid var(--berlin-border-color);
 }
 
 .item-pagination {
@@ -914,15 +918,16 @@ ul.title-list {
     display: flex;
     flex-wrap: wrap;
     padding: (.5 * $spacing-unit);
-    border-top: 1px solid var(--berlin-border-color);
-    border-bottom: 1px solid var(--berlin-border-color);
     gap: $spacing-unit;
 }
 
+#outputs,
 #sort-links{
     padding: 0;
-    display:block;
+    display: inline-flex;
+    gap: .5 * $spacing-unit;
 
+    p,
     ul { 
         padding-left: 0; 
         margin: 0;
@@ -1108,16 +1113,23 @@ ul.title-list {
     }
 }
 
+#item-filters,
+#search-filters {
+    padding: (.5 * $spacing-unit) 0;
+}
+
 #item-filters ul, #search-filters ul {
     padding-left: 0;
     list-style-type: none;
-    margin: (-.5 * $spacing-unit) 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25 * $spacing-unit;
 
     & > li {
         display: inline-block;
         background-color: #eee;
         padding: (.25 * $spacing-unit) (.5 * $spacing-unit);
-        margin: 0 (.5 * $spacing-unit) (.5 * $spacing-unit) 0;
     }
 
     & > li:last-child:after { content: "\00A0"; }
@@ -1256,7 +1268,6 @@ footer {
 
 .secondary-nav + .exhibit {
     border-top: 0;
-    padding-top: 0;
 }
 
 #exhibit-pages ul ul {
