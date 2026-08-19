@@ -1516,6 +1516,7 @@ ul.title-list {
   padding: 0;
   display: inline-flex;
   gap: 9px;
+  align-items: center;
 }
 #outputs p,
 #outputs ul,
@@ -1528,6 +1529,7 @@ ul.title-list {
 #sort-links ul {
   display: inline-flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 9px;
 }
 #outputs ul li,

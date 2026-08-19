@@ -926,6 +926,7 @@ ul.title-list {
     padding: 0;
     display: inline-flex;
     gap: .5 * $spacing-unit;
+    align-items: center;
 
     p,
     ul { 
@@ -936,6 +937,7 @@ ul.title-list {
     ul {
         display: inline-flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: .5 * $spacing-unit;
     }
 
