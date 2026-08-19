@@ -293,8 +293,8 @@ header {
     height: auto;
     width: auto;
     padding: .5em;
-    border: 1px blue dashed;
     color: #ff8000;
+    background-color: #fff;
 }
 
 /* @end */
@@ -369,7 +369,6 @@ header {
        navigation item */
     .nav-item > a:focus,
     .nav-item > a.open {
-        border: 1px solid #dedede;
         border-right: 0;
         margin: 0;
         border-bottom: 0;
@@ -422,7 +421,6 @@ header {
         top: (2 * $spacing-unit);
         margin-top: 1px;
         z-index: 1000;
-        box-shadow: 0 3px 5px #ccc;
     }
 
     /* list of items within sub-navigation panel */

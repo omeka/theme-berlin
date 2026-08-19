@@ -762,8 +762,8 @@ header:after {
   height: auto;
   width: auto;
   padding: 0.5em;
-  border: 1px blue dashed;
   color: #ff8000;
+  background-color: #fff;
 }
 
 /* @end */
@@ -867,7 +867,6 @@ header:after {
 }
 #primary-nav .nav-item > a:focus,
 #primary-nav .nav-item > a.open {
-  border: 1px solid #dedede;
   border-right: 0;
   margin: 0;
   border-bottom: 0;
@@ -909,7 +908,6 @@ header:after {
   top: 36px;
   margin-top: 1px;
   z-index: 1000;
-  box-shadow: 0 3px 5px #ccc;
 }
 #primary-nav .sub-nav ul {
   vertical-align: top;
