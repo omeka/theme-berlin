@@ -1,4 +1,7 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
+
+<h1 class="sr-only"><?php echo __('Home'); ?></h1>
+
 <div id="primary">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
     <p><?php echo $homepageText; ?></p>
