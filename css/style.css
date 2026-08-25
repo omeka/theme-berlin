@@ -1901,6 +1901,10 @@ footer nav + p {
 
 /* @end */
 /* @group ----- Exhibit Builder ----- */
+.browse .exhibit {
+  margin-top: 18px;
+}
+
 .pagination + .exhibit {
   border-top: 1px solid #eee;
 }
@@ -2091,6 +2095,13 @@ footer nav + p {
   display: inline;
 }
 
+.map.browse .pagination-nav {
+  padding: 4.5px 0 9px;
+  border-bottom: 1px solid var(--berlin-border-color);
+  margin-bottom: 18px;
+  width: 100%;
+}
+
 /* @end */
 @media screen and (max-width: 768px) {
   /* @group ----- Generic HTML elements ----- */
@@ -2116,7 +2127,9 @@ footer nav + p {
   /* @end */
   /* @group ----- Navigation ----- */
   #primary-nav {
-    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999;
   }
 
   #mobile-nav {

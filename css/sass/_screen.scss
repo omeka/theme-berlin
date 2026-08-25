@@ -1213,6 +1213,10 @@ footer {
 
 /* @group ----- Exhibit Builder ----- */
 
+.browse .exhibit {
+    margin-top: $spacing-unit;
+}
+
 .pagination + .exhibit {
     border-top: 1px solid #eee;
 }
@@ -1345,5 +1349,12 @@ footer {
 
 #recaptcha_area input {
     display: inline;
+}
+
+.map.browse .pagination-nav {
+    padding: (.25 * $spacing-unit) 0 (.5 * $spacing-unit);
+    border-bottom: 1px solid var(--berlin-border-color);
+    margin-bottom: $spacing-unit;
+    width: 100%;
 }
 /* @end */
