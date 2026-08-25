@@ -25,7 +25,11 @@ input[type=text], input[type=password], textarea {
 
 /* @group ----- Navigation ----- */
 
-#primary-nav { display: none; }
+#primary-nav { 
+    position: absolute;
+    top: -9999px;
+    left: -9999;
+}
 
 #mobile-nav {
     display:block;

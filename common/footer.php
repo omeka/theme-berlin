@@ -25,7 +25,8 @@
         Omeka.showAdvancedForm();
         Omeka.skipNav();
         Omeka.megaMenu();
-        Berlin.dropDown();
+        Berlin.dropDown(); 
+        Berlin.manageNavVisibility();
     });
 </script>
 
