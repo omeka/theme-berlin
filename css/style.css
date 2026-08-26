@@ -1909,6 +1909,11 @@ footer nav + p {
   border-top: 1px solid #eee;
 }
 
+.exhibits .pagination-nav {
+  display: flex;
+  clear: both;
+}
+
 #exhibit-pages {
   width: 220px;
   display: inline-block;
@@ -1967,6 +1972,10 @@ footer nav + p {
 
 .secondary-nav + .exhibit {
   border-top: 0;
+}
+
+.secondary-nav + .pagination-nav {
+  padding: 9px 0 0;
 }
 
 #exhibit-pages ul ul {

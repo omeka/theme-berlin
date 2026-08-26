@@ -1221,6 +1221,11 @@ footer {
     border-top: 1px solid #eee;
 }
 
+.exhibits .pagination-nav {
+    display: flex;
+    clear: both;
+}
+
 #exhibit-pages {
     width: skeleton-column-width(4, $base-width);
     display: inline-block;
@@ -1285,6 +1290,10 @@ footer {
 
 .secondary-nav + .exhibit {
     border-top: 0;
+}
+
+.secondary-nav + .pagination-nav {
+    padding: (.5 * $spacing-unit) 0 0;
 }
 
 #exhibit-pages ul ul {
