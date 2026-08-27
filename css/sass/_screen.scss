@@ -729,6 +729,7 @@ nav + .exhibit {
     width: 0;
     text-decoration: underline;
     margin-right: 10px;
+    line-height: 1;
 }
 
 .desc .sort-icon:after {
@@ -945,6 +946,10 @@ ul.title-list {
     ul li {
         display: inline-block;
         list-style-type: none;
+    }
+
+    .sorting a {
+        display: inline-flex;
     }
 }
 

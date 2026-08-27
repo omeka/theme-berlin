@@ -1236,6 +1236,7 @@ nav + .exhibit {
   width: 0;
   text-decoration: underline;
   margin-right: 10px;
+  line-height: 1;
 }
 
 .desc .sort-icon:after {
@@ -1537,6 +1538,10 @@ ul.title-list {
 #sort-links ul li {
   display: inline-block;
   list-style-type: none;
+}
+#outputs .sorting a,
+#sort-links .sorting a {
+  display: inline-flex;
 }
 
 #outputs {
