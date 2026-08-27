@@ -33,7 +33,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
     <h2><?php echo link_to_item(null, array('class'=>'permalink')); ?></h2>
     <div class="item-meta">
     <?php if (metadata('item', 'has files')): ?>
-    <div class="item-img">
+    <div class="image">
         <?php echo link_to_item(item_image()); ?>
     </div>
     <?php endif; ?>

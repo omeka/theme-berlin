@@ -1289,7 +1289,7 @@ ul.title-list {
 
 .browse .record {
   border-bottom: 1px solid #eee;
-  padding: 36px 0;
+  padding: 18px 0;
   width: 100%;
 }
 
@@ -1392,7 +1392,7 @@ ul.title-list {
 /* @end */
 /* @group ----- Items/Browse ----- */
 .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
   float: left;
   display: inline;
   margin-left: 10px;
@@ -1401,25 +1401,25 @@ ul.title-list {
 }
 @media only screen and (max-width: 767px) {
   .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     margin: 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 999px) {
   .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     width: 165px;
   }
 }
 @media only screen and (max-width: 767px) {
   .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     width: 360px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     width: 540px;
   }
 }
@@ -1430,14 +1430,14 @@ ul.title-list {
   max-width: 100%;
 }
 
-.browse .item-meta .item-img {
+.browse .item-meta .image {
   margin-right: 0;
   float: right;
   text-align: right;
 }
 
-.browse .item-img img {
-  max-height: 126px;
+.browse .image img {
+  max-height: 180px;
   max-width: 100%;
 }
 
@@ -1553,7 +1553,7 @@ ul.title-list {
   clear: both;
 }
 
-.item-img a {
+.image a {
   display: block;
 }
 
@@ -1761,17 +1761,17 @@ ul.title-list {
 
 /* @end */
 /* @group ----- Collections/Show ----- */
-.collections .item-img {
+.collections .image {
   float: left;
   margin: 0 18px 0 0;
 }
-.collections .item-img a {
+.collections .image a {
   display: block;
   height: 72px;
   border: 1px solid var(--berlin-border-color);
   padding: 2px;
 }
-.collections .item-img img {
+.collections .image img {
   height: 100%;
   width: auto;
 }
@@ -2301,12 +2301,12 @@ footer nav + p {
   }
 }
 @media screen and (max-width: 768px) {
-  .browse .item-meta .item-img {
+  .browse .item-meta .image {
     width: auto;
     float: left;
     margin: 0 18px 0 0;
   }
-  .browse .item-meta .item-img img {
+  .browse .item-meta .image img {
     margin-top: 0;
   }
 }

@@ -777,7 +777,7 @@ ul.title-list {
 
 .browse .record {
     border-bottom:1px solid #eee;
-    padding: (2 * $spacing-unit) 0;
+    padding: ($spacing-unit) 0;
     width: 100%;
 }
 
@@ -874,7 +874,7 @@ ul.title-list {
 /* @group ----- Items/Browse ----- */
 
 .browse .item h2,
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     @include columns(4);
 }
 
@@ -884,14 +884,14 @@ ul.title-list {
     max-width: 100%;
 }
 
-.browse .item-meta .item-img {
+.browse .item-meta .image {
     @include omega;
     float: right;
     text-align: right;
 }
 
-.browse .item-img img {
-    max-height: (7 * $spacing-unit);
+.browse .image img {
+    max-height: (10 * $spacing-unit);
     max-width: 100%;
 }
 
@@ -955,7 +955,7 @@ ul.title-list {
 
 #outputs { clear: both; }
 
-.item-img a {
+.image a {
     display: block;
 }
 
@@ -1081,7 +1081,7 @@ ul.title-list {
 
 /* @group ----- Collections/Show ----- */
 
-.collections .item-img {
+.collections .image {
     float: left;
     margin: 0 $spacing-unit 0 0;
 
