@@ -1335,6 +1335,11 @@ ul.title-list {
   margin-right: 3px;
 }
 
+.hTagcloud a {
+  display: inline-block;
+  line-height: 1.5;
+}
+
 .popular a {
   font-size: 120%;
 }
