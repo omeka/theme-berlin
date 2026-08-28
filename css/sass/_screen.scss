@@ -611,16 +611,13 @@ header {
     overflow: auto;
 }
 
-#sort-links + .item,
-#sort-links + .collection,
+#sort-links + .record,
 nav + .exhibit {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--berlin-border-color);
 }
 
 
-.item + .pagination-nav ul,
-.collection + .pagination-nav ul,
-.exhibit + .pagination-nav ul {
+.record + .pagination-nav ul {
     margin-top: $spacing-unit;
 }
 
@@ -696,6 +693,12 @@ nav + .exhibit {
 
 .collections.show .view-items-link {
     font-size: 1.25 * $base-font-size;
+    margin-top: $spacing-unit;
+    display: block
+}
+
+#collection-items .item:first-of-type {
+    border-top: 1px solid var(--berlin-border-color);
 }
 
 /* @end */
@@ -776,9 +779,32 @@ ul.title-list {
 }
 
 .browse .record {
-    border-bottom:1px solid #eee;
+    border-bottom: 1px solid var(--berlin-border-color);
     padding: ($spacing-unit) 0;
     width: 100%;
+}
+
+.browse .record h2,
+.browse .record h3 {
+    @include columns(4);
+    @include alpha;
+    padding-right: $spacing-unit;
+    margin: 0 0 $spacing-unit;
+    max-width: 100%;
+}
+
+.browse .record .image {
+    @include columns(3);
+    @include omega;
+    margin-left: $spacing-unit;
+    float: right;
+    text-align: right;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        float: none;
+    }
 }
 
 .browse-controls + .record {
@@ -789,7 +815,7 @@ ul.title-list {
     clear:both;
     display: flex;
     justify-content: space-between;
-    border-top:1px solid #eee;
+    border-top:1px solid var(--berlin-border-color);
     padding-top:18px;
 }
     .item-pagination a {
@@ -804,11 +830,6 @@ ul.title-list {
     .item-pagination .next {
         margin-left: auto;
     }
-
-.item .tags {
-    clear:left;
-    margin-left:216px;
-}
 
 .item .item-file a {
     display: block;
@@ -873,30 +894,13 @@ ul.title-list {
 
 /* @group ----- Items/Browse ----- */
 
-.browse .item h2,
-.browse .item-meta .image {
-    @include columns(4);
-}
-
-.browse .item h2 {
-    @include alpha;
-    margin-bottom: 0;
-    max-width: 100%;
-}
-
-.browse .item-meta .image {
-    @include omega;
-    float: right;
-    text-align: right;
-}
-
 .browse .image img {
     max-height: (10 * $spacing-unit);
     max-width: 100%;
 }
 
 
-.browse .item-meta {
+.browse .record-meta {
     @include columns(12);
     margin: 0;
     max-width: 100%;
@@ -1016,13 +1020,7 @@ ul.title-list {
 
 /* @group ----- Collections/Browse ----- */
 
-.browse .collection.record,
-.browse .exhibit {
-    clear: both;
-    border-bottom: 1px solid #eee;
-    float: left;
-    width: 100%;
-    padding-top: $spacing-unit;
+.browse .record {
 
     .view-items-link { margin-bottom: 1.5 * $spacing-unit; }
 
@@ -1042,39 +1040,9 @@ ul.title-list {
     box-shadow: -5px -5px 0 -1px #f2f2f2, -5px -5px 0 var(--berlin-border-color), -8px -8px 0 -1px #ddd, -8px -8px 0 var(--berlin-border-color);
 }
 
-.browse .collection h2,
-.browse .exhibit h2 {
-    @include columns(4);
-    @include alpha;
-    margin: 0 0 $spacing-unit;
-    max-width: 100%;
-}
-
-.browse .collection .image,
-.browse .exhibit .image {
-    @include columns(3);
-    @include omega;
-    float: right;
-    text-align: right;
-
-    img {
-        max-width: 100%;
-        height: auto;
-        float: none;
-    }
-}
-
-.collection-meta {
-    @include columns(9);
-}
-
 .collection-description p:first-of-type,
 .view-items-link:only-child {
     margin-top: .5 * $spacing-unit;
-}
-
-.browse .collection .element {
-    clear: none;
 }
 
 /* @end */
@@ -1095,18 +1063,6 @@ ul.title-list {
     img {
         height: 100%;
         width: auto;
-    }
-}
-
-.collections .item {
-    overflow: hidden;
-    border-top: 1px solid var(--berlin-border-color);
-    margin-top: $spacing-unit;
-
-    &:last-of-type {
-        border-bottom: 1px solid var(--berlin-border-color);
-        margin-bottom: $spacing-unit;
-        padding-bottom: $spacing-unit - 1px;
     }
 }
 
@@ -1223,7 +1179,7 @@ footer {
 }
 
 .pagination + .exhibit {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--berlin-border-color);
 }
 
 .exhibits .pagination-nav {
@@ -1248,14 +1204,14 @@ footer {
 
     & > ul {
         margin-left: 0;
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--berlin-border-color);
         padding-top: $spacing-unit - 1px;
         padding-left: 0;
         list-style-type: none;
     }
 
     & > ul > li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--berlin-border-color);
         padding-bottom: $spacing-unit - 1px;
         margin-bottom: $spacing-unit;
     }
@@ -1329,23 +1285,6 @@ footer {
 #exhibit-page-navigation {
     clear: none;
     margin: (2 * $spacing-unit) 0 (1 * $spacing-unit);
-}
-
-.exhibit .description,
-.exhibit .description ~ * {
-    @include columns(9);
-
-    p:first-of-type {
-        margin-top: .5 * $spacing-unit;
-    }
-}
-
-.exhibit .description ~ * {
-    display: block;
-    margin: $spacing-unit auto;
-    padding: 0 40px 0 80px;
-    float: none;
-    box-sizing: content-box;
 }
 
 .exhibit-items .download-file:last-child {

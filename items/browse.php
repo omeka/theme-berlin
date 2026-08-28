@@ -31,11 +31,9 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">
     <h2><?php echo link_to_item(null, array('class'=>'permalink')); ?></h2>
-    <div class="item-meta">
+    <div class="record-meta">
     <?php if (metadata('item', 'has files')): ?>
-    <div class="image">
-        <?php echo link_to_item(item_image()); ?>
-    </div>
+        <?php echo link_to_item(item_image(), array('class' => 'image')); ?>
     <?php endif; ?>
 
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
