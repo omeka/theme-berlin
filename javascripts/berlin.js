@@ -24,8 +24,10 @@ if (!Berlin) {
         var primaryNav = $('#primary-nav');
         if (window.innerWidth > 768) {
             $('#primary-nav').attr('aria-hidden', 'false');
+            $('#primary-nav a').removeAttr('tabIndex');
         } else {
             $('#primary-nav').attr('aria-hidden', 'true');
+            $('#primary-nav a').attr('tabIndex', '-1');
         }
     };
 
