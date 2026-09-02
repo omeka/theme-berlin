@@ -2176,10 +2176,15 @@ footer nav + p {
 }
 @media screen and (max-width: 768px) {
   .browse .record .image {
-    margin: 18px 18px 9px 9px;
+    margin: 0 18px 9px 0;
     float: left;
     width: auto;
     max-width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .browse .record-meta {
+    margin-top: 18px;
   }
 }
 @media screen and (max-width: 768px) {

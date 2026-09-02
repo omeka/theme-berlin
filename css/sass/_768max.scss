@@ -152,10 +152,14 @@ footer .navigation {
 }
 
 .browse .record .image {
-    margin: $spacing-unit $spacing-unit (.5 * $spacing-unit) (.5 * $spacing-unit);
+    margin: 0 $spacing-unit (.5 * $spacing-unit) 0;
     float: left;
     width: auto;
     max-width: 50%;
+}
+
+.browse .record-meta {
+    margin-top: $spacing-unit;
 }
 
 .browse .view-items-link {
