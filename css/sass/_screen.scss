@@ -542,11 +542,6 @@ header {
         list-style-type: none;
     }
 
-    a, form {
-        text-decoration:none;
-        display:inline-block;
-    }
-
     .page-input,
     form {
         display: inline-flex;
@@ -730,7 +725,6 @@ nav + .exhibit {
     display: inline-block;
     height: 0;
     width: 0;
-    text-decoration: underline;
     margin-right: 10px;
     line-height: 1;
 }
@@ -925,6 +919,16 @@ ul.title-list {
     flex-wrap: wrap;
     padding: (.5 * $spacing-unit);
     gap: $spacing-unit;
+}
+
+.browse-controls a, 
+.browse-controls form {
+    text-decoration:none;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
+    min-width: 24px;
 }
 
 #outputs,

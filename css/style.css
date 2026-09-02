@@ -961,10 +961,6 @@ header:after {
 .pagination li {
   list-style-type: none;
 }
-.pagination a, .pagination form {
-  text-decoration: none;
-  display: inline-block;
-}
 .pagination .page-input,
 .pagination form {
   display: inline-flex;
@@ -1242,7 +1238,6 @@ nav + .exhibit {
   display: inline-block;
   height: 0;
   width: 0;
-  text-decoration: underline;
   margin-right: 10px;
   line-height: 1;
 }
@@ -1543,6 +1538,16 @@ ul.title-list {
   flex-wrap: wrap;
   padding: 9px;
   gap: 18px;
+}
+
+.browse-controls a,
+.browse-controls form {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 24px;
+  min-width: 24px;
 }
 
 #outputs,
