@@ -1134,22 +1134,22 @@ nav + .exhibit {
   letter-spacing: 0.1em;
 }
 
-.featured,
+#home .featured,
 #featured-exhibit {
   overflow: hidden;
   background: #eee;
   padding: 18px 20px;
   margin-bottom: 18px;
 }
-.featured h2,
+#home .featured h2,
 #featured-exhibit h2 {
   margin: 0;
 }
-.featured h3,
+#home .featured h3,
 #featured-exhibit h3 {
   margin: 0 0 18px;
 }
-.featured img,
+#home .featured img,
 #featured-exhibit img {
   float: left;
   border: 1px solid var(--berlin-border-color);
