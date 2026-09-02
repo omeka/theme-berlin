@@ -1540,8 +1540,9 @@ ul.title-list {
   gap: 18px;
 }
 
-.browse-controls a,
-.browse-controls form {
+.pagination a,
+.pagination form,
+.sorting a {
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
