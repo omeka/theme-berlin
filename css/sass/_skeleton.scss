@@ -12,16 +12,16 @@
 // #Variable Definitions
 // ==================================================
     $base-width: 960px;
-    $tablet-width: 768px;
-    $mobile-portrait-width: 300px;
-    $mobile-landscape-width: 420px;
+    $tablet-width: 740px;
+    $mobile-portrait-width: 360px;
+    $mobile-landscape-width: 540px;
 
     $num-columns: 16;
     $margin: 10px;
 
 // Grid
 // ==================================================
-    @function skeleton-third-width($num: 1, $width: $base-width) {
+    @function skeleton-third-width($nu : 1, $width: $base-width) {
         @return $num * ($width / 3) - (2 * $margin); }
 
     @function skeleton-column-width($num: 1, $width: $base-width) {
@@ -32,6 +32,7 @@
         margin: 0 auto;
         padding: 0;
         width: $base-width;
+        max-width: 100%;
 
         &:after {
             content: "\0020";
@@ -40,7 +41,7 @@
             clear: both;
             visibility: hidden; }
 
-        @media only screen and (min-width: 768px) and (max-width: 959px) {
+        @media only screen and (min-width: 768px) and (max-width: 999px) {
             width: $tablet-width; }
 
         @media only screen and (max-width: 767px) {
@@ -68,7 +69,7 @@
         @include column;
         width: skeleton-column-width($num, $base-width);
 
-        @media only screen and (min-width: 768px) and (max-width: 959px) {
+        @media only screen and (min-width: 768px) and (max-width: 999px) {
             width: skeleton-column-width($num, $tablet-width); }
 
         @media only screen and (max-width: 767px) {
@@ -81,7 +82,7 @@
         @include column;
         width: skeleton-third-width($num, $base-width);
 
-        @media only screen and (min-width: 768px) and (max-width: 959px) {
+        @media only screen and (min-width: 768px) and (max-width: 999px) {
             width: skeleton-third-width($num, $tablet-width); }
 
         @media only screen and (max-width: 767px) {
@@ -94,7 +95,7 @@
         $offset: 2 * $margin;
         padding-left: skeleton-column-width($num, $base-width) + $offset;
 
-        @media only screen and (min-width: 768px) and (max-width: 959px) {
+        @media only screen and (min-width: 768px) and (max-width: 999px) {
             padding-left: skeleton-column-width($num, $tablet-width) + $offset; }
 
         @media only screen and (max-width: 767px) {

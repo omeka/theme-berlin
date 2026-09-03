@@ -11,29 +11,29 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
 <?php echo item_search_filters(); ?>
 
-<?php echo pagination_links(); ?>
+<div class="browse-controls">
+    <?php echo pagination_links(); ?>
+    <?php if ($total_results > 0): ?>
 
-<?php if ($total_results > 0): ?>
+    <?php
+    $sortLinks[__('Title')] = 'Dublin Core,Title';
+    $sortLinks[__('Creator')] = 'Dublin Core,Creator';
+    $sortLinks[__('Date Added')] = 'added';
+    ?>
+    <div id="sort-links">
+        <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+    </div>
 
-<?php
-$sortLinks[__('Title')] = 'Dublin Core,Title';
-$sortLinks[__('Creator')] = 'Dublin Core,Creator';
-$sortLinks[__('Date Added')] = 'added';
-?>
-<div id="sort-links">
-    <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
+    <?php endif; ?>
 </div>
 
-<?php endif; ?>
 
 <?php foreach (loop('items') as $item): ?>
 <div class="item record">
     <h2><?php echo link_to_item(null, array('class'=>'permalink')); ?></h2>
-    <div class="item-meta">
+    <div class="record-meta">
     <?php if (metadata('item', 'has files')): ?>
-    <div class="item-img">
-        <?php echo link_to_item(item_image()); ?>
-    </div>
+        <?php echo link_to_item(item_image(), array('class' => 'image')); ?>
     <?php endif; ?>
 
     <?php if ($description = metadata('item', array('Dublin Core', 'Description'), array('snippet'=>250))): ?>
@@ -54,11 +54,13 @@ $sortLinks[__('Date Added')] = 'added';
 </div><!-- end class="item hentry" -->
 <?php endforeach; ?>
 
-<?php echo pagination_links(); ?>
+<div class="browse-controls">
+    <?php echo pagination_links(); ?>
 
-<div id="outputs">
-    <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
-    <?php echo output_format_list(false); ?>
+    <div id="outputs">
+        <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
+        <?php echo output_format_list(false); ?>
+    </div>
 </div>
 
 <?php fire_plugin_hook('public_items_browse', array('items'=>$items, 'view' => $this)); ?>
