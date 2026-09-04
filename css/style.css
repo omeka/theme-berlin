@@ -678,7 +678,6 @@ header:after {
 #advanced-form {
   display: none;
   background-color: #fff;
-  overflow: auto;
   z-index: 1001;
   position: absolute;
   top: 30px;
@@ -695,7 +694,7 @@ header:after {
   margin-bottom: 0;
 }
 #advanced-form.open {
-  display: block;
+  display: flow-root;
 }
 
 #advanced-form input[type=radio] {
@@ -925,7 +924,7 @@ header:after {
 
 #secondary-nav, .secondary-nav {
   margin-bottom: 4.5px;
-  overflow: auto;
+  display: flow-root;
   border-bottom: 1px solid var(--berlin-border-color);
   clear: both;
 }
@@ -987,7 +986,6 @@ header:after {
 /* @end */
 /* @group ----- Global selectors ----- */
 #content {
-  overflow: hidden;
   border: 1px solid var(--berlin-border-color);
   background: #fff;
   position: relative;
@@ -995,6 +993,7 @@ header:after {
   padding: 0;
   width: 960px;
   max-width: 100%;
+  display: flow-root;
   padding: 18px 10px;
   z-index: 0;
 }
@@ -1045,7 +1044,6 @@ header:after {
 
 .record {
   clear: both;
-  overflow: auto;
 }
 
 #sort-links + .record,
@@ -1132,7 +1130,7 @@ nav + .exhibit {
 
 #home .featured,
 #featured-exhibit {
-  overflow: hidden;
+  display: flow-root;
   background: #eee;
   padding: 18px 20px;
   margin-bottom: 18px;
@@ -1156,12 +1154,14 @@ nav + .exhibit {
 }
 
 #recent-items .item {
-  overflow: hidden;
+  display: flow-root;
   border-bottom: 1px solid var(--berlin-border-color);
   margin-bottom: 18px;
 }
-#recent-items .item .image {
-  height: 72px;
+#recent-items .item img {
+  max-height: 72px;
+  width: auto;
+  max-width: 100%;
 }
 #recent-items .item h3 {
   margin-top: 0;
@@ -1261,7 +1261,7 @@ ul.title-list {
 }
 
 #item-images {
-  overflow: hidden;
+  display: flow-root;
   margin-bottom: 18px;
   margin-right: -10px;
 }
@@ -1280,7 +1280,7 @@ ul.title-list {
 
 /* Items Classes*/
 .element {
-  overflow: hidden;
+  display: flow-root;
   clear: both;
   margin-bottom: 18px;
 }
@@ -1599,7 +1599,7 @@ ul.title-list {
 /* @group ----- Items/Search ----- */
 .field {
   margin-bottom: 18px;
-  overflow: hidden;
+  display: flow-root;
 }
 
 .inputs select {
@@ -1760,7 +1760,7 @@ footer {
   padding: 0;
   width: 960px;
   max-width: 100%;
-  overflow: hidden;
+  display: flow;
   margin-top: 18px;
 }
 footer:after {

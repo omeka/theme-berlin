@@ -264,7 +264,6 @@ header {
 #advanced-form {
     display: none;
     background-color: #fff;
-    overflow: auto;
     z-index: 1001;
     position: absolute;
     top: 30px;
@@ -283,7 +282,7 @@ header {
     }
 
     &.open {
-        display: block;
+        display: flow-root;
     }
 }
 
@@ -503,7 +502,7 @@ header {
 
 #secondary-nav, .secondary-nav {
     margin-bottom: .25 * $spacing-unit;
-    overflow: auto;
+    display: flow-root;
     border-bottom:1px solid var(--berlin-border-color);
     clear: both;
 
@@ -571,10 +570,10 @@ header {
 /* @group ----- Global selectors ----- */
 
 #content {
-    overflow:hidden;
     border:1px solid var(--berlin-border-color);
     background:#fff;
     @include container;
+    display: flow-root;
     padding: (1 * $spacing-unit) 10px;
     z-index: 0;
 }
@@ -603,7 +602,6 @@ header {
 
 .record {
     clear: both;
-    overflow: auto;
 }
 
 #sort-links + .record,
@@ -649,7 +647,7 @@ nav + .exhibit {
 
 #home .featured,
 #featured-exhibit {
-    overflow:hidden;
+    display: flow-root;
     background:#eee;
     padding: $spacing-unit 20px;
     margin-bottom: $spacing-unit;
@@ -669,12 +667,14 @@ nav + .exhibit {
 }
 
 #recent-items .item {
-    overflow:hidden;
+    display: flow-root;
     border-bottom:1px solid var(--berlin-border-color);
     margin-bottom: $spacing-unit;
 
-    .image {
-        height: (4 * $spacing-unit);
+    img {
+        max-height: (4 * $spacing-unit);
+        width: auto;
+        max-width: 100%;
     }
 
     h3 {
@@ -748,7 +748,7 @@ ul.title-list {
 }
 
 #item-images {
-  overflow:hidden;
+  display: flow-root;
   margin-bottom:18px;
   margin-right:-10px;
 }
@@ -767,7 +767,7 @@ ul.title-list {
 
 /* Items Classes*/
 .element {
-    overflow:hidden;
+    display: flow-root;
     clear:both;
     margin-bottom: $spacing-unit;
 }
@@ -980,7 +980,7 @@ ul.title-list {
 
 .field {
     margin-bottom: $spacing-unit;
-    overflow: hidden;
+    display: flow-root;
 }
 
 .inputs select {
@@ -1142,7 +1142,7 @@ ul.title-list {
 footer {
     clear:both;
     @include container;
-    overflow:hidden;
+    display: flow;
     margin-top: $spacing-unit;
 
     a { text-decoration:none; }
