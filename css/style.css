@@ -525,7 +525,7 @@ header {
   position: relative;
 }
 header:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -555,7 +555,7 @@ header:after {
   max-width: 100%;
 }
 #header-image:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -766,7 +766,7 @@ header:after {
   /* list item within sub-navigation panel */
 }
 #primary-nav:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -880,7 +880,7 @@ header:after {
   margin-top: -9px;
 }
 #primary-nav .sub-nav ul a:before {
-  content: "—";
+  content: "—"/"";
   margin-right: 4.5px;
 }
 #primary-nav .sub-nav li {
@@ -919,7 +919,7 @@ header:after {
   text-align: center;
 }
 #primary-nav [aria-haspopup=true].open:after {
-  content: "";
+  content: ""/"";
 }
 
 #secondary-nav, .secondary-nav {
@@ -998,7 +998,7 @@ header:after {
   z-index: 0;
 }
 #content:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -1192,7 +1192,7 @@ nav + .exhibit {
   padding: 18px 10px;
 }
 .items #content:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -1764,7 +1764,7 @@ footer {
   margin-top: 18px;
 }
 footer:after {
-  content: " ";
+  content: " "/"";
   display: block;
   height: 0;
   clear: both;
@@ -1795,14 +1795,14 @@ footer .navigation li {
   display: inline;
 }
 footer .navigation li:after {
-  content: " ·";
+  content: " ·"/"";
   margin: 0 10px 0 5px;
 }
 footer .navigation li:last-child {
   margin: 0;
 }
 footer .navigation li:last-child:after {
-  content: " ";
+  content: " "/"";
   display: none;
 }
 footer .navigation a {
@@ -1869,7 +1869,7 @@ footer nav + p {
   text-indent: -1.5em;
 }
 #exhibit-pages ul li > ul li:before {
-  content: "—";
+  content: "—"/"";
 }
 #exhibit-pages li {
   list-style-type: none;
@@ -2026,7 +2026,7 @@ footer nav + p {
     zoom: 1;
   }
   #mobile-nav:after {
-    content: " ";
+    content: " "/"";
     display: block;
     height: 0;
     clear: both;
@@ -2127,12 +2127,12 @@ footer nav + p {
 }
 @media screen and (max-width: 768px) {
   #mobile-nav li ul a:before {
-    content: "-- ";
+    content: "-- "/"";
   }
 }
 @media screen and (max-width: 768px) {
   #mobile-nav li ul ul a:before {
-    content: "---- ";
+    content: "---- "/"";
   }
 }
 @media screen and (max-width: 768px) {

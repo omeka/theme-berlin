@@ -447,7 +447,7 @@ header {
             margin-top: (-.5 * $spacing-unit);
 
             &:before {
-                content: "\2014";
+                content: "\2014" / "";
                 margin-right: (.25 * $spacing-unit);
             }
         }
@@ -496,7 +496,7 @@ header {
     }
 
     [aria-haspopup="true"].open:after {
-        content: "\f0d7";
+        content: "\f0d7" / "";
     }
 }
 
@@ -1154,14 +1154,14 @@ footer {
             display:inline;
 
             &:after {
-                content: " \00B7";
+                content: " \00B7" / "";
                 margin: 0 10px 0 5px;
             }
 
             &:last-child { margin: 0; }
 
             &:last-child:after {
-                content: "\00A0";
+                content: "\00A0" / "";
                 display: none;
             }
         }
@@ -1234,7 +1234,7 @@ footer {
         li { text-indent: -1.5em; }
 
         li:before {
-            content: "\2014";
+            content: "\2014" / "";
         }
     }
 

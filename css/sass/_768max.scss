@@ -86,11 +86,11 @@ input[type=text], input[type=password], textarea {
     }
 
     li ul a:before {
-        content: "-- ";
+        content: "-- " / "";
     }
 
     li ul ul a:before {
-        content: "---- ";
+        content: "---- " / "";
     }
 }
 
