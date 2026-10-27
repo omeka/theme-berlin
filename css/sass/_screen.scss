@@ -773,6 +773,7 @@ ul.title-list {
 }
 
 .browse .record {
+    display: flow-root;
     border-bottom: 1px solid var(--berlin-border-color);
     padding: ($spacing-unit) 0;
     width: 100%;
