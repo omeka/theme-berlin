@@ -693,7 +693,8 @@ header:after {
 #advanced-form > *:last-child {
   margin-bottom: 0;
 }
-#advanced-form.open {
+
+[aria-expanded=true] + #advanced-form {
   display: flow-root;
 }
 
