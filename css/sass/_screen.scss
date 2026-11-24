@@ -281,9 +281,10 @@ header {
           margin-bottom: 0;
     }
 
-    &.open {
-        display: flow-root;
-    }
+}
+
+[aria-expanded="true"] + #advanced-form {
+    display: flow-root;
 }
 
 #advanced-form input[type="radio"] { margin-right: 5px;}
